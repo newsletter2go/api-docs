@@ -4000,7 +4000,7 @@
         },
         {
           "_postman_id": "3bfd595a-d46c-4695-9681-aea918f22e9a",
-          "name": "Get a version of a Mailing",
+          "name": "Get saved Versions of a Mailing",
           "request": {
             "method": "GET",
             "header": [],
