@@ -9,9 +9,9 @@ This repository is used to version our Postman collection. If you are looking fo
 
 If you found a bug or would like to improve our Postman collection, please create a pull request.  
 If you want to get notified when we add or change API calls, make sure to watch this repository.  
-If you like what we do, leave a star. Our developers will appreciate it 😉
+If you like what we do, leave a ⭐. Our developers will appreciate it 😉
 
-Last but not least, you can always contact our [technical support team](support@newsletter2go.com).
+Last but not least, you can always contact our [technical support team](mailto:support@newsletter2go.com?subject=Newsletter2Go%20API%20Postman%20Collection).
 
 ## How to use
 
