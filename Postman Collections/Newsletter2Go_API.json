@@ -4005,7 +4005,7 @@
             "method": "GET",
             "header": [],
             "body": {},
-            "url": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}",
+            "url": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/versions",
             "description": "_filter"
           },
           "response": []
