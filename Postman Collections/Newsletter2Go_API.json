@@ -5055,7 +5055,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"recipient\": {\r\r            \"email\": \"s+form@newsletter2go.com\"\r\r        }\r\t\r}"
+              "raw": "{\r\t\"recipient\": {\r            \"email\": \"email@example.org\",\r            \"first_name\": \"John\",\r            \"last_name\": \"Doe\",\r            \"{{attribute_name}}\": \"attribute value\"\r        }\r}"
             },
             "url": "https://api.newsletter2go.com/forms/submit/{{form_id}}"
           },
