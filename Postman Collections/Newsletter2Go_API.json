@@ -3662,13 +3662,15 @@
           "name": "Get Mailings from List",
           "request": {
             "auth": {
-              "type": "bearer",
-              "bearer": {
-                "token": "{{access_token}}"
-              }
+              "type": "noauth"
             },
             "method": "GET",
-            "header": [],
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
             "body": {},
             "url": "https://api.newsletter2go.com/lists/{{list_id}}/newsletters",
             "description": "useful for automated mailings that run every day"
