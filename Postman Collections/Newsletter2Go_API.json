@@ -3524,6 +3524,31 @@
           },
           "response": []
         }
+      ],
+      "auth": {
+        "type": "noauth"
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "04419517-f797-4cdd-972a-00718ea9db34",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "8a5a088f-b643-4eee-a532-779f5dcac7c5",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        }
       ]
     },
     {
