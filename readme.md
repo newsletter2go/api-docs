@@ -17,7 +17,7 @@ Last but not least, you can always contact our [technical support team](mailto:s
 
 1. Download the free [Postman app](https://www.getpostman.com/apps) or the [Chrome browser extension](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop)
 1. Visit [https://docs.newsletter2go.com](https://docs.newsletter2go.com) and click the `Run in Postman` button on the top right _or_   
-1. Download the Postman JSON file from the folder `Postman Collection` in this repository, open Postman and import the file.  
+1. Download the Postman JSON file from the folder `Postman Collections` in this repository, open Postman and import the file.  
 1. Make sure to select the `Newsletter2Go API` environment on the top right  
 1. Add your user credentials to the environment variables
 1. Run the first `Authentication` request. (Your `access token` will be automatically stored within the environment variables)
