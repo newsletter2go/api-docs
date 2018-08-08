@@ -5223,70 +5223,70 @@
   ],
   "variable": [
     {
-      "id": "9bb970c8-4497-487b-8788-0d23f7f04f22",
+      "id": "933b0a5d-edc5-4973-b569-8e7f8c7a5351",
       "key": "list_id",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "c03ac289-3fb7-4db7-b17c-a956c083d3d4",
+      "id": "e504f5d6-f818-43fc-a8d2-2d7847af6974",
       "key": "attribute_id",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "b1a0788a-9a07-4943-a76c-0adc7480881a",
+      "id": "df970bc3-a9c3-4a5d-bf32-55aab6053c9d",
       "key": "attribute_name",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "80a1685c-1d0e-46f3-99d4-b820fd9c111e",
+      "id": "47433db2-7a02-49c5-9d3f-32fe38cc2a0a",
       "key": "company_id",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "5fc86600-60d2-4586-9d17-3b3811308fcd",
+      "id": "d4e78601-eb00-471b-adf4-bef481d83e21",
       "key": "user_id",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "7bf1be9d-0813-4781-b66c-339c94834099",
+      "id": "2ddf0980-4bbd-40cd-8615-f00df178075f",
       "key": "recipient_id",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "1db7c7c4-edf6-416b-b32b-ce56f7447eb6",
+      "id": "950a26b2-273e-4dfc-9e9a-00e14ae5b651",
       "key": "group_id",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "79c640b5-b936-48f9-a084-9047edae2b7c",
+      "id": "da8ff73f-49b4-49a2-a789-d7633d164498",
       "key": "file_id",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "7e72e83b-5af5-4d43-820f-11ca47538802",
+      "id": "e87855f5-80ea-42c6-aa4a-e3b1284afc12",
       "key": "import_id",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "39fefc4c-1553-4afe-935c-0f28dbbc46e6",
+      "id": "f8499e5f-c927-4a04-9e9a-27408199c342",
       "key": "newsletter_id",
       "value": "",
       "type": "string",
