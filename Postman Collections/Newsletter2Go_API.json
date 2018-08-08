@@ -3702,7 +3702,7 @@
               "raw": "{\r\n  \"type\": \"default\",\r\n  \"name\": \"New Mailing Name\",\r\n  \"has_open_tracking\": true,\r\n  \"has_click_tracking\": true,\r\n  \"has_conversion_tracking\": true,\r\n  \"subject\": \"Subject\",\r\n  \"preheader\": \"Pre header\",\r\n  \"header_from_email\": \"from@example.org\",\r\n  \"header_from_name\": \"From Name\",\r\n  \"header_reply_email\": \"reply@example.org\",\r\n  \"header_reply_name\": \"Reply Name\"\r\n}"
             },
             "url": "https://api.newsletter2go.com/lists/{{list_id}}/newsletters",
-            "description": "Defaults will be used from the list\n\njson should be documented (nml)"
+            "description": "Defaults will be used from the list\n\njson should be documented in a separate document for the Newsletter2Go Markup Language (NML)"
           },
           "response": [
             {
@@ -5223,70 +5223,70 @@
   ],
   "variable": [
     {
-      "id": "50fdc79a-a138-4089-ad52-a1304b5c6b9e",
+      "id": "c24b5e1f-29e0-4c25-865e-b965ac7befcd",
       "key": "list_id",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "5e8ecdc5-8838-47e7-8038-b5736b95d454",
+      "id": "97f40fef-b7fb-4611-9fd5-f97d7ff94396",
       "key": "attribute_id",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "a7c1a3b8-8477-413d-96e3-006e07e37d3c",
+      "id": "16e5965f-045a-4e3a-92c9-156bbdf957c9",
       "key": "attribute_name",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "9a0f0f83-4b4b-4d06-b581-0a3e0de57053",
+      "id": "d94d5fd7-8cb3-4601-9d1c-2e5c2fb6b5db",
       "key": "company_id",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "47285566-d6b1-4d68-bc77-7f89cf5cb87f",
+      "id": "fdce0954-4859-4c88-aed9-593e24816642",
       "key": "user_id",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "dd1da450-451e-4f45-95bc-c8afd6516225",
+      "id": "3ca65b3f-72f5-45dc-a060-abee496a3b04",
       "key": "recipient_id",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "9857b84d-2949-4d80-8b40-a7b7278d444b",
+      "id": "25084e24-3ef8-4ce4-8c8c-abdd0d95a845",
       "key": "group_id",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "6d2c5719-2438-4fdc-a47d-aa5fac8ed0e6",
+      "id": "f574aec4-e4f2-4bd7-8d03-86fa4b21b8db",
       "key": "file_id",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "1a9a645c-7308-46c2-a8c2-0e3196ab8ccb",
+      "id": "486f6731-d83a-4092-99fd-2c05c1fd0451",
       "key": "import_id",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "92dc4a98-cc53-4572-9f2a-3089a0fee576",
+      "id": "1165138d-1a62-4fa4-a52c-bec20e2d9f8e",
       "key": "newsletter_id",
       "value": "",
       "type": "string",
