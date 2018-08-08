@@ -2752,6 +2752,907 @@
       ]
     },
     {
+      "_postman_id": "9fa4c904-5bc0-41f5-8c70-11ec428d8c75",
+      "name": "Attributes",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "186844bb-9313-4935-96f8-9336f654aaf7",
+          "name": "Get Attributes from List",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{access_token}}"
+              }
+            ],
+            "body": {},
+            "url": "https://api.newsletter2go.com/lists/{{list_id}}/attributes"
+          },
+          "response": [
+            {
+              "id": "e205cc7e-f488-4c56-9166-c2ce79241278",
+              "name": "Get Attributes from List",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {},
+                "url": "https://api.newsletter2go.com/lists/{{list_id}}/attributes"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Access-Control-Allow-Headers",
+                  "value": "authorization, Content-Type, x-from",
+                  "name": "Access-Control-Allow-Headers",
+                  "description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+                },
+                {
+                  "key": "Access-Control-Allow-Methods",
+                  "value": "GET,HEAD,POST,PUT,PATCH,DELETE,OPTIONS,TRACE",
+                  "name": "Access-Control-Allow-Methods",
+                  "description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*",
+                  "name": "Access-Control-Allow-Origin",
+                  "description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache",
+                  "name": "Cache-Control",
+                  "description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive",
+                  "name": "Connection",
+                  "description": "Options that are desired for the connection"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip",
+                  "name": "Content-Encoding",
+                  "description": "The type of encoding used on the data."
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 06 Aug 2018 14:23:09 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "nginx",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000",
+                  "name": "Strict-Transport-Security",
+                  "description": "A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains."
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked",
+                  "name": "Transfer-Encoding",
+                  "description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept-Encoding",
+                  "name": "Vary",
+                  "description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept-Encoding",
+                  "name": "Vary",
+                  "description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff",
+                  "name": "X-Content-Type-Options",
+                  "description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+                },
+                {
+                  "key": "X-Fpm",
+                  "value": "default",
+                  "name": "X-Fpm",
+                  "description": "Custom header"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN",
+                  "name": "X-Frame-Options",
+                  "description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+                },
+                {
+                  "key": "X-Upstream",
+                  "value": "138.201.29.81:8200",
+                  "name": "X-Upstream",
+                  "description": "Custom header"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1",
+                  "name": "X-XSS-Protection",
+                  "description": "Cross-site scripting (XSS) filter"
+                },
+                {
+                  "key": "expires",
+                  "value": "-1",
+                  "name": "expires",
+                  "description": "Gives the date/time after which the response is considered stale"
+                },
+                {
+                  "key": "pragma",
+                  "value": "no-cache",
+                  "name": "pragma",
+                  "description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"links\": {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/lists\\/om355owj\\/attributes?_limit=50&_offset=0\"\n        },\n        \"count\": 18\n    },\n    \"value\": [\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/cnxun8wj\",\n            \"id\": \"cnxun8wj\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/91pt19av\",\n            \"id\": \"91pt19av\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/jcnm7ks3\",\n            \"id\": \"jcnm7ks3\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/tzf44guv\",\n            \"id\": \"tzf44guv\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/jkjs21xz\",\n            \"id\": \"jkjs21xz\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/cg1968o3\",\n            \"id\": \"cg1968o3\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/axse6xrn\",\n            \"id\": \"axse6xrn\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/yac6xvbr\",\n            \"id\": \"yac6xvbr\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/e85q32t3\",\n            \"id\": \"e85q32t3\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/f8nsxi6b\",\n            \"id\": \"f8nsxi6b\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/e779lnbn\",\n            \"id\": \"e779lnbn\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/cg1qmsb7\",\n            \"id\": \"cg1qmsb7\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/grwmd8lv\",\n            \"id\": \"grwmd8lv\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/wl5o0irb\",\n            \"id\": \"wl5o0irb\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/3pc9xfmv\",\n            \"id\": \"3pc9xfmv\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/d6p7g28n\",\n            \"id\": \"d6p7g28n\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/if43pq03\",\n            \"id\": \"if43pq03\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/7bkvcy1z\",\n            \"id\": \"7bkvcy1z\"\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "b8a4f83b-1e17-4f6c-922e-afcdadc3dd2d",
+          "name": "Get Attribute Details",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{access_token}}"
+              }
+            ],
+            "body": {},
+            "url": "https://api.newsletter2go.com/attributes/{{attribute_id}}"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "ccc3735c-106a-4c47-9725-2ed6302ac10a",
+          "name": "Delete Attribute",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{access_token}}"
+              }
+            ],
+            "body": {},
+            "url": "https://api.newsletter2go.com/lists/{{list_id}}/attributes/{{attribute_id}}"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "19dfd182-e8b2-4561-91fe-a4d1a31b11dc",
+          "name": "Create Attribute",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"list_ids\": [\r\n    \"{{list_id}}\"\r\n  ],\r\n    \"name\": \"New_Attribute\",\r\n    \"display\": \"all\",\r\n    \"type\": \"text\",\r\n    \"sub_type\": \"text\",\r\n    \"is_enum\": false,\r\n    \"is_public\": false,\r\n    \"is_multiselect\": false,\r\n    \"html_element_type\": \"input\",\r\n    \"is_global\": false,\r\n    \"default_value\": \"\"\r\n}"
+            },
+            "url": "https://api.newsletter2go.com/attributes",
+            "description": "<div class=\"alert alert-info\">Attribute names may only contain letters, numbers and underscores or as a REGEX `[0-9a-zA-Z_]+`</div>"
+          },
+          "response": [
+            {
+              "id": "c53239a8-ad25-45c1-abd6-140e4f82f3d4",
+              "name": "Create Attribute Text",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "type": "text",
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "disabled": false
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"list_ids\": [\r\n    \"{{list_id}}\"\r\n  ],\r\n  \"name\": \"Attribute_Text\",\r\n  \"type\": \"text\",\r\n  \"sub_type\": \"text\"\r\n}"
+                },
+                "url": "https://api.newsletter2go.com/attributes"
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Access-Control-Allow-Headers",
+                  "value": "authorization, Content-Type, x-from",
+                  "name": "Access-Control-Allow-Headers",
+                  "description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+                },
+                {
+                  "key": "Access-Control-Allow-Methods",
+                  "value": "GET,HEAD,POST,PUT,PATCH,DELETE,OPTIONS,TRACE",
+                  "name": "Access-Control-Allow-Methods",
+                  "description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*",
+                  "name": "Access-Control-Allow-Origin",
+                  "description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache",
+                  "name": "Cache-Control",
+                  "description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive",
+                  "name": "Connection",
+                  "description": "Options that are desired for the connection"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 03 Aug 2018 14:38:50 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "nginx",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000",
+                  "name": "Strict-Transport-Security",
+                  "description": "A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains."
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked",
+                  "name": "Transfer-Encoding",
+                  "description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff",
+                  "name": "X-Content-Type-Options",
+                  "description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+                },
+                {
+                  "key": "X-Fpm",
+                  "value": "default",
+                  "name": "X-Fpm",
+                  "description": "Custom header"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN",
+                  "name": "X-Frame-Options",
+                  "description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+                },
+                {
+                  "key": "X-Upstream",
+                  "value": "88.99.5.6:8200",
+                  "name": "X-Upstream",
+                  "description": "Custom header"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1",
+                  "name": "X-XSS-Protection",
+                  "description": "Cross-site scripting (XSS) filter"
+                },
+                {
+                  "key": "expires",
+                  "value": "-1",
+                  "name": "expires",
+                  "description": "Gives the date/time after which the response is considered stale"
+                },
+                {
+                  "key": "pragma",
+                  "value": "no-cache",
+                  "name": "pragma",
+                  "description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"status\": 201,\n    \"info\": {\n        \"count\": 1\n    },\n    \"value\": [\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/yk7aroef\",\n            \"id\": \"yk7aroef\"\n        }\n    ]\n}"
+            },
+            {
+              "id": "ec1d53ac-7f09-41bc-b3a7-ede47e4f6ca6",
+              "name": "Create Attribute Number",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"list_ids\": [\r\n    \"{{list_id}}\"\r\n  ],\r\n  \"name\": \"Attribute_Number\",\r\n  \"type\": \"number\",\r\n  \"sub_type\": \"integer\"\r\n}"
+                },
+                "url": "https://api.newsletter2go.com/attributes"
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Access-Control-Allow-Headers",
+                  "value": "authorization, Content-Type, x-from",
+                  "name": "Access-Control-Allow-Headers",
+                  "description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+                },
+                {
+                  "key": "Access-Control-Allow-Methods",
+                  "value": "GET,HEAD,POST,PUT,PATCH,DELETE,OPTIONS,TRACE",
+                  "name": "Access-Control-Allow-Methods",
+                  "description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*",
+                  "name": "Access-Control-Allow-Origin",
+                  "description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache",
+                  "name": "Cache-Control",
+                  "description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive",
+                  "name": "Connection",
+                  "description": "Options that are desired for the connection"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 03 Aug 2018 14:38:50 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "nginx",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000",
+                  "name": "Strict-Transport-Security",
+                  "description": "A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains."
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked",
+                  "name": "Transfer-Encoding",
+                  "description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff",
+                  "name": "X-Content-Type-Options",
+                  "description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+                },
+                {
+                  "key": "X-Fpm",
+                  "value": "default",
+                  "name": "X-Fpm",
+                  "description": "Custom header"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN",
+                  "name": "X-Frame-Options",
+                  "description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+                },
+                {
+                  "key": "X-Upstream",
+                  "value": "88.99.5.6:8200",
+                  "name": "X-Upstream",
+                  "description": "Custom header"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1",
+                  "name": "X-XSS-Protection",
+                  "description": "Cross-site scripting (XSS) filter"
+                },
+                {
+                  "key": "expires",
+                  "value": "-1",
+                  "name": "expires",
+                  "description": "Gives the date/time after which the response is considered stale"
+                },
+                {
+                  "key": "pragma",
+                  "value": "no-cache",
+                  "name": "pragma",
+                  "description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"status\": 201,\n    \"info\": {\n        \"count\": 1\n    },\n    \"value\": [\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/yk7aroef\",\n            \"id\": \"yk7aroef\"\n        }\n    ]\n}"
+            },
+            {
+              "id": "4069b0ca-ee38-4512-96ba-2a7d07c1805c",
+              "name": "Create Attribute - Duplicate Attribute Name",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"list_ids\": [\r\n    \"{{list_id}}\"\r\n  ],\r\n    \"name\": \"New_Attribute\",\r\n    \"display\": \"all\",\r\n    \"type\": \"text\",\r\n    \"sub_type\": \"text\",\r\n    \"is_enum\": false,\r\n    \"is_public\": false,\r\n    \"is_multiselect\": false,\r\n    \"html_element_type\": \"input\",\r\n    \"is_global\": false,\r\n    \"default_value\": \"\"\r\n}"
+                },
+                "url": "https://api.newsletter2go.com/attributes"
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Access-Control-Allow-Headers",
+                  "value": "authorization, Content-Type, x-from",
+                  "name": "Access-Control-Allow-Headers",
+                  "description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+                },
+                {
+                  "key": "Access-Control-Allow-Methods",
+                  "value": "GET,HEAD,POST,PUT,PATCH,DELETE,OPTIONS,TRACE",
+                  "name": "Access-Control-Allow-Methods",
+                  "description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*",
+                  "name": "Access-Control-Allow-Origin",
+                  "description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache",
+                  "name": "Cache-Control",
+                  "description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive",
+                  "name": "Connection",
+                  "description": "Options that are desired for the connection"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 07 Aug 2018 06:52:27 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "nginx",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000",
+                  "name": "Strict-Transport-Security",
+                  "description": "A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains."
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked",
+                  "name": "Transfer-Encoding",
+                  "description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff",
+                  "name": "X-Content-Type-Options",
+                  "description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+                },
+                {
+                  "key": "X-Fpm",
+                  "value": "default",
+                  "name": "X-Fpm",
+                  "description": "Custom header"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN",
+                  "name": "X-Frame-Options",
+                  "description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+                },
+                {
+                  "key": "X-Upstream",
+                  "value": "195.201.171.185:8200",
+                  "name": "X-Upstream",
+                  "description": "Custom header"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1",
+                  "name": "X-XSS-Protection",
+                  "description": "Cross-site scripting (XSS) filter"
+                },
+                {
+                  "key": "expires",
+                  "value": "-1",
+                  "name": "expires",
+                  "description": "Gives the date/time after which the response is considered stale"
+                },
+                {
+                  "key": "pragma",
+                  "value": "no-cache",
+                  "name": "pragma",
+                  "description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"status\": 400,\n    \"code\": 1062,\n    \"errorMessage\": \"Duplicate value \\\"New_Attribute\\\" for column \\\"name\\\"\"\n}"
+            },
+            {
+              "id": "4ac5963b-5a2b-4f8f-b51d-f535a2bc1f5d",
+              "name": "Create Attribute - Invalid Name",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "disabled": false
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"list_ids\": [\r\n    \"{{list_id}}\"\r\n  ],\r\n    \"name\": \"New Attribute\",\r\n    \"display\": \"all\",\r\n    \"type\": \"text\",\r\n    \"sub_type\": \"text\",\r\n    \"is_enum\": false,\r\n    \"is_public\": false,\r\n    \"is_multiselect\": false,\r\n    \"html_element_type\": \"input\",\r\n    \"is_global\": false,\r\n    \"default_value\": \"\"\r\n}"
+                },
+                "url": "https://api.newsletter2go.com/attributes"
+              },
+              "status": "Unprocessable Entity",
+              "code": 422,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Access-Control-Allow-Headers",
+                  "value": "authorization, Content-Type, x-from",
+                  "name": "Access-Control-Allow-Headers",
+                  "description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+                },
+                {
+                  "key": "Access-Control-Allow-Methods",
+                  "value": "GET,HEAD,POST,PUT,PATCH,DELETE,OPTIONS,TRACE",
+                  "name": "Access-Control-Allow-Methods",
+                  "description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*",
+                  "name": "Access-Control-Allow-Origin",
+                  "description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache",
+                  "name": "Cache-Control",
+                  "description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive",
+                  "name": "Connection",
+                  "description": "Options that are desired for the connection"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 07 Aug 2018 06:57:43 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "nginx",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000",
+                  "name": "Strict-Transport-Security",
+                  "description": "A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains."
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked",
+                  "name": "Transfer-Encoding",
+                  "description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff",
+                  "name": "X-Content-Type-Options",
+                  "description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+                },
+                {
+                  "key": "X-Fpm",
+                  "value": "default",
+                  "name": "X-Fpm",
+                  "description": "Custom header"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN",
+                  "name": "X-Frame-Options",
+                  "description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+                },
+                {
+                  "key": "X-Upstream",
+                  "value": "195.201.175.58:8200",
+                  "name": "X-Upstream",
+                  "description": "Custom header"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1",
+                  "name": "X-XSS-Protection",
+                  "description": "Cross-site scripting (XSS) filter"
+                },
+                {
+                  "key": "expires",
+                  "value": "-1",
+                  "name": "expires",
+                  "description": "Gives the date/time after which the response is considered stale"
+                },
+                {
+                  "key": "pragma",
+                  "value": "no-cache",
+                  "name": "pragma",
+                  "description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"status\": 422,\n    \"code\": 10003,\n    \"errorMessage\": \"Error during input validation\",\n    \"moreInfo\": {\n        \"errors\": [\n            {\n                \"code\": 10003,\n                \"fieldName\": \"name\",\n                \"message\": \"given name (New Attribute) for attribute is not allowed. Only Characters, numbers and _ are supported\"\n            }\n        ]\n    }\n}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "23e37d1d-f8aa-48a1-9093-b9f29195085d",
+          "name": "Update Attribute",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"list_ids\": [\r\n    \"{{list_id}}\"\r\n  ],\r\n  \"name\": \"New_name\"\r\n}"
+            },
+            "url": "https://api.newsletter2go.com/attributes/{{attribute_id}}"
+          },
+          "response": [
+            {
+              "id": "220616d5-c137-476d-8817-dc7c5c414a55",
+              "name": "Update Attribute",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "disabled": false
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"list_ids\": [\r\n    \"{{list_id}}\"\r\n  ],\r\n  \"name\": \"New_name\"\r\n}"
+                },
+                "url": "https://api.newsletter2go.com/attributes/{{attribute_id}}"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Access-Control-Allow-Headers",
+                  "value": "authorization, Content-Type, x-from",
+                  "name": "Access-Control-Allow-Headers",
+                  "description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+                },
+                {
+                  "key": "Access-Control-Allow-Methods",
+                  "value": "GET,HEAD,POST,PUT,PATCH,DELETE,OPTIONS,TRACE",
+                  "name": "Access-Control-Allow-Methods",
+                  "description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*",
+                  "name": "Access-Control-Allow-Origin",
+                  "description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache",
+                  "name": "Cache-Control",
+                  "description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive",
+                  "name": "Connection",
+                  "description": "Options that are desired for the connection"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip",
+                  "name": "Content-Encoding",
+                  "description": "The type of encoding used on the data."
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 07 Aug 2018 06:59:04 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "nginx",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000",
+                  "name": "Strict-Transport-Security",
+                  "description": "A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains."
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked",
+                  "name": "Transfer-Encoding",
+                  "description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept-Encoding",
+                  "name": "Vary",
+                  "description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept-Encoding",
+                  "name": "Vary",
+                  "description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff",
+                  "name": "X-Content-Type-Options",
+                  "description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+                },
+                {
+                  "key": "X-Fpm",
+                  "value": "default",
+                  "name": "X-Fpm",
+                  "description": "Custom header"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN",
+                  "name": "X-Frame-Options",
+                  "description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+                },
+                {
+                  "key": "X-Upstream",
+                  "value": "195.201.175.58:8200",
+                  "name": "X-Upstream",
+                  "description": "Custom header"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1",
+                  "name": "X-XSS-Protection",
+                  "description": "Cross-site scripting (XSS) filter"
+                },
+                {
+                  "key": "expires",
+                  "value": "-1",
+                  "name": "expires",
+                  "description": "Gives the date/time after which the response is considered stale"
+                },
+                {
+                  "key": "pragma",
+                  "value": "no-cache",
+                  "name": "pragma",
+                  "description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"count\": 1\n    },\n    \"value\": []\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "_postman_id": "f84f1ba5-15e8-4200-aa37-fac35dec44f9",
       "name": "Campaigns",
       "description": "",
@@ -4122,907 +5023,6 @@
               ""
             ]
           }
-        }
-      ]
-    },
-    {
-      "_postman_id": "9fa4c904-5bc0-41f5-8c70-11ec428d8c75",
-      "name": "Attributes",
-      "description": "",
-      "item": [
-        {
-          "_postman_id": "186844bb-9313-4935-96f8-9336f654aaf7",
-          "name": "Get Attributes from List",
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "{{access_token}}"
-              }
-            ],
-            "body": {},
-            "url": "https://api.newsletter2go.com/lists/{{list_id}}/attributes"
-          },
-          "response": [
-            {
-              "id": "e205cc7e-f488-4c56-9166-c2ce79241278",
-              "name": "Get Attributes from List",
-              "originalRequest": {
-                "method": "GET",
-                "header": [],
-                "body": {},
-                "url": "https://api.newsletter2go.com/lists/{{list_id}}/attributes"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Access-Control-Allow-Headers",
-                  "value": "authorization, Content-Type, x-from",
-                  "name": "Access-Control-Allow-Headers",
-                  "description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
-                },
-                {
-                  "key": "Access-Control-Allow-Methods",
-                  "value": "GET,HEAD,POST,PUT,PATCH,DELETE,OPTIONS,TRACE",
-                  "name": "Access-Control-Allow-Methods",
-                  "description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
-                },
-                {
-                  "key": "Access-Control-Allow-Origin",
-                  "value": "*",
-                  "name": "Access-Control-Allow-Origin",
-                  "description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
-                },
-                {
-                  "key": "Cache-Control",
-                  "value": "no-cache",
-                  "name": "Cache-Control",
-                  "description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
-                },
-                {
-                  "key": "Connection",
-                  "value": "keep-alive",
-                  "name": "Connection",
-                  "description": "Options that are desired for the connection"
-                },
-                {
-                  "key": "Content-Encoding",
-                  "value": "gzip",
-                  "name": "Content-Encoding",
-                  "description": "The type of encoding used on the data."
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json",
-                  "name": "Content-Type",
-                  "description": "The mime type of this content"
-                },
-                {
-                  "key": "Date",
-                  "value": "Mon, 06 Aug 2018 14:23:09 GMT",
-                  "name": "Date",
-                  "description": "The date and time that the message was sent"
-                },
-                {
-                  "key": "Server",
-                  "value": "nginx",
-                  "name": "Server",
-                  "description": "A name for the server"
-                },
-                {
-                  "key": "Strict-Transport-Security",
-                  "value": "max-age=31536000",
-                  "name": "Strict-Transport-Security",
-                  "description": "A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains."
-                },
-                {
-                  "key": "Transfer-Encoding",
-                  "value": "chunked",
-                  "name": "Transfer-Encoding",
-                  "description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
-                },
-                {
-                  "key": "Vary",
-                  "value": "Accept-Encoding",
-                  "name": "Vary",
-                  "description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
-                },
-                {
-                  "key": "Vary",
-                  "value": "Accept-Encoding",
-                  "name": "Vary",
-                  "description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
-                },
-                {
-                  "key": "X-Content-Type-Options",
-                  "value": "nosniff",
-                  "name": "X-Content-Type-Options",
-                  "description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
-                },
-                {
-                  "key": "X-Fpm",
-                  "value": "default",
-                  "name": "X-Fpm",
-                  "description": "Custom header"
-                },
-                {
-                  "key": "X-Frame-Options",
-                  "value": "SAMEORIGIN",
-                  "name": "X-Frame-Options",
-                  "description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
-                },
-                {
-                  "key": "X-Upstream",
-                  "value": "138.201.29.81:8200",
-                  "name": "X-Upstream",
-                  "description": "Custom header"
-                },
-                {
-                  "key": "X-XSS-Protection",
-                  "value": "1",
-                  "name": "X-XSS-Protection",
-                  "description": "Cross-site scripting (XSS) filter"
-                },
-                {
-                  "key": "expires",
-                  "value": "-1",
-                  "name": "expires",
-                  "description": "Gives the date/time after which the response is considered stale"
-                },
-                {
-                  "key": "pragma",
-                  "value": "no-cache",
-                  "name": "pragma",
-                  "description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"links\": {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/lists\\/om355owj\\/attributes?_limit=50&_offset=0\"\n        },\n        \"count\": 18\n    },\n    \"value\": [\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/cnxun8wj\",\n            \"id\": \"cnxun8wj\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/91pt19av\",\n            \"id\": \"91pt19av\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/jcnm7ks3\",\n            \"id\": \"jcnm7ks3\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/tzf44guv\",\n            \"id\": \"tzf44guv\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/jkjs21xz\",\n            \"id\": \"jkjs21xz\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/cg1968o3\",\n            \"id\": \"cg1968o3\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/axse6xrn\",\n            \"id\": \"axse6xrn\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/yac6xvbr\",\n            \"id\": \"yac6xvbr\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/e85q32t3\",\n            \"id\": \"e85q32t3\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/f8nsxi6b\",\n            \"id\": \"f8nsxi6b\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/e779lnbn\",\n            \"id\": \"e779lnbn\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/cg1qmsb7\",\n            \"id\": \"cg1qmsb7\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/grwmd8lv\",\n            \"id\": \"grwmd8lv\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/wl5o0irb\",\n            \"id\": \"wl5o0irb\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/3pc9xfmv\",\n            \"id\": \"3pc9xfmv\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/d6p7g28n\",\n            \"id\": \"d6p7g28n\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/if43pq03\",\n            \"id\": \"if43pq03\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/7bkvcy1z\",\n            \"id\": \"7bkvcy1z\"\n        }\n    ]\n}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "b8a4f83b-1e17-4f6c-922e-afcdadc3dd2d",
-          "name": "Get Attribute Details",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "{{access_token}}"
-              }
-            ],
-            "body": {},
-            "url": "https://api.newsletter2go.com/attributes/{{attribute_id}}"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "ccc3735c-106a-4c47-9725-2ed6302ac10a",
-          "name": "Delete Attribute",
-          "request": {
-            "method": "DELETE",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "{{access_token}}"
-              }
-            ],
-            "body": {},
-            "url": "https://api.newsletter2go.com/lists/{{list_id}}/attributes/{{attribute_id}}"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "19dfd182-e8b2-4561-91fe-a4d1a31b11dc",
-          "name": "Create Attribute",
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"list_ids\": [\r\n    \"{{list_id}}\"\r\n  ],\r\n    \"name\": \"New_Attribute\",\r\n    \"display\": \"all\",\r\n    \"type\": \"text\",\r\n    \"sub_type\": \"text\",\r\n    \"is_enum\": false,\r\n    \"is_public\": false,\r\n    \"is_multiselect\": false,\r\n    \"html_element_type\": \"input\",\r\n    \"is_global\": false,\r\n    \"default_value\": \"\"\r\n}"
-            },
-            "url": "https://api.newsletter2go.com/attributes",
-            "description": "<div class=\"alert alert-info\">Attribute names may only contain letters, numbers and underscores or as a REGEX `[0-9a-zA-Z_]+`</div>"
-          },
-          "response": [
-            {
-              "id": "c53239a8-ad25-45c1-abd6-140e4f82f3d4",
-              "name": "Create Attribute Text",
-              "originalRequest": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "type": "text",
-                    "name": "Content-Type",
-                    "value": "application/json",
-                    "disabled": false
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\r\n  \"list_ids\": [\r\n    \"{{list_id}}\"\r\n  ],\r\n  \"name\": \"Attribute_Text\",\r\n  \"type\": \"text\",\r\n  \"sub_type\": \"text\"\r\n}"
-                },
-                "url": "https://api.newsletter2go.com/attributes"
-              },
-              "status": "Created",
-              "code": 201,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Access-Control-Allow-Headers",
-                  "value": "authorization, Content-Type, x-from",
-                  "name": "Access-Control-Allow-Headers",
-                  "description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
-                },
-                {
-                  "key": "Access-Control-Allow-Methods",
-                  "value": "GET,HEAD,POST,PUT,PATCH,DELETE,OPTIONS,TRACE",
-                  "name": "Access-Control-Allow-Methods",
-                  "description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
-                },
-                {
-                  "key": "Access-Control-Allow-Origin",
-                  "value": "*",
-                  "name": "Access-Control-Allow-Origin",
-                  "description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
-                },
-                {
-                  "key": "Cache-Control",
-                  "value": "no-cache",
-                  "name": "Cache-Control",
-                  "description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
-                },
-                {
-                  "key": "Connection",
-                  "value": "keep-alive",
-                  "name": "Connection",
-                  "description": "Options that are desired for the connection"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json",
-                  "name": "Content-Type",
-                  "description": "The mime type of this content"
-                },
-                {
-                  "key": "Date",
-                  "value": "Fri, 03 Aug 2018 14:38:50 GMT",
-                  "name": "Date",
-                  "description": "The date and time that the message was sent"
-                },
-                {
-                  "key": "Server",
-                  "value": "nginx",
-                  "name": "Server",
-                  "description": "A name for the server"
-                },
-                {
-                  "key": "Strict-Transport-Security",
-                  "value": "max-age=31536000",
-                  "name": "Strict-Transport-Security",
-                  "description": "A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains."
-                },
-                {
-                  "key": "Transfer-Encoding",
-                  "value": "chunked",
-                  "name": "Transfer-Encoding",
-                  "description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
-                },
-                {
-                  "key": "X-Content-Type-Options",
-                  "value": "nosniff",
-                  "name": "X-Content-Type-Options",
-                  "description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
-                },
-                {
-                  "key": "X-Fpm",
-                  "value": "default",
-                  "name": "X-Fpm",
-                  "description": "Custom header"
-                },
-                {
-                  "key": "X-Frame-Options",
-                  "value": "SAMEORIGIN",
-                  "name": "X-Frame-Options",
-                  "description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
-                },
-                {
-                  "key": "X-Upstream",
-                  "value": "88.99.5.6:8200",
-                  "name": "X-Upstream",
-                  "description": "Custom header"
-                },
-                {
-                  "key": "X-XSS-Protection",
-                  "value": "1",
-                  "name": "X-XSS-Protection",
-                  "description": "Cross-site scripting (XSS) filter"
-                },
-                {
-                  "key": "expires",
-                  "value": "-1",
-                  "name": "expires",
-                  "description": "Gives the date/time after which the response is considered stale"
-                },
-                {
-                  "key": "pragma",
-                  "value": "no-cache",
-                  "name": "pragma",
-                  "description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\n    \"status\": 201,\n    \"info\": {\n        \"count\": 1\n    },\n    \"value\": [\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/yk7aroef\",\n            \"id\": \"yk7aroef\"\n        }\n    ]\n}"
-            },
-            {
-              "id": "ec1d53ac-7f09-41bc-b3a7-ede47e4f6ca6",
-              "name": "Create Attribute Number",
-              "originalRequest": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\r\n  \"list_ids\": [\r\n    \"{{list_id}}\"\r\n  ],\r\n  \"name\": \"Attribute_Number\",\r\n  \"type\": \"number\",\r\n  \"sub_type\": \"integer\"\r\n}"
-                },
-                "url": "https://api.newsletter2go.com/attributes"
-              },
-              "status": "Created",
-              "code": 201,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Access-Control-Allow-Headers",
-                  "value": "authorization, Content-Type, x-from",
-                  "name": "Access-Control-Allow-Headers",
-                  "description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
-                },
-                {
-                  "key": "Access-Control-Allow-Methods",
-                  "value": "GET,HEAD,POST,PUT,PATCH,DELETE,OPTIONS,TRACE",
-                  "name": "Access-Control-Allow-Methods",
-                  "description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
-                },
-                {
-                  "key": "Access-Control-Allow-Origin",
-                  "value": "*",
-                  "name": "Access-Control-Allow-Origin",
-                  "description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
-                },
-                {
-                  "key": "Cache-Control",
-                  "value": "no-cache",
-                  "name": "Cache-Control",
-                  "description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
-                },
-                {
-                  "key": "Connection",
-                  "value": "keep-alive",
-                  "name": "Connection",
-                  "description": "Options that are desired for the connection"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json",
-                  "name": "Content-Type",
-                  "description": "The mime type of this content"
-                },
-                {
-                  "key": "Date",
-                  "value": "Fri, 03 Aug 2018 14:38:50 GMT",
-                  "name": "Date",
-                  "description": "The date and time that the message was sent"
-                },
-                {
-                  "key": "Server",
-                  "value": "nginx",
-                  "name": "Server",
-                  "description": "A name for the server"
-                },
-                {
-                  "key": "Strict-Transport-Security",
-                  "value": "max-age=31536000",
-                  "name": "Strict-Transport-Security",
-                  "description": "A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains."
-                },
-                {
-                  "key": "Transfer-Encoding",
-                  "value": "chunked",
-                  "name": "Transfer-Encoding",
-                  "description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
-                },
-                {
-                  "key": "X-Content-Type-Options",
-                  "value": "nosniff",
-                  "name": "X-Content-Type-Options",
-                  "description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
-                },
-                {
-                  "key": "X-Fpm",
-                  "value": "default",
-                  "name": "X-Fpm",
-                  "description": "Custom header"
-                },
-                {
-                  "key": "X-Frame-Options",
-                  "value": "SAMEORIGIN",
-                  "name": "X-Frame-Options",
-                  "description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
-                },
-                {
-                  "key": "X-Upstream",
-                  "value": "88.99.5.6:8200",
-                  "name": "X-Upstream",
-                  "description": "Custom header"
-                },
-                {
-                  "key": "X-XSS-Protection",
-                  "value": "1",
-                  "name": "X-XSS-Protection",
-                  "description": "Cross-site scripting (XSS) filter"
-                },
-                {
-                  "key": "expires",
-                  "value": "-1",
-                  "name": "expires",
-                  "description": "Gives the date/time after which the response is considered stale"
-                },
-                {
-                  "key": "pragma",
-                  "value": "no-cache",
-                  "name": "pragma",
-                  "description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\n    \"status\": 201,\n    \"info\": {\n        \"count\": 1\n    },\n    \"value\": [\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/yk7aroef\",\n            \"id\": \"yk7aroef\"\n        }\n    ]\n}"
-            },
-            {
-              "id": "4069b0ca-ee38-4512-96ba-2a7d07c1805c",
-              "name": "Create Attribute - Duplicate Attribute Name",
-              "originalRequest": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\r\n  \"list_ids\": [\r\n    \"{{list_id}}\"\r\n  ],\r\n    \"name\": \"New_Attribute\",\r\n    \"display\": \"all\",\r\n    \"type\": \"text\",\r\n    \"sub_type\": \"text\",\r\n    \"is_enum\": false,\r\n    \"is_public\": false,\r\n    \"is_multiselect\": false,\r\n    \"html_element_type\": \"input\",\r\n    \"is_global\": false,\r\n    \"default_value\": \"\"\r\n}"
-                },
-                "url": "https://api.newsletter2go.com/attributes"
-              },
-              "status": "Bad Request",
-              "code": 400,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Access-Control-Allow-Headers",
-                  "value": "authorization, Content-Type, x-from",
-                  "name": "Access-Control-Allow-Headers",
-                  "description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
-                },
-                {
-                  "key": "Access-Control-Allow-Methods",
-                  "value": "GET,HEAD,POST,PUT,PATCH,DELETE,OPTIONS,TRACE",
-                  "name": "Access-Control-Allow-Methods",
-                  "description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
-                },
-                {
-                  "key": "Access-Control-Allow-Origin",
-                  "value": "*",
-                  "name": "Access-Control-Allow-Origin",
-                  "description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
-                },
-                {
-                  "key": "Cache-Control",
-                  "value": "no-cache",
-                  "name": "Cache-Control",
-                  "description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
-                },
-                {
-                  "key": "Connection",
-                  "value": "keep-alive",
-                  "name": "Connection",
-                  "description": "Options that are desired for the connection"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json",
-                  "name": "Content-Type",
-                  "description": "The mime type of this content"
-                },
-                {
-                  "key": "Date",
-                  "value": "Tue, 07 Aug 2018 06:52:27 GMT",
-                  "name": "Date",
-                  "description": "The date and time that the message was sent"
-                },
-                {
-                  "key": "Server",
-                  "value": "nginx",
-                  "name": "Server",
-                  "description": "A name for the server"
-                },
-                {
-                  "key": "Strict-Transport-Security",
-                  "value": "max-age=31536000",
-                  "name": "Strict-Transport-Security",
-                  "description": "A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains."
-                },
-                {
-                  "key": "Transfer-Encoding",
-                  "value": "chunked",
-                  "name": "Transfer-Encoding",
-                  "description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
-                },
-                {
-                  "key": "X-Content-Type-Options",
-                  "value": "nosniff",
-                  "name": "X-Content-Type-Options",
-                  "description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
-                },
-                {
-                  "key": "X-Fpm",
-                  "value": "default",
-                  "name": "X-Fpm",
-                  "description": "Custom header"
-                },
-                {
-                  "key": "X-Frame-Options",
-                  "value": "SAMEORIGIN",
-                  "name": "X-Frame-Options",
-                  "description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
-                },
-                {
-                  "key": "X-Upstream",
-                  "value": "195.201.171.185:8200",
-                  "name": "X-Upstream",
-                  "description": "Custom header"
-                },
-                {
-                  "key": "X-XSS-Protection",
-                  "value": "1",
-                  "name": "X-XSS-Protection",
-                  "description": "Cross-site scripting (XSS) filter"
-                },
-                {
-                  "key": "expires",
-                  "value": "-1",
-                  "name": "expires",
-                  "description": "Gives the date/time after which the response is considered stale"
-                },
-                {
-                  "key": "pragma",
-                  "value": "no-cache",
-                  "name": "pragma",
-                  "description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\n    \"status\": 400,\n    \"code\": 1062,\n    \"errorMessage\": \"Duplicate value \\\"New_Attribute\\\" for column \\\"name\\\"\"\n}"
-            },
-            {
-              "id": "4ac5963b-5a2b-4f8f-b51d-f535a2bc1f5d",
-              "name": "Create Attribute - Invalid Name",
-              "originalRequest": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json",
-                    "disabled": false
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\r\n  \"list_ids\": [\r\n    \"{{list_id}}\"\r\n  ],\r\n    \"name\": \"New Attribute\",\r\n    \"display\": \"all\",\r\n    \"type\": \"text\",\r\n    \"sub_type\": \"text\",\r\n    \"is_enum\": false,\r\n    \"is_public\": false,\r\n    \"is_multiselect\": false,\r\n    \"html_element_type\": \"input\",\r\n    \"is_global\": false,\r\n    \"default_value\": \"\"\r\n}"
-                },
-                "url": "https://api.newsletter2go.com/attributes"
-              },
-              "status": "Unprocessable Entity",
-              "code": 422,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Access-Control-Allow-Headers",
-                  "value": "authorization, Content-Type, x-from",
-                  "name": "Access-Control-Allow-Headers",
-                  "description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
-                },
-                {
-                  "key": "Access-Control-Allow-Methods",
-                  "value": "GET,HEAD,POST,PUT,PATCH,DELETE,OPTIONS,TRACE",
-                  "name": "Access-Control-Allow-Methods",
-                  "description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
-                },
-                {
-                  "key": "Access-Control-Allow-Origin",
-                  "value": "*",
-                  "name": "Access-Control-Allow-Origin",
-                  "description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
-                },
-                {
-                  "key": "Cache-Control",
-                  "value": "no-cache",
-                  "name": "Cache-Control",
-                  "description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
-                },
-                {
-                  "key": "Connection",
-                  "value": "keep-alive",
-                  "name": "Connection",
-                  "description": "Options that are desired for the connection"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json",
-                  "name": "Content-Type",
-                  "description": "The mime type of this content"
-                },
-                {
-                  "key": "Date",
-                  "value": "Tue, 07 Aug 2018 06:57:43 GMT",
-                  "name": "Date",
-                  "description": "The date and time that the message was sent"
-                },
-                {
-                  "key": "Server",
-                  "value": "nginx",
-                  "name": "Server",
-                  "description": "A name for the server"
-                },
-                {
-                  "key": "Strict-Transport-Security",
-                  "value": "max-age=31536000",
-                  "name": "Strict-Transport-Security",
-                  "description": "A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains."
-                },
-                {
-                  "key": "Transfer-Encoding",
-                  "value": "chunked",
-                  "name": "Transfer-Encoding",
-                  "description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
-                },
-                {
-                  "key": "X-Content-Type-Options",
-                  "value": "nosniff",
-                  "name": "X-Content-Type-Options",
-                  "description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
-                },
-                {
-                  "key": "X-Fpm",
-                  "value": "default",
-                  "name": "X-Fpm",
-                  "description": "Custom header"
-                },
-                {
-                  "key": "X-Frame-Options",
-                  "value": "SAMEORIGIN",
-                  "name": "X-Frame-Options",
-                  "description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
-                },
-                {
-                  "key": "X-Upstream",
-                  "value": "195.201.175.58:8200",
-                  "name": "X-Upstream",
-                  "description": "Custom header"
-                },
-                {
-                  "key": "X-XSS-Protection",
-                  "value": "1",
-                  "name": "X-XSS-Protection",
-                  "description": "Cross-site scripting (XSS) filter"
-                },
-                {
-                  "key": "expires",
-                  "value": "-1",
-                  "name": "expires",
-                  "description": "Gives the date/time after which the response is considered stale"
-                },
-                {
-                  "key": "pragma",
-                  "value": "no-cache",
-                  "name": "pragma",
-                  "description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\n    \"status\": 422,\n    \"code\": 10003,\n    \"errorMessage\": \"Error during input validation\",\n    \"moreInfo\": {\n        \"errors\": [\n            {\n                \"code\": 10003,\n                \"fieldName\": \"name\",\n                \"message\": \"given name (New Attribute) for attribute is not allowed. Only Characters, numbers and _ are supported\"\n            }\n        ]\n    }\n}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "23e37d1d-f8aa-48a1-9093-b9f29195085d",
-          "name": "Update Attribute",
-          "request": {
-            "method": "PATCH",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"list_ids\": [\r\n    \"{{list_id}}\"\r\n  ],\r\n  \"name\": \"New_name\"\r\n}"
-            },
-            "url": "https://api.newsletter2go.com/attributes/{{attribute_id}}"
-          },
-          "response": [
-            {
-              "id": "220616d5-c137-476d-8817-dc7c5c414a55",
-              "name": "Update Attribute",
-              "originalRequest": {
-                "method": "PATCH",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json",
-                    "disabled": false
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\r\n  \"list_ids\": [\r\n    \"{{list_id}}\"\r\n  ],\r\n  \"name\": \"New_name\"\r\n}"
-                },
-                "url": "https://api.newsletter2go.com/attributes/{{attribute_id}}"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Access-Control-Allow-Headers",
-                  "value": "authorization, Content-Type, x-from",
-                  "name": "Access-Control-Allow-Headers",
-                  "description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
-                },
-                {
-                  "key": "Access-Control-Allow-Methods",
-                  "value": "GET,HEAD,POST,PUT,PATCH,DELETE,OPTIONS,TRACE",
-                  "name": "Access-Control-Allow-Methods",
-                  "description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
-                },
-                {
-                  "key": "Access-Control-Allow-Origin",
-                  "value": "*",
-                  "name": "Access-Control-Allow-Origin",
-                  "description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
-                },
-                {
-                  "key": "Cache-Control",
-                  "value": "no-cache",
-                  "name": "Cache-Control",
-                  "description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
-                },
-                {
-                  "key": "Connection",
-                  "value": "keep-alive",
-                  "name": "Connection",
-                  "description": "Options that are desired for the connection"
-                },
-                {
-                  "key": "Content-Encoding",
-                  "value": "gzip",
-                  "name": "Content-Encoding",
-                  "description": "The type of encoding used on the data."
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json",
-                  "name": "Content-Type",
-                  "description": "The mime type of this content"
-                },
-                {
-                  "key": "Date",
-                  "value": "Tue, 07 Aug 2018 06:59:04 GMT",
-                  "name": "Date",
-                  "description": "The date and time that the message was sent"
-                },
-                {
-                  "key": "Server",
-                  "value": "nginx",
-                  "name": "Server",
-                  "description": "A name for the server"
-                },
-                {
-                  "key": "Strict-Transport-Security",
-                  "value": "max-age=31536000",
-                  "name": "Strict-Transport-Security",
-                  "description": "A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains."
-                },
-                {
-                  "key": "Transfer-Encoding",
-                  "value": "chunked",
-                  "name": "Transfer-Encoding",
-                  "description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
-                },
-                {
-                  "key": "Vary",
-                  "value": "Accept-Encoding",
-                  "name": "Vary",
-                  "description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
-                },
-                {
-                  "key": "Vary",
-                  "value": "Accept-Encoding",
-                  "name": "Vary",
-                  "description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
-                },
-                {
-                  "key": "X-Content-Type-Options",
-                  "value": "nosniff",
-                  "name": "X-Content-Type-Options",
-                  "description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
-                },
-                {
-                  "key": "X-Fpm",
-                  "value": "default",
-                  "name": "X-Fpm",
-                  "description": "Custom header"
-                },
-                {
-                  "key": "X-Frame-Options",
-                  "value": "SAMEORIGIN",
-                  "name": "X-Frame-Options",
-                  "description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
-                },
-                {
-                  "key": "X-Upstream",
-                  "value": "195.201.175.58:8200",
-                  "name": "X-Upstream",
-                  "description": "Custom header"
-                },
-                {
-                  "key": "X-XSS-Protection",
-                  "value": "1",
-                  "name": "X-XSS-Protection",
-                  "description": "Cross-site scripting (XSS) filter"
-                },
-                {
-                  "key": "expires",
-                  "value": "-1",
-                  "name": "expires",
-                  "description": "Gives the date/time after which the response is considered stale"
-                },
-                {
-                  "key": "pragma",
-                  "value": "no-cache",
-                  "name": "pragma",
-                  "description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"count\": 1\n    },\n    \"value\": []\n}"
-            }
-          ]
         }
       ]
     },
