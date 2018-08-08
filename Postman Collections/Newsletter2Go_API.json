@@ -3692,7 +3692,7 @@
         },
         {
           "_postman_id": "75083638-39a1-4cdf-a307-4e7708e8da76",
-          "name": "Get Mailings from List Copy",
+          "name": "Get one Mailings from List",
           "request": {
             "method": "GET",
             "header": [],
