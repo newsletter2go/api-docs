@@ -3697,8 +3697,7 @@
             "method": "GET",
             "header": [],
             "body": {},
-            "url": "https://api.newsletter2go.com/lists/{{list_id}}/newsletters",
-            "description": "useful for automated mailings that run every day"
+            "url": "https://api.newsletter2go.com/lists/{{list_id}}/newsletters"
           },
           "response": [
             {
