@@ -3697,7 +3697,7 @@
             "method": "GET",
             "header": [],
             "body": {},
-            "url": "https://api.newsletter2go.com/lists/{{list_id}}/newsletters"
+            "url": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}"
           },
           "response": [
             {
