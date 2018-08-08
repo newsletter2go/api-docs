@@ -2816,10 +2816,11 @@
             {
               "listen": "test",
               "script": {
-                "id": "71c3fb14-6344-4e1a-b4b6-b91d1b4abffd",
+                "id": "d8f17b5c-7fb8-4515-9be6-b600c5b6f306",
                 "type": "text/javascript",
                 "exec": [
-                  ""
+                  "var jsonData = JSON.parse(responseBody);",
+                  "postman.setEnvironmentVariable(\"file_id\", jsonData.file);"
                 ]
               }
             }
