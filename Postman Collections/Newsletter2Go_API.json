@@ -4309,7 +4309,7 @@
         },
         {
           "_postman_id": "d39fb18d-bf1f-4255-be78-36f327023b0a",
-          "name": "Send Mailing Copy",
+          "name": "Send Transactioinal Mailing",
           "request": {
             "method": "POST",
             "header": [
