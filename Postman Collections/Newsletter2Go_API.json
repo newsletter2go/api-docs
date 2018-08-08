@@ -3511,7 +3511,7 @@
     {
       "_postman_id": "22cf6ae6-ae22-4cc6-8160-cded15a94fbb",
       "name": "Forms",
-      "description": "",
+      "description": "no need for authorization. public endpoints.",
       "item": [
         {
           "_postman_id": "4daba842-cc75-45e1-a822-05334f87ebed",
