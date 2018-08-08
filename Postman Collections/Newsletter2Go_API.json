@@ -4171,7 +4171,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n\t\"scheduled\": \"2018-08-08T17:02:12+0200\",\r\n\t\"group_ids\": [\r\n\t\t\"{{group_id}}\"\r\n\t],\r\n\t\"recipient_ids\": [\r\n\t\t\"{{recipient_id}}\"\r\n\t]\r\n}"
+              "raw": "{\r\n  \"scheduled\": \"2018-07-27T16:58:12+0200\",\r\n  \"group_ids\": [],\r\n  \"recipient_ids\": [\r\n    \"{{recipient_id}}\"\r\n  ]\r\n}"
             },
             "url": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/send"
           },
