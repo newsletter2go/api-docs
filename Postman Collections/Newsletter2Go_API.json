@@ -3688,7 +3688,7 @@
         },
         {
           "_postman_id": "b6908876-23a9-4edc-a15f-edf5d9337085",
-          "name": "Create empty Mailing",
+          "name": "Create Mailing",
           "request": {
             "method": "POST",
             "header": [
@@ -5223,70 +5223,70 @@
   ],
   "variable": [
     {
-      "id": "1978a653-9c06-48d7-810c-24d86de2d725",
+      "id": "2d2a0353-832b-46e1-be89-0dbb7565d8b2",
       "key": "list_id",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "b911eaf4-5829-4967-915d-557af1f326cb",
+      "id": "d794541d-b2dd-4dd2-8367-96ae3410a977",
       "key": "attribute_id",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "f4ba0d13-030c-476e-84f3-ea63e2e618f0",
+      "id": "b8ec82f0-0386-4446-8b49-a971fa3bdba5",
       "key": "attribute_name",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "aacb5b33-d78c-451d-8494-dd4dc2798fe9",
+      "id": "bc20455c-1055-4f9e-b4df-027c328524cb",
       "key": "company_id",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "02543702-d52e-49f6-ba76-1d4ca46a7f71",
+      "id": "8dea3a6f-68ab-41ee-87f2-302a3d560eab",
       "key": "user_id",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "fa7bc792-a680-4e08-89fe-cdaa926d4b2c",
+      "id": "ddb0744a-efc5-4801-8479-1e5ab40dd3af",
       "key": "recipient_id",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "ff5a64a4-de5f-4695-bf78-b25457fed8c9",
+      "id": "76be7944-8fc5-4b08-9ea1-e2ba12aed44a",
       "key": "group_id",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "678d5a6f-9449-4a9b-9dd4-ccbf7254cee8",
+      "id": "b27932ff-d8dc-457d-a03b-c49bd98f93ce",
       "key": "file_id",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "54b6561e-1d9a-42a0-b399-782d15c864a6",
+      "id": "fe51f13d-605a-4802-b218-b2005235fce6",
       "key": "import_id",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "83a18ea2-777e-4609-a3af-1c5863beacc5",
+      "id": "24b3fe1c-8719-41c0-9f05-d0af6cd90dca",
       "key": "newsletter_id",
       "value": "",
       "type": "string",
