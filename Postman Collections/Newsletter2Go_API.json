@@ -4160,7 +4160,7 @@
         },
         {
           "_postman_id": "1b5d2eaa-7d3b-4e17-ad6f-c199c1e5d3e8",
-          "name": "Create Mailing Copy",
+          "name": "Send Mailing",
           "request": {
             "method": "POST",
             "header": [
