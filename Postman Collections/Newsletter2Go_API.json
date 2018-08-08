@@ -3865,8 +3865,16 @@
           "name": "Update one Mailings",
           "request": {
             "method": "PATCH",
-            "header": [],
-            "body": {},
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"company_id\": \"3kf9rpeb\",\n    \"list_id\": \"abcdef\",\n    \"modified_at\": \"2018-07-27T08:47:12+0000\",\n    \"created_at\": \"2018-07-27T08:46:15+0000\",\n    \"type\": \"default\",\n    \"sub_type\": \"default\",\n    \"name\": \"Newsletter 2018-07-18T13:39:28+02:00\",\n    \"state\": \"sent\",\n    \"is_deleted\": false,\n    \"is_disabled\": false,\n    \"is_duplicatable\": true,\n    \"is_approved\": false,\n    \"is_archived\": false,\n    \"is_anonymized\": false,\n    \"ip_class\": 0,\n    \"progress_count\": 1,\n    \"has_open_tracking\": true,\n    \"has_click_tracking\": true,\n    \"has_conversion_tracking\": true,\n    \"has_google_analytics_tracking\": false,\n    \"has_econda_tracking\": false,\n    \"has_custom_tracking\": false,\n    \"statistic_last_sent\": \"2018-07-27T08:47:03+0000\",\n    \"statistic_mail_count\": 1,\n    \"statistic_hard_bounces\": 0,\n    \"statistic_soft_bounces\": 0,\n    \"statistic_spam_bounces\": 0,\n    \"statistic_opens\": 1,\n    \"statistic_unique_opens\": 1,\n    \"statistic_clicks\": 0,\n    \"statistic_unique_clicks\": 0,\n    \"statistic_conversions\": 0,\n    \"statistic_conversions_sum\": 0,\n    \"statistic_unsubscribes\": 0,\n    \"statistic_complaints\": 0\n}"
+            },
             "url": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}"
           },
           "response": [
