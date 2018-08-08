@@ -3520,7 +3520,7 @@
             "method": "GET",
             "header": [],
             "body": {},
-            "url": ""
+            "url": "https://api.newsletter2go.com/forms/generate/{{form_id}}"
           },
           "response": []
         },
@@ -3528,10 +3528,18 @@
           "_postman_id": "46cc4c57-dc6e-440c-83ec-f214f9d24a1a",
           "name": "Get Form Copy",
           "request": {
-            "method": "GET",
-            "header": [],
-            "body": {},
-            "url": ""
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"recipient\": {\r\r            \"email\": \"s+form@newsletter2go.com\"\r\r        }\r\t\r}"
+            },
+            "url": "https://api.newsletter2go.com/forms/submit/{{form_id}}"
           },
           "response": []
         }
