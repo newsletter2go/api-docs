@@ -3661,6 +3661,12 @@
           "_postman_id": "d45a8153-1081-4ee6-a779-6a245d484746",
           "name": "Get Mailings from List",
           "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "token": "{{access_token}}"
+              }
+            },
             "method": "GET",
             "header": [],
             "body": {},
