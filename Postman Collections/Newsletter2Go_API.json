@@ -4320,7 +4320,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"contexts\": [\r\n  \t\t{\r\n  \t\t\"recipient\": {\r\n  \t\t\t\"email\": \"s@newsletter2go.com\" }\r\n  \t\t}\r\n  \t]\r\n}"
+              "raw": "{\r\n  \"contexts\": [\r\n  \t\t{\r\n  \t\t\"recipient\": {\r\n  \t\t\t\"email\": \"email@example.org\" }\r\n  \t\t}\r\n  \t]\r\n}"
             },
             "url": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/sendtest"
           },
