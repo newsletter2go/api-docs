@@ -850,233 +850,6 @@
       "description": "",
       "item": [
         {
-          "_postman_id": "21056689-a283-4b42-be23-7e23b4b9026e",
-          "name": "Segments",
-          "description": "",
-          "item": [
-            {
-              "_postman_id": "170ef0ae-10c5-4bc1-a658-750dad70c452",
-              "name": "Create Segment",
-              "request": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n\t\"list_id\": \"{{list_id}}\",\n\t\"name\": \"New regular Segment\",\n\t\"is_dynamic\": false\n}"
-                },
-                "url": "https://api.newsletter2go.com/groups"
-              },
-              "response": []
-            },
-            {
-              "_postman_id": "9e4c105f-23de-4fc0-8ebd-da2a4e8c1998",
-              "name": "Create Auto-Update Segment",
-              "request": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n\t\"list_id\": \"{{list_id}}\",\n\t\"name\": \"New group Segment like example\",\n\t\"filter\": \"email=LIKE=\\\"%example%\\\"\",\n\t\"is_dynamic\": true\n}"
-                },
-                "url": "https://api.newsletter2go.com/groups",
-                "description": "explain filter, explain is_dynamic"
-              },
-              "response": []
-            },
-            {
-              "_postman_id": "dc96fd1b-9664-4bf9-8f03-891216999de1",
-              "name": "Update Segment",
-              "request": {
-                "method": "PATCH",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n\t\"name\": \"A new Segment Name\"\n}"
-                },
-                "url": "https://api.newsletter2go.com/groups/{{group_id}}"
-              },
-              "response": []
-            },
-            {
-              "_postman_id": "c28c7c5b-f3d0-4d35-be6e-eacd6b83495c",
-              "name": "Delete Segment",
-              "request": {
-                "method": "DELETE",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "https://api.newsletter2go.com/groups/{{group_id}}"
-              },
-              "response": []
-            },
-            {
-              "_postman_id": "d9e629cc-aa41-45b3-83a9-f99756f606a3",
-              "name": "Delete Recipient from Segment",
-              "request": {
-                "method": "DELETE",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": {
-                  "raw": "https://api.newsletter2go.com/lists/{{list_id}}/groups/{{group_id}}/recipients?_filter=email%3DLIKE%3D%22%example%25%22",
-                  "protocol": "https",
-                  "host": [
-                    "api",
-                    "newsletter2go",
-                    "com"
-                  ],
-                  "path": [
-                    "lists",
-                    "{{list_id}}",
-                    "groups",
-                    "{{group_id}}",
-                    "recipients"
-                  ],
-                  "query": [
-                    {
-                      "key": "_filter",
-                      "value": "email%3DLIKE%3D%22%example%25%22",
-                      "equals": true
-                    }
-                  ]
-                },
-                "description": "remove all Recipients from given group. Pay attention to the filter, if you forget to submit it, all recipients are getting removed from the group!\nwill only work for regular group"
-              },
-              "response": []
-            },
-            {
-              "_postman_id": "e2b73d08-b635-4028-8397-9687f32e2be2",
-              "name": "Add one Recipient to Segment",
-              "request": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "https://api.newsletter2go.com/lists/{{list_id}}/groups/{{group_id}}/recipients/{{recipient_id}}",
-                "description": "will only work for regular group"
-              },
-              "response": []
-            },
-            {
-              "_postman_id": "35077232-fdc7-4a30-8ef2-a45f5341fb07",
-              "name": "Add multiple Recipients to Segment",
-              "request": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": {
-                  "raw": "https://api.newsletter2go.com/lists/{{list_id}}/groups/{{group_id}}/recipients?_filter=email%3DLIKE%3D%22%example%25%22",
-                  "protocol": "https",
-                  "host": [
-                    "api",
-                    "newsletter2go",
-                    "com"
-                  ],
-                  "path": [
-                    "lists",
-                    "{{list_id}}",
-                    "groups",
-                    "{{group_id}}",
-                    "recipients"
-                  ],
-                  "query": [
-                    {
-                      "key": "_filter",
-                      "value": "email%3DLIKE%3D%22%example%25%22",
-                      "equals": true
-                    }
-                  ]
-                },
-                "description": "add all Recipients to the given group. Pay attention to the filter, if you forget to submit it, all recipients of the current list are getting added to the group!\nonly works with regular groups"
-              },
-              "response": []
-            },
-            {
-              "_postman_id": "0f795e20-e225-4633-81cb-8c0165dea3e3",
-              "name": "Get Recipient from Segment",
-              "request": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "https://api.newsletter2go.com/lists/{{list_id}}/groups/{{group_id}}/recipients"
-              },
-              "response": []
-            },
-            {
-              "_postman_id": "bef8c5b0-c961-41d8-9a77-2d6eb0ea526e",
-              "name": "Get Segments in List",
-              "request": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "https://api.newsletter2go.com/lists/{{list_id}}/groups"
-              },
-              "response": []
-            }
-          ],
-          "_postman_isSubFolder": true
-        },
-        {
           "_postman_id": "c97c941a-267c-4afb-80e9-d45b0572b19d",
           "name": "Get Recipients",
           "request": {
@@ -5939,6 +5712,232 @@
               "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"count\": 0\n    },\n    \"value\": []\n}"
             }
           ]
+        }
+      ]
+    },
+    {
+      "_postman_id": "21056689-a283-4b42-be23-7e23b4b9026e",
+      "name": "Segments",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "170ef0ae-10c5-4bc1-a658-750dad70c452",
+          "name": "Create Segment",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"list_id\": \"{{list_id}}\",\n\t\"name\": \"New regular Segment\",\n\t\"is_dynamic\": false\n}"
+            },
+            "url": "https://api.newsletter2go.com/groups"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "9e4c105f-23de-4fc0-8ebd-da2a4e8c1998",
+          "name": "Create Auto-Update Segment",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"list_id\": \"{{list_id}}\",\n\t\"name\": \"New group Segment like example\",\n\t\"filter\": \"email=LIKE=\\\"%example%\\\"\",\n\t\"is_dynamic\": true\n}"
+            },
+            "url": "https://api.newsletter2go.com/groups",
+            "description": "explain filter, explain is_dynamic"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "dc96fd1b-9664-4bf9-8f03-891216999de1",
+          "name": "Update Segment",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"name\": \"A new Segment Name\"\n}"
+            },
+            "url": "https://api.newsletter2go.com/groups/{{group_id}}"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "c28c7c5b-f3d0-4d35-be6e-eacd6b83495c",
+          "name": "Delete Segment",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://api.newsletter2go.com/groups/{{group_id}}"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "d9e629cc-aa41-45b3-83a9-f99756f606a3",
+          "name": "Delete Recipient from Segment",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://api.newsletter2go.com/lists/{{list_id}}/groups/{{group_id}}/recipients?_filter=email%3DLIKE%3D%22%example%25%22",
+              "protocol": "https",
+              "host": [
+                "api",
+                "newsletter2go",
+                "com"
+              ],
+              "path": [
+                "lists",
+                "{{list_id}}",
+                "groups",
+                "{{group_id}}",
+                "recipients"
+              ],
+              "query": [
+                {
+                  "key": "_filter",
+                  "value": "email%3DLIKE%3D%22%example%25%22",
+                  "equals": true
+                }
+              ]
+            },
+            "description": "remove all Recipients from given group. Pay attention to the filter, if you forget to submit it, all recipients are getting removed from the group!\nwill only work for regular group"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "e2b73d08-b635-4028-8397-9687f32e2be2",
+          "name": "Add one Recipient to Segment",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://api.newsletter2go.com/lists/{{list_id}}/groups/{{group_id}}/recipients/{{recipient_id}}",
+            "description": "will only work for regular group"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "35077232-fdc7-4a30-8ef2-a45f5341fb07",
+          "name": "Add multiple Recipients to Segment",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://api.newsletter2go.com/lists/{{list_id}}/groups/{{group_id}}/recipients?_filter=email%3DLIKE%3D%22%example%25%22",
+              "protocol": "https",
+              "host": [
+                "api",
+                "newsletter2go",
+                "com"
+              ],
+              "path": [
+                "lists",
+                "{{list_id}}",
+                "groups",
+                "{{group_id}}",
+                "recipients"
+              ],
+              "query": [
+                {
+                  "key": "_filter",
+                  "value": "email%3DLIKE%3D%22%example%25%22",
+                  "equals": true
+                }
+              ]
+            },
+            "description": "add all Recipients to the given group. Pay attention to the filter, if you forget to submit it, all recipients of the current list are getting added to the group!\nonly works with regular groups"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "0f795e20-e225-4633-81cb-8c0165dea3e3",
+          "name": "Get Recipient from Segment",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://api.newsletter2go.com/lists/{{list_id}}/groups/{{group_id}}/recipients"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "bef8c5b0-c961-41d8-9a77-2d6eb0ea526e",
+          "name": "Get Segments in List",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://api.newsletter2go.com/lists/{{list_id}}/groups"
+          },
+          "response": []
         }
       ]
     }
