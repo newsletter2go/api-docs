@@ -3702,7 +3702,7 @@
               "raw": "{\r\n  \"type\": \"default\",\r\n  \"name\": \"New Mailing Name\",\r\n  \"has_open_tracking\": true,\r\n  \"has_click_tracking\": true,\r\n  \"has_conversion_tracking\": true,\r\n  \"subject\": \"Subject\",\r\n  \"preheader\": \"Pre header\",\r\n  \"header_from_email\": \"from@example.org\",\r\n  \"header_from_name\": \"From Name\",\r\n  \"header_reply_email\": \"reply@example.org\",\r\n  \"header_reply_name\": \"Reply Name\"\r\n}"
             },
             "url": "https://api.newsletter2go.com/lists/{{list_id}}/newsletters",
-            "description": "Defaults will be used from the list\n\njson should be documented in a separate document for the Newsletter2Go Markup Language (NML)"
+            "description": "If your list has default values for `header_from_email`, `header_from_name`, `header_reply_email` and/or `header_reply_name`, those will be used in case you don't pass them in this call.\n\njson should be documented in a separate document for the Newsletter2Go Markup Language (NML)"
           },
           "response": [
             {
@@ -5223,70 +5223,70 @@
   ],
   "variable": [
     {
-      "id": "27f7e548-16d3-4bda-8396-72335203ffe5",
+      "id": "0eb8c226-339c-4455-a9d3-c460f4b030b6",
       "key": "list_id",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "2655464f-7212-4de7-9a25-a970fa08fb5d",
+      "id": "95602db5-604d-420f-8d19-6db55519180d",
       "key": "attribute_id",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "a63c55d5-ef39-46d3-8a53-4cf8782018f0",
+      "id": "682b641e-3680-4cc8-aa0d-5e952a3d3aa3",
       "key": "attribute_name",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "9464af75-36e3-4488-af81-840cbf16b763",
+      "id": "38950184-5a37-4b7e-9ffe-1d4b9d7e8d33",
       "key": "company_id",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "cb264a11-9147-4b52-9396-0711d9c3f672",
+      "id": "a0952e83-dd62-43a2-ab59-0590f72665e8",
       "key": "user_id",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "26402108-fc89-4324-a3e5-2ac419bcf03e",
+      "id": "d0f555a6-50a9-4cae-926c-5faf039db424",
       "key": "recipient_id",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "dd77a6e8-40db-458a-b24b-4c91978bb88c",
+      "id": "ee53f407-af70-43a6-a3d3-000751ca6c5f",
       "key": "group_id",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "0549ccb7-61b0-4661-9af0-0245449bfc3d",
+      "id": "cd9580c9-6f94-4c27-9e9a-4da18ec24a78",
       "key": "file_id",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "0a9ef757-ad9a-4ac7-b9da-aca47550a3ff",
+      "id": "c03e6a07-7987-46dc-a5d2-a97a5b857515",
       "key": "import_id",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "553a5b89-5b9c-485b-a1e9-f87a0f52f826",
+      "id": "57d5deb4-b16c-4980-b183-4215bb700b66",
       "key": "newsletter_id",
       "value": "",
       "type": "string",
