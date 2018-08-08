@@ -3019,11 +3019,11 @@
             {
               "listen": "test",
               "script": {
-                "id": "57495d69-ab94-4ff3-a7c6-42943de6458f",
+                "id": "eaf63b35-cc62-4196-a26b-b0f4df58c6b7",
                 "type": "text/javascript",
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"import_id\", jsonData.id);"
+                  "postman.setEnvironmentVariable(\"import_id\", jsonData.value.id);"
                 ]
               }
             }
