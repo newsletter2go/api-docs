@@ -199,6 +199,134 @@
               "cookie": [],
               "responseTime": null,
               "body": "{\"access_token\":\"__eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfXy5haWQiOjgzLCJfXy5lbnZpcm9ubWVudCI6InByb2R1Y3Rpb24iLCJfXy5leHBpcmVzQXQiOjE1MzM1NzI1NjYsIl9fLnNjb3BlIjoiIiwiX18uY2lkIjoiMTEzOTFfbUE2VkdQX1F0UFFwU19ac0t4TkVxVF9hUUhzbzNVRnduIiwiX18ucmQxIjo4NDQzLCJfXy5yZDIiOjg0MzU0fQ.etASDQloWfALGxwNdr9Ck8cHDO2nMbmz4Rb6c33ArfQ\",\"expires_in\":7200,\"token_type\":\"bearer\",\"scope\":null,\"refresh_token\":\"__eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfXy5haWQiOjgzLCJfXy5lbnZpcm9ubWVudCI6InByb2R1Y3Rpb24iLCJfXy5leHBpcmVzQXQiOjE1MzYxNTczNjYsIl9fLnNjb3BlIjoiIiwiX18uY2lkIjoiMTEzOTFfbUE2VkdQX1F0UFFwU19ac0t4TkVxVF9hUUhzbzNVRnduIiwiX18ucmQxIjo4ODQ3NSwiX18ucmQyIjo3OTEwMywiX18ucmVmcmVzaCI6dHJ1ZX0.ogAr7rvly6IHeBHocZkLaJ4Q-Hh1ZWrQFdtFSdpuIDg\",\"account_id\":\"awtfn5jn\",\"type\":\"user\"}"
+            },
+            {
+              "id": "8f5dd3c9-0e25-4fae-a42d-0b4ded5d44ff",
+              "name": "OAuth Login failed",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "disabled": false
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Basic {{auth_key}}",
+                    "disabled": false
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"username\": \"{{username}}\",\r\n  \"password\": \"{{password}}\",\r\n  \"grant_type\": \"https://nl2go.com/jwt\"\r\n}"
+                },
+                "url": "https://api.newsletter2go.com/oauth/v2/token"
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Access-Control-Allow-Headers",
+                  "value": "authorization, Content-Type, x-from",
+                  "name": "Access-Control-Allow-Headers",
+                  "description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+                },
+                {
+                  "key": "Access-Control-Allow-Methods",
+                  "value": "GET,HEAD,POST,PUT,PATCH,DELETE,OPTIONS,TRACE",
+                  "name": "Access-Control-Allow-Methods",
+                  "description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*",
+                  "name": "Access-Control-Allow-Origin",
+                  "description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache",
+                  "name": "Cache-Control",
+                  "description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive",
+                  "name": "Connection",
+                  "description": "Options that are desired for the connection"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 09 Aug 2018 06:23:44 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache",
+                  "name": "Pragma",
+                  "description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+                },
+                {
+                  "key": "Server",
+                  "value": "nginx",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000",
+                  "name": "Strict-Transport-Security",
+                  "description": "A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains."
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked",
+                  "name": "Transfer-Encoding",
+                  "description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff",
+                  "name": "X-Content-Type-Options",
+                  "description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+                },
+                {
+                  "key": "X-Fpm",
+                  "value": "default",
+                  "name": "X-Fpm",
+                  "description": "Custom header"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN",
+                  "name": "X-Frame-Options",
+                  "description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+                },
+                {
+                  "key": "X-Upstream",
+                  "value": "88.99.95.25:8200",
+                  "name": "X-Upstream",
+                  "description": "Custom header"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1",
+                  "name": "X-XSS-Protection",
+                  "description": "Cross-site scripting (XSS) filter"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\"error\":\"invalid_client\",\"error_description\":\"Client id was not found in the headers or body\"}"
             }
           ]
         },
