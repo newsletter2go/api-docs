@@ -1099,11 +1099,18 @@
           "_postman_id": "80247ee2-dda3-4793-b15a-905af57af154",
           "name": "Update List",
           "request": {
+            "auth": {
+              "type": "noauth"
+            },
             "method": "PATCH",
             "header": [
               {
                 "key": "Content-Type",
                 "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}} "
               }
             ],
             "body": {
