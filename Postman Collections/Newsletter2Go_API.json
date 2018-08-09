@@ -55,7 +55,8 @@
               "mode": "raw",
               "raw": "{\r\n  \"username\": \"{{username}}\",\r\n  \"password\": \"{{password}}\",\r\n  \"grant_type\": \"https://nl2go.com/jwt\"\r\n}"
             },
-            "url": "https://api.newsletter2go.com/oauth/v2/token"
+            "url": "https://api.newsletter2go.com/oauth/v2/token",
+            "description": "In order to retrieve the `access_token` that you will need to send with each consecutive call, you have to authenticate once. \n[Grab your credentials](https://ui.newsletter2go.com/api-client) and make sure that you [base64 encode](https://www.base64encode.net/) your `auth key` before you send it in the `Authorization` header prepended by `Basic `.\nSend your `username` and `password` in the JSON payload of the `POST` request. The `grant_type` `https://nl2go.com/jwt` is required and signals that you are passing `username` and `password` and not a `refresh_token` (check out the next example for that)."
           },
           "response": [
             {
