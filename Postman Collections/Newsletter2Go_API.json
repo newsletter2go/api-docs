@@ -56,7 +56,7 @@
               "raw": "{\r\n  \"username\": \"{{username}}\",\r\n  \"password\": \"{{password}}\",\r\n  \"grant_type\": \"https://nl2go.com/jwt\"\r\n}"
             },
             "url": "https://api.newsletter2go.com/oauth/v2/token",
-            "description": "In order to retrieve the `access_token` that you will need to send with each consecutive call, you have to authenticate once. \n[Grab your credentials](https://ui.newsletter2go.com/api-client) and make sure that you [base64 encode](https://www.base64encode.net/) your `auth key` before you send it in the `Authorization` header prepended by `Basic `.\nSend your `username` and `password` in the JSON payload of the `POST` request. The `grant_type` `https://nl2go.com/jwt` is required and signals that you are passing `username` and `password` and not a `refresh_token` (check out the next example for that)."
+            "description": "In order to retrieve the `access_token` that you will need to send with each consecutive call, you have to authenticate once. \n[Grab your credentials](https://ui.newsletter2go.com/api-client) and make sure that you [base64 encode](https://www.base64encode.net/) your `auth key` before you send it in the `Authorization` header prepended by `Basic `.\nSend your `username` and `password` in the JSON payload of the `POST` request. Also we require to send along the `grant_type` `https://nl2go.com/jwt`.\nStore the `access_token` and the `refresh_token` for later use. The `access_token` expires after 2 hours. You can always re-authenticate with your user credentials or refresh the `access_token` by calling the oauth endpoint with the `refresh_token`."
           },
           "response": [
             {
