@@ -956,18 +956,24 @@
               "raw": "{\r\n  \"name\": \"My new List\",\r\n  \"uses_econda\": false,\r\n  \"uses_googleanalytics\": true,\r\n  \"has_opentracking\": true,\r\n  \"has_clicktracking\": true,\r\n  \"has_conversiontracking\": false,\r\n  \"imprint\": \"http://example.org/imprint\",\r\n  \"header_from_email\": \"from@example.org\",\r\n  \"header_from_name\": \"From Name\",\r\n  \"header_reply_email\": \"reply@example.org\",\r\n  \"header_reply_name\": \"Reply Name\",\r\n  \"tracking_url\": null,\r\n  \"landingpage\": \"http://example.org/unsubscribe-landingpage\",\r\n  \"use_ecg_list\": false\r\n}"
             },
             "url": "https://api.newsletter2go.com/lists",
-            "description": "If you want to set the default list id, use the company endpoint"
+            "description": "Create a new list.  \nIf you want to set this list as the default list, use the company endpoint and pass the `list_id`"
           },
           "response": [
             {
-              "id": "034a8586-94d9-4a94-8188-b724386c8817",
+              "id": "652d70db-3903-43a7-9b25-d9b98bcaee15",
               "name": "Create List",
               "originalRequest": {
                 "method": "POST",
                 "header": [
                   {
                     "key": "Content-Type",
-                    "value": "application/json"
+                    "value": "application/json",
+                    "disabled": false
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}} ",
+                    "disabled": false
                   }
                 ],
                 "body": {
@@ -1018,7 +1024,7 @@
                 },
                 {
                   "key": "Date",
-                  "value": "Mon, 06 Aug 2018 12:37:01 GMT",
+                  "value": "Thu, 09 Aug 2018 15:29:10 GMT",
                   "name": "Date",
                   "description": "The date and time that the message was sent"
                 },
@@ -1060,7 +1066,7 @@
                 },
                 {
                   "key": "X-Upstream",
-                  "value": "138.201.29.81:8200",
+                  "value": "195.201.171.185:8200",
                   "name": "X-Upstream",
                   "description": "Custom header"
                 },
@@ -1085,7 +1091,7 @@
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"status\": 201,\n    \"info\": {\n        \"count\": 1\n    },\n    \"value\": [\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/lists\\/5ndbltdf\",\n            \"id\": \"5ndbltdf\"\n        }\n    ]\n}"
+              "body": "{\n    \"status\": 201,\n    \"info\": {\n        \"count\": 1\n    },\n    \"value\": [\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/lists\\/us12cr7n\",\n            \"id\": \"us12cr7n\"\n        }\n    ]\n}"
             }
           ]
         },
