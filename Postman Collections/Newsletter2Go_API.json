@@ -1279,17 +1279,17 @@
           "_postman_id": "ef5f6c3e-4a7a-4b31-8b29-57775feff3fa",
           "name": "Delete List",
           "request": {
+            "auth": {
+              "type": "noauth"
+            },
             "method": "DELETE",
             "header": [
               {
-                "key": "Content-Type",
-                "value": "application/json"
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
+            "body": {},
             "url": "https://api.newsletter2go.com/lists/{{list_id}}",
             "description": "Delete a specific list.  \n<div class=\"alert alert-info\">Be careful! You're deleting the entire list with all campaigns and contacts irrevocably.</div>"
           },
