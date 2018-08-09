@@ -466,54 +466,35 @@
             {
               "listen": "prerequest",
               "script": {
-                "id": "4f4cae3b-07fd-42c4-9f29-e4aaf5fd594c",
+                "id": "6a43e9fa-8a6f-4075-bab4-1c8da6faa503",
                 "type": "text/javascript",
                 "exec": [
-                  "postman.setEnvironmentVariable(\"auth_key_base64\", btoa(postman.getEnvironmentVariable(\"auth_key\")));",
-                  "postman.setEnvironmentVariable(\"auth_key_part_username\", postman.getEnvironmentVariable(\"auth_key\").split(\":\")[0]);",
-                  "postman.setEnvironmentVariable(\"auth_key_part_password\", postman.getEnvironmentVariable(\"auth_key\").split(\":\")[1]);"
+                  ""
                 ]
               }
             },
             {
               "listen": "test",
               "script": {
-                "id": "2ab520a6-02dc-4066-8550-d84ca7504275",
+                "id": "9eb47064-e1e9-4438-a27f-d0b21c941611",
                 "type": "text/javascript",
                 "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"access_token\", jsonData.access_token);",
-                  "postman.setEnvironmentVariable(\"refresh_token\", jsonData.refresh_token);"
+                  ""
                 ]
               }
             }
           ],
           "request": {
             "method": "POST",
-            "header": [],
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
             "body": {
-              "mode": "formdata",
-              "formdata": [
-                {
-                  "key": "grant_type",
-                  "value": "https://nl2go.com/jwt",
-                  "type": "text"
-                },
-                {
-                  "key": "username",
-                  "value": "{{username}}",
-                  "sessionValue": "{{username}}",
-                  "description": "",
-                  "type": "text"
-                },
-                {
-                  "key": "password",
-                  "value": "{{password}}",
-                  "sessionValue": "{{pass",
-                  "description": "",
-                  "type": "text"
-                }
-              ]
+              "mode": "raw",
+              "raw": "{\r\n  \"refresh_token\": \"{{refresh_token}}\",\r\n  \"grant_type\": \"https://nl2go.com/jwt\"\r\n}"
             },
             "url": "https://api.newsletter2go.com/oauth/v2/token"
           },
