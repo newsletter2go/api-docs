@@ -4297,16 +4297,23 @@
           "_postman_id": "76993cf1-63df-4bb9-89ee-393d2e8593f3",
           "name": "Update one Mailings",
           "request": {
+            "auth": {
+              "type": "noauth"
+            },
             "method": "PATCH",
             "header": [
               {
                 "key": "Content-Type",
                 "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_key_base64}}"
               }
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"name\": \"other name\",\n    \"is_deleted\": false,\n    \"has_open_tracking\": true,\n    \"has_click_tracking\": true,\n    \"has_conversion_tracking\": true,\n    \"has_google_analytics_tracking\": false,\n    \"has_econda_tracking\": false,\n    \"has_custom_tracking\": false,\n    \"state\": \"active\"\n}"
+              "raw": "{\n    \"name\": \"other name\",\n    \"is_deleted\": false,\n    \"has_open_tracking\": true,\n    \"has_click_tracking\": true,\n    \"has_conversion_tracking\": true,\n    \"has_google_analytics_tracking\": false,\n    \"has_econda_tracking\": false,\n    \"has_custom_tracking\": false,\n    \"tracking_url\": \"asdkj\",\n    \"state\": \"active\"\n}"
             },
             "url": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}",
             "description": "state active for automated mailings"
