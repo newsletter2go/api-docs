@@ -783,7 +783,8 @@
               }
             ],
             "body": {},
-            "url": "https://api.newsletter2go.com/lists/{{list_id}}"
+            "url": "https://api.newsletter2go.com/lists/{{list_id}}",
+            "description": "Get all information for one specific list."
           },
           "response": [
             {
