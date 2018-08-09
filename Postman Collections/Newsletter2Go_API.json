@@ -1291,7 +1291,7 @@
             ],
             "body": {},
             "url": "https://api.newsletter2go.com/lists/{{list_id}}",
-            "description": "Delete a specific list.  \n<div class=\"alert alert-danger\">Be careful! You're deleting the entire list with all campaigns and contacts irrevocably.</div>"
+            "description": "Delete a specific list.  \n<div class=\"alert alert-info\">Be careful! You're deleting the entire list with all campaigns and contacts irrevocably.</div>"
           },
           "response": []
         }
