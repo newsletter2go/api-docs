@@ -4300,7 +4300,7 @@
         },
         {
           "_postman_id": "76993cf1-63df-4bb9-89ee-393d2e8593f3",
-          "name": "Update one Mailings",
+          "name": "Update one Mailing",
           "request": {
             "auth": {
               "type": "noauth"
