@@ -456,7 +456,8 @@
               }
             ],
             "body": {},
-            "url": "https://api.newsletter2go.com/lists"
+            "url": "https://api.newsletter2go.com/lists",
+            "description": "Get all lists in your account."
           },
           "response": [
             {
@@ -927,7 +928,7 @@
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"count\": 1\n    },\n    \"value\": [\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/lists\\/om355owj\",\n            \"id\": \"om355owj\",\n            \"company_id\": \"3kf9rpeb\",\n            \"created_at\": \"2016-04-06T11:27:31+0000\",\n            \"modified_at\": \"2018-05-18T12:40:33+0000\",\n            \"name\": \"Default\",\n            \"is_disabled\": false,\n            \"uses_econda\": false,\n            \"uses_googleanalytics\": false,\n            \"has_opentracking\": true,\n            \"has_clicktracking\": true,\n            \"has_conversiontracking\": true,\n            \"header_from_email\": \"support@newsletter2go.com\",\n            \"header_from_name\": \"support@newsletter2go.com\",\n            \"header_reply_email\": \"support@newsletter2go.com\",\n            \"use_ecg_list\": true\n        }\n    ]\n}"
+              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"count\": 1\n    },\n    \"value\": [\n        {\n            \"_href\": \"https://api.newsletter2go.com/lists/om355owj\",\n            \"id\": \"om355owj\",\n            \"company_id\": \"3kf9rpeb\",\n            \"created_at\": \"2016-04-06T11:27:31+0000\",\n            \"modified_at\": \"2018-05-18T12:40:33+0000\",\n            \"name\": \"Default\",\n            \"is_disabled\": false,\n            \"uses_econda\": false,\n            \"uses_googleanalytics\": false,\n            \"has_opentracking\": true,\n            \"has_clicktracking\": true,\n            \"has_conversiontracking\": true,\n            \"landingpage\": \"http://landingpage.org\",\n            \"header_from_email\": \"support@newsletter2go.com\",\n            \"header_from_name\": \"support@newsletter2go.com\",\n            \"header_reply_email\": \"support@newsletter2go.com\",\n            \"use_ecg_list\": true\n        }\n    ]\n}"
             }
           ]
         },
