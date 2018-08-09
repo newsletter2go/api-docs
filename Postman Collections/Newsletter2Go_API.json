@@ -4116,7 +4116,12 @@
           "name": "Get one Mailing",
           "request": {
             "method": "GET",
-            "header": [],
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
             "body": {},
             "url": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}"
           },
