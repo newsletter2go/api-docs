@@ -697,7 +697,7 @@
     {
       "_postman_id": "06014fbe-a579-47e3-81c9-74a25b700cf7",
       "name": "Lists",
-      "description": "",
+      "description": "With Newsletter2Go you can manage multiple contact lists. Each list can contains campaigns, contacts, segments and attributes.  \n\nThe purpose of lists is to separate concerns. You can manage different contacts in different states (active, unsubscribed) with different attributes in different lists. A typical application is to use lists for separate mailing types; e.g. one contact list to send out product news to prospects and one list to send regular information to existing customers.  \n\n<div class=\"alert alert-info\">Contacts can unsubscribe from lists independently. If you don't know if you should use another list, ask yourself the question if the recipients should be able to unsubscribe from each list individually</div>",
       "item": [
         {
           "_postman_id": "5552d812-59b0-4831-9771-a4ea91a8e552",
@@ -1094,6 +1094,28 @@
             "description": "careful, you're deleting the entire list with all campaigns and contacts"
           },
           "response": []
+        }
+      ],
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "a0cfdf57-b282-44ab-9f4c-ca0d96a3bb8a",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "99a1348c-dc22-4efd-b201-f03f423b23e3",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
         }
       ]
     },
