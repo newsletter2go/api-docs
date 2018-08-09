@@ -784,7 +784,152 @@
             "body": {},
             "url": "https://api.newsletter2go.com/lists/{{list_id}}"
           },
-          "response": []
+          "response": [
+            {
+              "id": "5d7a81c5-5eb2-42d6-a5b8-7d1583c1af80",
+              "name": "Get List Details",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}",
+                    "disabled": false
+                  }
+                ],
+                "body": {},
+                "url": "https://api.newsletter2go.com/lists/{{list_id}}"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Access-Control-Allow-Headers",
+                  "value": "authorization, Content-Type, x-from",
+                  "name": "Access-Control-Allow-Headers",
+                  "description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+                },
+                {
+                  "key": "Access-Control-Allow-Methods",
+                  "value": "GET,HEAD,POST,PUT,PATCH,DELETE,OPTIONS,TRACE",
+                  "name": "Access-Control-Allow-Methods",
+                  "description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*",
+                  "name": "Access-Control-Allow-Origin",
+                  "description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache",
+                  "name": "Cache-Control",
+                  "description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive",
+                  "name": "Connection",
+                  "description": "Options that are desired for the connection"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip",
+                  "name": "Content-Encoding",
+                  "description": "The type of encoding used on the data."
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 09 Aug 2018 14:42:44 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "nginx",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000",
+                  "name": "Strict-Transport-Security",
+                  "description": "A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains."
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked",
+                  "name": "Transfer-Encoding",
+                  "description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept-Encoding",
+                  "name": "Vary",
+                  "description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept-Encoding",
+                  "name": "Vary",
+                  "description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff",
+                  "name": "X-Content-Type-Options",
+                  "description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+                },
+                {
+                  "key": "X-Fpm",
+                  "value": "default",
+                  "name": "X-Fpm",
+                  "description": "Custom header"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN",
+                  "name": "X-Frame-Options",
+                  "description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+                },
+                {
+                  "key": "X-Upstream",
+                  "value": "195.201.171.185:8200",
+                  "name": "X-Upstream",
+                  "description": "Custom header"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1",
+                  "name": "X-XSS-Protection",
+                  "description": "Cross-site scripting (XSS) filter"
+                },
+                {
+                  "key": "expires",
+                  "value": "-1",
+                  "name": "expires",
+                  "description": "Gives the date/time after which the response is considered stale"
+                },
+                {
+                  "key": "pragma",
+                  "value": "no-cache",
+                  "name": "pragma",
+                  "description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"count\": 1\n    },\n    \"value\": [\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/lists\\/om355owj\",\n            \"id\": \"om355owj\",\n            \"company_id\": \"3kf9rpeb\",\n            \"created_at\": \"2016-04-06T11:27:31+0000\",\n            \"modified_at\": \"2018-05-18T12:40:33+0000\",\n            \"name\": \"Default\",\n            \"is_disabled\": false,\n            \"uses_econda\": false,\n            \"uses_googleanalytics\": false,\n            \"has_opentracking\": true,\n            \"has_clicktracking\": true,\n            \"has_conversiontracking\": true,\n            \"header_from_email\": \"support@newsletter2go.com\",\n            \"header_from_name\": \"support@newsletter2go.com\",\n            \"header_reply_email\": \"support@newsletter2go.com\",\n            \"use_ecg_list\": true\n        }\n    ]\n}"
+            }
+          ]
         },
         {
           "_postman_id": "364131ba-fd20-444a-b029-e53a5a89546d",
@@ -5149,7 +5294,7 @@
     {
       "_postman_id": "193e9341-33d4-45aa-9cb3-e933d1a52c4c",
       "name": "Company",
-      "description": "| Parameter | Type      | Description |\r\n|-----------|-----------|-----------|\r\n| `id` | `string`<br><span class=\"label label-default\">8-digit alphanumeric</span> | The `id` of your company account (`{{company_id}}`) |\r\n| `modified_at` | `date`<br><span class=\"label label-default\">ISO-8601 format</span> | Last date the company data was modified |\r\n| `created_at` | `date`<br><span class=\"label label-default\">ISO-8601 format</span> | The date your company account was created |\r\n| `phone` | `string` | The company phone number |\r\n| `agb_accepted_at` | `date`<br><span class=\"label label-default\">ISO-8601 format</span> | The date your company accepted the general terms and conditions |\r\n| `name` | `string` | The company name |\r\n| `address` | `string` | The company address |\r\n| `city` | `string` | The company city |\r\n| `postcode` | `string` | The company postcode |\r\n| `country` | `string`<br><span class=\"label label-default\">ISO 3166-1 alpha-2 format</span> | 2-digit country code of your company |\r\n| `bill_name` | `string` | The company name on your invoices |\r\n| `bill_first_name` | `string` | The first name on your invoices |\r\n| `bill_last_name` | `string` | The last name on your invoices |\r\n| `bill_gender` | `enum`<br><span class=\"label label-default\">m, f</span> | Gender of the person on your invoice |\r\n| `bill_address` | `string` | The company address on your invoices |\r\n| `bill_city` | `string` | The company city on your invoices |\r\n| `bill_postcode` | `string` | The company postcode on your invoices |\r\n| `bill_country` | `string`<br><span class=\"label label-default\">ISO 3166-1 alpha-2 format</span> | The company country on your invoices |\r\n| `bill_email` | `string`<br><span class=\"label label-default\">RFC822 compliant email address</span> | The email address invoices will be sent to |\r\n| `default_list_id` | `string`<br><span class=\"label label-default\">8-digit alphanumeric</span> | The `id` of your default list |\r\n| `credits_email` | `number`<br><span class=\"label label-default\">non-negative integer</span> | The amount of prepaid emails in your account |\r\n| `credits_freemail` | `number`<br><span class=\"label label-default\">non-negative integer</span> | The amount of free emails in your account |\r\n| `credits_abo` | `number`<br><span class=\"label label-default\">non-negative integer</span> | The amount of subscription emails in your account |\r\n| `state` | `enum`<br><span class=\"label label-default\">verified, pending, declined</span> | Whether your account has been verified for sending |\r\n| `uses_client_testing` | `boolean` | Whether the client testing is active |\r\n| `uses_payback` | `boolean` | Whether the credit payback feature is active |\r\n| `industry_id` | \"fyc983tf\" | |\r\n| `frequency` | `enum`<br><span class=\"label label-default\">daily, weekly, monthly, quartely, sporadic</span> | The dispatch frequency of the company |\r\n| `num_recipients` | `enum`<br><span class=\"label label-default\"><1000, 1000_5000, 5000_10000, 10000_25000, 25000_50000, >50000</span>  | The number of recipients of the company |\r\n| `is_opentracking_allowed` | `boolean` | Whether open tracking is allowed |\r\n| `is_clicktracking_allowed` | `boolean` | Whether click / link tracking is allowed |\r\n| `is_recipienttracking_allowed` | `boolean` | Whether recipient based tracking is allowed |\r\n| `allow_support_access` | `boolean` | Whether the customer support may access your account |\r\n",
+      "description": "| Parameter | Type      | Description |\r\n|-----------|-----------|-----------|\r\n| `id` | `string`<br>8-digit alphanumeric | The `id` of your company account (`{{company_id}}`) |\r\n| `modified_at` | `date`<br>ISO-8601 format | Last date the company data was modified |\r\n| `created_at` | `date`<br>ISO-8601 format | The date your company account was created |\r\n| `phone` | `string` | The company phone number |\r\n| `agb_accepted_at` | `date`<br>ISO-8601 format | The date your company accepted the general terms and conditions |\r\n| `name` | `string` | The company name |\r\n| `address` | `string` | The company address |\r\n| `city` | `string` | The company city |\r\n| `postcode` | `string` | The company postcode |\r\n| `country` | `string`<br>ISO 3166-1 alpha-2 format | 2-digit country code of your company |\r\n| `bill_name` | `string` | The company name on your invoices |\r\n| `bill_first_name` | `string` | The first name on your invoices |\r\n| `bill_last_name` | `string` | The last name on your invoices |\r\n| `bill_gender` | `enum`<br>m, f | Gender of the person on your invoice |\r\n| `bill_address` | `string` | The company address on your invoices |\r\n| `bill_city` | `string` | The company city on your invoices |\r\n| `bill_postcode` | `string` | The company postcode on your invoices |\r\n| `bill_country` | `string`<br>ISO 3166-1 alpha-2 format | The company country on your invoices |\r\n| `bill_email` | `string`<br>RFC822 compliant email address | The email address invoices will be sent to |\r\n| `default_list_id` | `string`<br>8-digit alphanumeric | The `id` of your default list |\r\n| `credits_email` | `number`<br>non-negative integer | The amount of prepaid emails in your account |\r\n| `credits_freemail` | `number`<br>non-negative integer | The amount of free emails in your account |\r\n| `credits_abo` | `number`<br>non-negative integer | The amount of subscription emails in your account |\r\n| `state` | `enum`<br>verified, pending, declined | Whether your account has been verified for sending |\r\n| `uses_client_testing` | `boolean` | Whether the client testing is active |\r\n| `uses_payback` | `boolean` | Whether the credit payback feature is active |\r\n| `industry_id` | \"fyc983tf\" | |\r\n| `frequency` | `enum`<br>daily, weekly, monthly, quartely, sporadic | The dispatch frequency of the company |\r\n| `num_recipients` | `enum`<br><1000, 1000_5000, 5000_10000, 10000_25000, 25000_50000, >50000  | The number of recipients of the company |\r\n| `is_opentracking_allowed` | `boolean` | Whether open tracking is allowed |\r\n| `is_clicktracking_allowed` | `boolean` | Whether click / link tracking is allowed |\r\n| `is_recipienttracking_allowed` | `boolean` | Whether recipient based tracking is allowed |\r\n| `allow_support_access` | `boolean` | Whether the customer support may access your account |\r\n",
       "item": [
         {
           "_postman_id": "d9b2e7cc-1145-4b04-be6f-ee1e88000646",
