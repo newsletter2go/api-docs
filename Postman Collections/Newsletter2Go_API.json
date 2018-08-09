@@ -504,7 +504,7 @@
               "raw": "{\r\n  \"refresh_token\": \"{{refresh_token}}\",\r\n  \"grant_type\": \"https://nl2go.com/jwt\"\r\n}"
             },
             "url": "https://api.newsletter2go.com/oauth/v2/token",
-            "description": "If you want to renew your `access_token`, pass the `refresh_token` in the JSON payload. Make sure to [base64 encode](https://www.base64encode.net/) your `auth key` in the `Basic Authorization` header."
+            "description": "If you want to renew your `access_token`, pass the `refresh_token` in the JSON payload. Make sure to [base64 encode](https://www.base64encode.net/) your `auth key` in the `Basic Authorization` header.\n\nThe `refresh_token` is valid 1 month."
           },
           "response": [
             {
