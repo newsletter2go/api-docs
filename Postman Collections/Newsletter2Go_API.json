@@ -1111,7 +1111,7 @@
               "raw": "{\r\n  \"name\": \"My updated List\",\r\n  \"uses_econda\": false,\r\n  \"uses_googleanalytics\": true,\r\n  \"has_opentracking\": true,\r\n  \"has_clicktracking\": true,\r\n  \"has_conversiontracking\": false,\r\n  \"imprint\": \"http://example.org/imprint\",\r\n  \"header_from_email\": \"from@example.org\",\r\n  \"header_from_name\": \"From Name\",\r\n  \"header_reply_email\": \"reply@example.org\",\r\n  \"header_reply_name\": \"Reply Name\",\r\n  \"tracking_url\": null,\r\n  \"landingpage\": \"http://example.org/unsubscribe-landingpage\",\r\n  \"use_ecg_list\": false\r\n}"
             },
             "url": "https://api.newsletter2go.com/lists/{{list_id}}",
-            "description": "If you want to set the default list id, use the company endpoint"
+            "description": "Update an existing list.  \nIf you want to set this list as the default list, use the company endpoint and pass the `list_id`"
           },
           "response": []
         },
