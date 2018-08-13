@@ -1504,7 +1504,7 @@
             ],
             "body": {},
             "url": {
-              "raw": "https://api.newsletter2go.com/recipients?_filter=&_filter=(id%3D%3D%22{{recipient_id}}%22)",
+              "raw": "https://api.newsletter2go.com/recipients?_filter=(id%3D%3D%22{{recipient_id}}%22)",
               "protocol": "https",
               "host": [
                 "api",
@@ -1515,11 +1515,6 @@
                 "recipients"
               ],
               "query": [
-                {
-                  "key": "_filter",
-                  "value": "",
-                  "equals": true
-                },
                 {
                   "key": "_filter",
                   "value": "(id%3D%3D%22{{recipient_id}}%22)",
