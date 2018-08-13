@@ -1870,7 +1870,7 @@
             ],
             "body": {},
             "url": {
-              "raw": "https://api.newsletter2go.com/recipients/{{recipient_id}}?_fields=email,firstname,{{attribute_name}}",
+              "raw": "https://api.newsletter2go.com/lists/{{list_id}}/recipients/{{recipient_id}}?_fields=email,firstname,{{attribute_name}}",
               "protocol": "https",
               "host": [
                 "api",
@@ -1878,6 +1878,8 @@
                 "com"
               ],
               "path": [
+                "lists",
+                "{{list_id}}",
                 "recipients",
                 "{{recipient_id}}"
               ],
