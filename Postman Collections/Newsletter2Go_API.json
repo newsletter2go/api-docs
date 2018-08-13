@@ -3333,6 +3333,194 @@
               "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"count\": 1\n    },\n    \"value\": [\n        {\n            \"count_inserted\": 105,\n            \"count_updated\": 4,\n            \"count_failed\": 6,\n            \"duplicate_recipients\": [\n                {\n                    \"email\": \"email@example.org\"\n                },\n                {\n                    \"email\": \"other@example.org\"\n                }\n            ],\n            \"invalid_recipients\": [],\n            \"file\": \"myfilename.xlsx\"\n        }\n    ]\n}"
             }
           ]
+        },
+        {
+          "_postman_id": "b06186f7-74e9-4032-a232-ac588e1bb2b9",
+          "name": "Get Recipients Details Copy",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}} "
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://api.newsletter2go.com/recipients/{{recipients_id}}?_expand=true&_fields={{attribute_name}}",
+              "protocol": "https",
+              "host": [
+                "api",
+                "newsletter2go",
+                "com"
+              ],
+              "path": [
+                "recipients",
+                "{{recipients_id}}"
+              ],
+              "query": [
+                {
+                  "key": "_expand",
+                  "value": "true",
+                  "equals": true
+                },
+                {
+                  "key": "_fields",
+                  "value": "{{attribute_name}}",
+                  "equals": true
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "b7ae2d67-631a-4e3a-b90e-7cfe54f3f4d7",
+              "name": "Get Recipients Details",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}} ",
+                    "disabled": false
+                  }
+                ],
+                "body": {},
+                "url": "https://api.newsletter2go.com/recipients/{{recipient_id}}"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Access-Control-Allow-Headers",
+                  "value": "authorization, Content-Type, x-from",
+                  "name": "Access-Control-Allow-Headers",
+                  "description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+                },
+                {
+                  "key": "Access-Control-Allow-Methods",
+                  "value": "GET,HEAD,POST,PUT,PATCH,DELETE,OPTIONS,TRACE",
+                  "name": "Access-Control-Allow-Methods",
+                  "description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*",
+                  "name": "Access-Control-Allow-Origin",
+                  "description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache",
+                  "name": "Cache-Control",
+                  "description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive",
+                  "name": "Connection",
+                  "description": "Options that are desired for the connection"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip",
+                  "name": "Content-Encoding",
+                  "description": "The type of encoding used on the data."
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 13 Aug 2018 13:10:00 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "nginx",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000",
+                  "name": "Strict-Transport-Security",
+                  "description": "A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains."
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked",
+                  "name": "Transfer-Encoding",
+                  "description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept-Encoding",
+                  "name": "Vary",
+                  "description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept-Encoding",
+                  "name": "Vary",
+                  "description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff",
+                  "name": "X-Content-Type-Options",
+                  "description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+                },
+                {
+                  "key": "X-Fpm",
+                  "value": "default",
+                  "name": "X-Fpm",
+                  "description": "Custom header"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN",
+                  "name": "X-Frame-Options",
+                  "description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+                },
+                {
+                  "key": "X-Upstream",
+                  "value": "195.201.175.58:8200",
+                  "name": "X-Upstream",
+                  "description": "Custom header"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1",
+                  "name": "X-XSS-Protection",
+                  "description": "Cross-site scripting (XSS) filter"
+                },
+                {
+                  "key": "expires",
+                  "value": "-1",
+                  "name": "expires",
+                  "description": "Gives the date/time after which the response is considered stale"
+                },
+                {
+                  "key": "pragma",
+                  "value": "no-cache",
+                  "name": "pragma",
+                  "description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"count\": 1,\n        \"additional\": {\n            \"active\": 0\n        }\n    },\n    \"value\": [\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/recipients\\/itwd21o3\",\n            \"id\": \"itwd21o3\",\n            \"company_id\": \"3kf9rpeb\",\n            \"email\": \"email@example.tld\",\n            \"phone\": \"+49123456789\",\n            \"modified_at\": \"2018-08-13T13:09:34+0000\",\n            \"created_at\": \"2018-08-10T07:07:34+0000\",\n            \"gender\": \"m\",\n            \"first_name\": \"John\",\n            \"last_name\": \"Doe\",\n            \"num_emailbounces\": 0,\n            \"is_unbouncable\": false,\n            \"is_globally_unsubscribed\": false,\n            \"is_globally_blacklisted\": false,\n            \"is_bounced\": false,\n            \"import_id\": \"5b71830ec923b0.10565980\",\n            \"import_position\": 0,\n            \"is_import_update\": true,\n            \"hash\": \"618e72f30d5395dcba2021426382e082bfc0e9592c191081604e18acf62b6612\"\n        }\n    ]\n}"
+            }
+          ]
         }
       ],
       "event": [
