@@ -956,7 +956,7 @@
               "raw": "{\r\n  \"name\": \"My new List\",\r\n  \"uses_econda\": false,\r\n  \"uses_googleanalytics\": true,\r\n  \"has_opentracking\": true,\r\n  \"has_clicktracking\": true,\r\n  \"has_conversiontracking\": false,\r\n  \"imprint\": \"http://example.org/imprint\",\r\n  \"header_from_email\": \"from@example.org\",\r\n  \"header_from_name\": \"From Name\",\r\n  \"header_reply_email\": \"reply@example.org\",\r\n  \"header_reply_name\": \"Reply Name\",\r\n  \"tracking_url\": null,\r\n  \"landingpage\": \"http://example.org/unsubscribe-landingpage\",\r\n  \"use_ecg_list\": false\r\n}"
             },
             "url": "https://api.newsletter2go.com/lists",
-            "description": "Create a new list.  \nIf you want to set this list as the default list, use the company endpoint and pass the `list_id`"
+            "description": "Create a new list.  \nIf you want to set this list as the default list, use the [company endpoint](#193e9341-33d4-45aa-9cb3-e933d1a52c4c) and pass the `list_id`"
           },
           "response": [
             {
@@ -1507,11 +1507,17 @@
           },
           "response": [
             {
-              "id": "cecf4b1a-204e-4879-bfbc-dc38e9fefe8d",
+              "id": "8d1b5fa0-79bc-4e7c-aa64-da8a14b7dad6",
               "name": "Get Recipients from List",
               "originalRequest": {
                 "method": "GET",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}} ",
+                    "disabled": false
+                  }
+                ],
                 "body": {},
                 "url": "https://api.newsletter2go.com/lists/{{list_id}}/recipients"
               },
@@ -1563,7 +1569,7 @@
                 },
                 {
                   "key": "Date",
-                  "value": "Wed, 08 Aug 2018 09:52:23 GMT",
+                  "value": "Fri, 10 Aug 2018 07:34:25 GMT",
                   "name": "Date",
                   "description": "The date and time that the message was sent"
                 },
@@ -1617,7 +1623,7 @@
                 },
                 {
                   "key": "X-Upstream",
-                  "value": "88.99.5.6:8200",
+                  "value": "195.201.175.58:8200",
                   "name": "X-Upstream",
                   "description": "Custom header"
                 },
@@ -1642,7 +1648,7 @@
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"links\": {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/lists\\/om355owj\\/recipients?_limit=50&_offset=0\"\n        },\n        \"count\": 2,\n        \"additional\": {\n            \"active\": 2\n        }\n    },\n    \"value\": [\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/recipients\\/uait2ts7\",\n            \"id\": \"uait2ts7\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/recipients\\/g783na13\",\n            \"id\": \"g783na13\"\n        }\n    ]\n}"
+              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"links\": {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/lists\\/om355owj\\/recipients?_limit=50&_offset=0\"\n        },\n        \"count\": 5,\n        \"additional\": {\n            \"active\": 5\n        }\n    },\n    \"value\": [\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/recipients\\/g783na13\",\n            \"id\": \"g783na13\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/recipients\\/y2n9bqcz\",\n            \"id\": \"y2n9bqcz\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/recipients\\/e76chulj\",\n            \"id\": \"e76chulj\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/recipients\\/52x6v6ee\",\n            \"id\": \"52x6v6ee\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/recipients\\/itwd21o3\",\n            \"id\": \"itwd21o3\"\n        }\n    ]\n}"
             }
           ]
         },
