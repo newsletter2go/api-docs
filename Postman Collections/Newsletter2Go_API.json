@@ -1503,12 +1503,35 @@
               }
             ],
             "body": {},
-            "url": "https://api.newsletter2go.com/recipients"
+            "url": {
+              "raw": "https://api.newsletter2go.com/recipients?_filter=&_filter=(id%3D%3D%22{{recipient_id}}%22)",
+              "protocol": "https",
+              "host": [
+                "api",
+                "newsletter2go",
+                "com"
+              ],
+              "path": [
+                "recipients"
+              ],
+              "query": [
+                {
+                  "key": "_filter",
+                  "value": "",
+                  "equals": true
+                },
+                {
+                  "key": "_filter",
+                  "value": "(id%3D%3D%22{{recipient_id}}%22)",
+                  "equals": true
+                }
+              ]
+            }
           },
           "response": [
             {
-              "id": "c1a01f8f-0059-48ed-8ff4-0f9e0729a848",
-              "name": "Get Recipients",
+              "id": "22cec075-1206-4fba-b80e-711adcc5550a",
+              "name": "Get Recipients Details",
               "originalRequest": {
                 "method": "GET",
                 "header": [
@@ -1519,7 +1542,7 @@
                   }
                 ],
                 "body": {},
-                "url": "https://api.newsletter2go.com/recipients"
+                "url": "https://api.newsletter2go.com/recipients/{{recipient_id}}"
               },
               "status": "OK",
               "code": 200,
@@ -1569,7 +1592,7 @@
                 },
                 {
                   "key": "Date",
-                  "value": "Fri, 10 Aug 2018 07:33:58 GMT",
+                  "value": "Mon, 13 Aug 2018 13:10:00 GMT",
                   "name": "Date",
                   "description": "The date and time that the message was sent"
                 },
@@ -1648,7 +1671,7 @@
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"links\": {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/recipients?_limit=50&_offset=0\"\n        },\n        \"count\": 5,\n        \"additional\": {\n            \"active\": 0\n        }\n    },\n    \"value\": [\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/recipients\\/e76chulj\",\n            \"id\": \"e76chulj\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/recipients\\/itwd21o3\",\n            \"id\": \"itwd21o3\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/recipients\\/52x6v6ee\",\n            \"id\": \"52x6v6ee\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/recipients\\/y2n9bqcz\",\n            \"id\": \"y2n9bqcz\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/recipients\\/g783na13\",\n            \"id\": \"g783na13\"\n        }\n    ]\n}"
+              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"count\": 1,\n        \"additional\": {\n            \"active\": 0\n        }\n    },\n    \"value\": [\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/recipients\\/itwd21o3\",\n            \"id\": \"itwd21o3\",\n            \"company_id\": \"3kf9rpeb\",\n            \"email\": \"email@example.tld\",\n            \"phone\": \"+49123456789\",\n            \"modified_at\": \"2018-08-13T13:09:34+0000\",\n            \"created_at\": \"2018-08-10T07:07:34+0000\",\n            \"gender\": \"m\",\n            \"first_name\": \"John\",\n            \"last_name\": \"Doe\",\n            \"num_emailbounces\": 0,\n            \"is_unbouncable\": false,\n            \"is_globally_unsubscribed\": false,\n            \"is_globally_blacklisted\": false,\n            \"is_bounced\": false,\n            \"import_id\": \"5b71830ec923b0.10565980\",\n            \"import_position\": 0,\n            \"is_import_update\": true,\n            \"hash\": \"618e72f30d5395dcba2021426382e082bfc0e9592c191081604e18acf62b6612\"\n        }\n    ]\n}"
             }
           ]
         },
