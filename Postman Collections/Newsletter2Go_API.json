@@ -1505,7 +1505,7 @@
             ],
             "body": {},
             "url": {
-              "raw": "https://api.newsletter2go.com/recipients/{{recipient_id}}?_fields={{attribute_name}},is_unsubscribed,statistic_mails_unique_clicked",
+              "raw": "https://api.newsletter2go.com/recipients/{{recipient_id}}?_fields=email,firstname,{{attribute_name}}",
               "protocol": "https",
               "host": [
                 "api",
@@ -1519,7 +1519,7 @@
               "query": [
                 {
                   "key": "_fields",
-                  "value": "{{attribute_name}},is_unsubscribed,statistic_mails_unique_clicked",
+                  "value": "email,firstname,{{attribute_name}}",
                   "equals": true
                 }
               ]
