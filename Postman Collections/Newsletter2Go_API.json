@@ -5657,7 +5657,27 @@
               }
             ],
             "body": {},
-            "url": "https://api.newsletter2go.com/lists/{{list_id}}/attributes"
+            "url": {
+              "raw": "https://api.newsletter2go.com/lists/{{list_id}}/attributes?_expand=true",
+              "protocol": "https",
+              "host": [
+                "api",
+                "newsletter2go",
+                "com"
+              ],
+              "path": [
+                "lists",
+                "{{list_id}}",
+                "attributes"
+              ],
+              "query": [
+                {
+                  "key": "_expand",
+                  "value": "true",
+                  "equals": true
+                }
+              ]
+            }
           },
           "response": [
             {
