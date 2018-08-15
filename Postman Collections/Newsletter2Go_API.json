@@ -2382,6 +2382,9 @@
           "_postman_id": "b84956c5-93ef-48a4-9e1d-7f13306dbffd",
           "name": "Delete one Recipient from List",
           "request": {
+            "auth": {
+              "type": "noauth"
+            },
             "method": "DELETE",
             "header": [
               {
