@@ -1340,7 +1340,7 @@
             ],
             "body": {},
             "url": "https://api.newsletter2go.com/recipients",
-            "description": "Get recipients from any list"
+            "description": "Get recipients from any list.\nRemember: You can use the [common GET parameters](#common-get-parameters) to control what is returned from the API."
           },
           "response": [
             {
