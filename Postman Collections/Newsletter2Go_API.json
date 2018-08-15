@@ -3160,16 +3160,23 @@
           "_postman_id": "b16f71d0-0d63-4df0-a750-7dc4e8515bcc",
           "name": "Update multiple Recipients",
           "request": {
+            "auth": {
+              "type": "noauth"
+            },
             "method": "PATCH",
             "header": [
               {
                 "key": "Content-Type",
                 "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
               }
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"email\": \"email@example.tld\",\r\n  \"phone\": \"+499876543210\",\r\n  \"gender\": \"f\",\r\n  \"first_name\": \"Jane\",\r\n  \"last_name\": \"Doe\",\r\n  \"is_unsubscribed\": false,\r\n  \"is_blacklisted\": false,\r\n  \"{{attribute_name}}\": \"other attribute value\"\r\n}"
+              "raw": "{\r\n  \"email\": \"new_email@example.tld\",\r\n  \"phone\": \"+499876543210\",\r\n  \"gender\": \"f\",\r\n  \"first_name\": \"Jane\",\r\n  \"last_name\": \"Doe\",\r\n  \"is_unsubscribed\": false,\r\n  \"is_blacklisted\": false,\r\n  \"{{attribute_name}}\": \"other attribute value\"\r\n}"
             },
             "url": {
               "raw": "https://api.newsletter2go.com/lists/{{list_id}}/recipients?_filter=email%3DLIKE%3D%22%example%25%22",
