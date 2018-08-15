@@ -439,7 +439,7 @@
       "item": [
         {
           "_postman_id": "5552d812-59b0-4831-9771-a4ea91a8e552",
-          "name": "Get all Lists",
+          "name": "Get all Lists 1",
           "request": {
             "auth": {
               "type": "noauth"
