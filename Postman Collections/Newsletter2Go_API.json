@@ -2594,7 +2594,7 @@
                 }
               ]
             },
-            "description": "Delete multiple / all recipients from one list. \n\n<div class=\"alert alert-info\">Be careful. If you don't pass a <code>_filter</code>, all your recipients will be deleted irrevocably from the list.</div>"
+            "description": "Delete multiple / all recipients in one list. \n\n<div class=\"alert alert-info\">Be careful. If you don't pass a <code>_filter</code>, all your recipients will be deleted irrevocably from the list.</div>"
           },
           "response": [
             {
