@@ -7159,7 +7159,7 @@
               "raw": "{\r\n  \"type\": \"transaction\",\r\n  \"name\": \"New Transactional Mailing Name\",\r\n  \"has_open_tracking\": true,\r\n  \"has_click_tracking\": true,\r\n  \"has_conversion_tracking\": true,\r\n  \"subject\": \"Subject\",\r\n  \"preheader\": \"Pre header\",\r\n  \"header_from_email\": \"from@example.org\",\r\n  \"header_from_name\": \"From Name\",\r\n  \"header_reply_email\": \"reply@example.org\",\r\n  \"header_reply_name\": \"Reply Name\"\r\n}"
             },
             "url": "https://api.newsletter2go.com/lists/{{list_id}}/newsletters",
-            "description": "If your list has default values for `header_from_email`, `header_from_name`, `header_reply_email` and/or `header_reply_name`, those will be used in case you don't pass them in this call.\n\njson should be documented in a separate document for the Newsletter2Go Markup Language (NML)"
+            "description": "Make sure to understand [how transactional mailings work](#transactional-mailings) first. \n\nIf your list has default values for `header_from_email`, `header_from_name`, `header_reply_email` and/or `header_reply_name`, those will be used in case you don't pass them in this call.\n\njson should be documented in a separate document for the Newsletter2Go Markup Language (NML)"
           },
           "response": [
             {
