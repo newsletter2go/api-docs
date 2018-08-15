@@ -3412,7 +3412,7 @@
               ]
             },
             "url": "https://api.newsletter2go.com/lists/{{list_id}}/recipients/import/init",
-            "description": "Payload is not JSON but csv, ods, xls, xlsx file"
+            "description": "If you want to import large amounts of recipients asynchronously, you can upload a csv, ods, xls, xlsx file to our API.  \nThe import is divided into 3 steps: \n1. Upload a csv, ods, xls, xlsx file to the `import/init` end point. Store the `file` from the response.\n2. Match the attributes with the columns in the uploaded file and start the import in the `import/save` call.\n3. Get infos on the import status in the `import/{{import_id}}/info` call.\n\n<div class=\"alert alert-info\">This call expects a csv, ods, xls, xlsx file in the payload instead of JSON</div>"
           },
           "response": [
             {
