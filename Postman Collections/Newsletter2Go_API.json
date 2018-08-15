@@ -2561,6 +2561,9 @@
           "_postman_id": "08f94f86-eab1-4b57-aca4-5f4c8d9e8317",
           "name": "Delete multiple Recipients from List",
           "request": {
+            "auth": {
+              "type": "noauth"
+            },
             "method": "DELETE",
             "header": [
               {
