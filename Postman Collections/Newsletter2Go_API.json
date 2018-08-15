@@ -4546,6 +4546,25 @@
           "response": []
         },
         {
+          "_postman_id": "0f795e20-e225-4633-81cb-8c0165dea3e3",
+          "name": "Get Recipient from Segment",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://api.newsletter2go.com/lists/{{list_id}}/groups/{{group_id}}/recipients"
+          },
+          "response": []
+        },
+        {
           "_postman_id": "e2b73d08-b635-4028-8397-9687f32e2be2",
           "name": "Add one Recipient to Segment",
           "request": {
@@ -4653,25 +4672,6 @@
               ]
             },
             "description": "remove all Recipients from given group. Pay attention to the filter, if you forget to submit it, all recipients are getting removed from the group!\nwill only work for regular group"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "0f795e20-e225-4633-81cb-8c0165dea3e3",
-          "name": "Get Recipient from Segment",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": "https://api.newsletter2go.com/lists/{{list_id}}/groups/{{group_id}}/recipients"
           },
           "response": []
         }
