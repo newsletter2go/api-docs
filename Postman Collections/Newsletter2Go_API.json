@@ -3176,6 +3176,9 @@
           "_postman_id": "b16f71d0-0d63-4df0-a750-7dc4e8515bcc",
           "name": "Update multiple Recipients",
           "request": {
+            "auth": {
+              "type": "noauth"
+            },
             "method": "PATCH",
             "header": [
               {
