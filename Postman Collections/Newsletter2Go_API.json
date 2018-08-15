@@ -3619,18 +3619,24 @@
               "mode": "raw",
               "raw": "{\n\t\"file\": \"{{file_id}}\",\n\t\"associations\": {\n\t\t\"0\": \"email\",\n\t\t\"1\": \"first_name\",\n\t\t\"2\": \"last_name\", \n\t\t\"3\": \"{{attribute_name}}\"\n\t}\n}"
             },
-            "url": "https://api.newsletter2go.com/lists/{{list_id}}/recipients/import/save"
+            "url": "https://api.newsletter2go.com/lists/{{list_id}}/recipients/import/save",
+            "description": "In this call, you match the columns of the uploaded file to the attributes in your account.  \nMake sure to pass the right amount of `associations`.  \nDepending on the size of your file, the import might take some time. Make sure to check the import status from time to time by using the `import/{{import_id}}/info` endpoint."
           },
           "response": [
             {
-              "id": "3313628a-1a4c-427b-bd3a-1c4c8a44efe7",
-              "name": "Import Recipients - Match columns and start Import - already started",
+              "id": "51b4a59c-58bd-49fc-81af-80e1e7342c10",
+              "name": "Import Recipients - Match columns and start Import",
               "originalRequest": {
                 "method": "POST",
                 "header": [
                   {
                     "key": "Content-Type",
                     "value": "application/json",
+                    "disabled": false
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}",
                     "disabled": false
                   }
                 ],
@@ -3640,8 +3646,8 @@
                 },
                 "url": "https://api.newsletter2go.com/lists/{{list_id}}/recipients/import/save"
               },
-              "status": "Bad Request",
-              "code": 400,
+              "status": "Created",
+              "code": 201,
               "_postman_previewlanguage": "json",
               "header": [
                 {
@@ -3682,7 +3688,7 @@
                 },
                 {
                   "key": "Date",
-                  "value": "Wed, 08 Aug 2018 10:58:04 GMT",
+                  "value": "Wed, 15 Aug 2018 11:57:02 GMT",
                   "name": "Date",
                   "description": "The date and time that the message was sent"
                 },
@@ -3749,136 +3755,7 @@
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"status\": 400,\n    \"code\": 10019,\n    \"errorMessage\": \"Bad Request (Import alredy in progress)\"\n}"
-            },
-            {
-              "id": "551bd6f0-beb3-4e1a-8b34-e44a381dd43a",
-              "name": "Import Recipients - Match columns and start Import",
-              "originalRequest": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json",
-                    "disabled": false
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n\t\"file\": \"{{file_id}}\",\n\t\"associations\": {\n\t\t\"0\": \"email\",\n\t\t\"1\": \"first_name\",\n\t\t\"2\": \"last_name\", \n\t\t\"3\": \"{{attribute_name}}\"\n\t}\n}"
-                },
-                "url": "https://api.newsletter2go.com/lists/{{list_id}}/recipients/import/save"
-              },
-              "status": "Created",
-              "code": 201,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Access-Control-Allow-Headers",
-                  "value": "authorization, Content-Type, x-from",
-                  "name": "Access-Control-Allow-Headers",
-                  "description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
-                },
-                {
-                  "key": "Access-Control-Allow-Methods",
-                  "value": "GET,HEAD,POST,PUT,PATCH,DELETE,OPTIONS,TRACE",
-                  "name": "Access-Control-Allow-Methods",
-                  "description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
-                },
-                {
-                  "key": "Access-Control-Allow-Origin",
-                  "value": "*",
-                  "name": "Access-Control-Allow-Origin",
-                  "description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
-                },
-                {
-                  "key": "Cache-Control",
-                  "value": "no-cache",
-                  "name": "Cache-Control",
-                  "description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
-                },
-                {
-                  "key": "Connection",
-                  "value": "keep-alive",
-                  "name": "Connection",
-                  "description": "Options that are desired for the connection"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json",
-                  "name": "Content-Type",
-                  "description": "The mime type of this content"
-                },
-                {
-                  "key": "Date",
-                  "value": "Wed, 08 Aug 2018 11:00:59 GMT",
-                  "name": "Date",
-                  "description": "The date and time that the message was sent"
-                },
-                {
-                  "key": "Server",
-                  "value": "nginx",
-                  "name": "Server",
-                  "description": "A name for the server"
-                },
-                {
-                  "key": "Strict-Transport-Security",
-                  "value": "max-age=31536000",
-                  "name": "Strict-Transport-Security",
-                  "description": "A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains."
-                },
-                {
-                  "key": "Transfer-Encoding",
-                  "value": "chunked",
-                  "name": "Transfer-Encoding",
-                  "description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
-                },
-                {
-                  "key": "X-Content-Type-Options",
-                  "value": "nosniff",
-                  "name": "X-Content-Type-Options",
-                  "description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
-                },
-                {
-                  "key": "X-Fpm",
-                  "value": "file",
-                  "name": "X-Fpm",
-                  "description": "Custom header"
-                },
-                {
-                  "key": "X-Frame-Options",
-                  "value": "SAMEORIGIN",
-                  "name": "X-Frame-Options",
-                  "description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
-                },
-                {
-                  "key": "X-Upstream",
-                  "value": "94.130.134.120:8200",
-                  "name": "X-Upstream",
-                  "description": "Custom header"
-                },
-                {
-                  "key": "X-XSS-Protection",
-                  "value": "1",
-                  "name": "X-XSS-Protection",
-                  "description": "Cross-site scripting (XSS) filter"
-                },
-                {
-                  "key": "expires",
-                  "value": "-1",
-                  "name": "expires",
-                  "description": "Gives the date/time after which the response is considered stale"
-                },
-                {
-                  "key": "pragma",
-                  "value": "no-cache",
-                  "name": "pragma",
-                  "description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\n    \"status\": 201,\n    \"info\": {\n        \"count\": 1\n    },\n    \"value\": [\n        {\n            \"id\": 206818\n        }\n    ]\n}"
+              "body": "{\n    \"status\": 201,\n    \"info\": {\n        \"count\": 1\n    },\n    \"value\": [\n        {\n            \"id\": 207906\n        }\n    ]\n}"
             }
           ]
         },
