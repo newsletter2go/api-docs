@@ -3160,9 +3160,6 @@
           "_postman_id": "b16f71d0-0d63-4df0-a750-7dc4e8515bcc",
           "name": "Update multiple Recipients",
           "request": {
-            "auth": {
-              "type": "noauth"
-            },
             "method": "PATCH",
             "header": [
               {
@@ -3203,7 +3200,7 @@
           },
           "response": [
             {
-              "id": "d9999a84-7f77-429f-a678-0925a40e5cda",
+              "id": "396735bf-e1db-4e7a-a7db-a280849d84a1",
               "name": "Update multiple Recipients",
               "originalRequest": {
                 "method": "PATCH",
@@ -3211,6 +3208,11 @@
                   {
                     "key": "Content-Type",
                     "value": "application/json",
+                    "disabled": false
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}",
                     "disabled": false
                   }
                 ],
@@ -3288,7 +3290,7 @@
                 },
                 {
                   "key": "Date",
-                  "value": "Wed, 08 Aug 2018 09:49:50 GMT",
+                  "value": "Wed, 15 Aug 2018 11:14:06 GMT",
                   "name": "Date",
                   "description": "The date and time that the message was sent"
                 },
@@ -3342,7 +3344,7 @@
                 },
                 {
                   "key": "X-Upstream",
-                  "value": "88.99.90.166:8200",
+                  "value": "94.130.134.120:8200",
                   "name": "X-Upstream",
                   "description": "Custom header"
                 },
