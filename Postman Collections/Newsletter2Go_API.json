@@ -2594,11 +2594,11 @@
                 }
               ]
             },
-            "description": "remove all recipients from one list. Pay attention to the filter, if you forget to submit it, all recipients are getting removed from the group!\nwill only work for regular group"
+            "description": "Delete multiple / all recipients from one list. \n\n<div class=\"alert alert-info\">Be careful. If you don't pass a <code>_filter</code>, all your recipients will be deleted irrevocably from the list.</div>"
           },
           "response": [
             {
-              "id": "b76c1305-9c69-4578-9419-f429d86ecba8",
+              "id": "bfc4ac11-41df-4dcd-b766-b3897017bbc0",
               "name": "Delete multiple Recipients from List",
               "originalRequest": {
                 "method": "DELETE",
@@ -2606,6 +2606,11 @@
                   {
                     "key": "Content-Type",
                     "value": "application/json",
+                    "disabled": false
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}",
                     "disabled": false
                   }
                 ],
@@ -2683,7 +2688,7 @@
                 },
                 {
                   "key": "Date",
-                  "value": "Wed, 08 Aug 2018 09:56:56 GMT",
+                  "value": "Wed, 15 Aug 2018 11:04:24 GMT",
                   "name": "Date",
                   "description": "The date and time that the message was sent"
                 },
@@ -2737,7 +2742,7 @@
                 },
                 {
                   "key": "X-Upstream",
-                  "value": "94.130.134.120:8200",
+                  "value": "195.201.175.58:8200",
                   "name": "X-Upstream",
                   "description": "Custom header"
                 },
