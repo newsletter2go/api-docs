@@ -8521,7 +8521,7 @@
     {
       "_postman_id": "22cf6ae6-ae22-4cc6-8160-cded15a94fbb",
       "name": "Forms",
-      "description": "The forms end points offer a convenient way to retrieve subscribe, profile and unsubscribe forms configured in the Newsletter2Go UI and to submit them subscribing and unsubscribing exiting recipients.\n\n<div class=\"alert alert-info\">The forms calls are public and don't need authentication.</div> ",
+      "description": "The forms end points offer a convenient way to retrieve subscribe, profile and unsubscribe forms configured in the Newsletter2Go UI and to submit them subscribing and unsubscribing exiting recipients.\n\n<div class=\"alert alert-info\">The forms calls are public and don't need authentication. You only need your `form_id` from the Newsletter2Go UI.</div> ",
       "item": [
         {
           "_postman_id": "4daba842-cc75-45e1-a822-05334f87ebed",
