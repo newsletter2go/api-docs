@@ -2066,7 +2066,7 @@
         },
         {
           "_postman_id": "9eb0eccc-8c3c-4a59-90e5-547031fe55a2",
-          "name": "Create Recipient",
+          "name": "Create Recipient(s)",
           "request": {
             "auth": {
               "type": "noauth"
