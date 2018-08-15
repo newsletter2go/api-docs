@@ -9412,8 +9412,16 @@
           "_postman_id": "898b1b3e-071c-4391-95ba-fb4c0f5c09b7",
           "name": "Get User Details",
           "request": {
+            "auth": {
+              "type": "noauth"
+            },
             "method": "GET",
-            "header": [],
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}} "
+              }
+            ],
             "body": {},
             "url": "https://api.newsletter2go.com/users/{{user_id}}"
           },
