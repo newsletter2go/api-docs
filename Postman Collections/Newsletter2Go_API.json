@@ -1491,7 +1491,7 @@
         },
         {
           "_postman_id": "6c7853a8-978c-4d48-8d97-b5a921d6e287",
-          "name": "Get Recipients Details",
+          "name": "Get one Recipient's Details",
           "request": {
             "auth": {
               "type": "noauth"
