@@ -8027,11 +8027,17 @@
           },
           "response": [
             {
-              "id": "722da511-370c-4046-a04d-acdb6ce3305c",
-              "name": "Get mailing statistics",
+              "id": "e18c22f8-759c-4177-99a2-fc4ff4434e10",
+              "name": "Get specific Mailing Reports",
               "originalRequest": {
                 "method": "GET",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}} ",
+                    "disabled": false
+                  }
+                ],
                 "body": {},
                 "url": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports"
               },
@@ -8083,7 +8089,7 @@
                 },
                 {
                   "key": "Date",
-                  "value": "Wed, 08 Aug 2018 11:38:59 GMT",
+                  "value": "Wed, 15 Aug 2018 14:16:03 GMT",
                   "name": "Date",
                   "description": "The date and time that the message was sent"
                 },
@@ -8137,7 +8143,7 @@
                 },
                 {
                   "key": "X-Upstream",
-                  "value": "195.201.171.185:8200",
+                  "value": "88.99.5.6:8200",
                   "name": "X-Upstream",
                   "description": "Custom header"
                 },
@@ -8162,36 +8168,35 @@
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"count\": 1\n    },\n    \"value\": [\n        {\n            \"unsubscribes\": [\n                {\n                    \"count\": 0\n                }\n            ],\n            \"complaints\": [\n                {\n                    \"count\": 0\n                }\n            ],\n            \"bounces\": [\n                {\n                    \"count\": 0\n                }\n            ],\n            \"open\": {\n                \"unique_open_rate\": 0,\n                \"open_rate\": 0,\n                \"unique_opens\": 0,\n                \"opens\": 0,\n                \"opens_per_opener\": 0,\n                \"devices\": [],\n                \"families\": [],\n                \"useragents\": []\n            },\n            \"click\": {\n                \"unique_click_rate\": 0,\n                \"click_rate\": 0,\n                \"ctr\": 0,\n                \"unique_clicks\": 0,\n                \"clicks\": 0,\n                \"clicks_per_clicker\": 0,\n                \"links\": []\n            },\n            \"conversion\": {\n                \"unique_conversion_rate\": 0,\n                \"conversion_rate\": 0,\n                \"ctr\": 0,\n                \"unique_ctr\": 0,\n                \"unique_conversions\": 0,\n                \"conversions\": 0,\n                \"conversions_per_recipient\": 0,\n                \"products\": [],\n                \"links\": [],\n                \"amount\": 0,\n                \"amount_per_conversion\": 0\n            },\n            \"receivers\": 0,\n            \"name\": \"Newsletter 2018-07-18T13:39:28+02:00\",\n            \"subject\": \"TEst \\ud83e\\udd13\\ud83e\\udd13\\ud83e\\udd13\\ud83e\\udd13\\ud83e\\udd13\",\n            \"header_from_email\": \"support@newsletter2go.com\",\n            \"header_from_name\": \"support@newsletter2go.com\",\n            \"thumbnail_big_url\": \"\\/\\/files.newsletter2go.com\\/jcnmuslf\\/s_3kf9rpeb\\/newsletter\\/jlrcg7mf\\/au37rqoz\\/thumbnail_big.png\",\n            \"header_reply_email\": \"support@newsletter2go.com\",\n            \"header_reply_name\": \"support@newsletter2go.com\",\n            \"header_to_email\": null,\n            \"header_to_name\": null,\n            \"has_open_tracking\": true,\n            \"has_click_tracking\": true,\n            \"has_conversion_tracking\": true,\n            \"has_google_analytics_tracking\": false,\n            \"has_econda_tracking\": false,\n            \"has_custom_tracking\": false,\n            \"tracking_parameter\": null,\n            \"tracking_url\": null,\n            \"tags\": [],\n            \"first_dispatch_time\": \"2018-07-27T08:47:03+0000\",\n            \"last_dispatch_time\": \"2018-07-27T08:47:03+0000\",\n            \"attachments\": []\n        }\n    ]\n}"
-            },
+              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"count\": 1\n    },\n    \"value\": [\n        {\n            \"unsubscribes\": [\n                {\n                    \"count\": 0\n                }\n            ],\n            \"complaints\": [\n                {\n                    \"count\": 0\n                }\n            ],\n            \"bounces\": [\n                {\n                    \"count\": 0\n                }\n            ],\n            \"open\": {\n                \"unique_open_rate\": 0,\n                \"open_rate\": 0,\n                \"unique_opens\": 0,\n                \"opens\": 0,\n                \"opens_per_opener\": 0,\n                \"devices\": [],\n                \"families\": [],\n                \"useragents\": []\n            },\n            \"click\": {\n                \"unique_click_rate\": 0,\n                \"click_rate\": 0,\n                \"ctr\": 0,\n                \"unique_clicks\": 0,\n                \"clicks\": 0,\n                \"clicks_per_clicker\": 0,\n                \"links\": []\n            },\n            \"conversion\": {\n                \"unique_conversion_rate\": 0,\n                \"conversion_rate\": 0,\n                \"ctr\": 0,\n                \"unique_ctr\": 0,\n                \"unique_conversions\": 0,\n                \"conversions\": 0,\n                \"conversions_per_recipient\": 0,\n                \"products\": [],\n                \"links\": [],\n                \"amount\": 0,\n                \"amount_per_conversion\": 0\n            },\n            \"receivers\": 0,\n            \"name\": \"Other Name\",\n            \"subject\": \"Subject\",\n            \"header_from_email\": \"from@example.org\",\n            \"header_from_name\": \"From Name\",\n            \"thumbnail_big_url\": \"\\/\\/files.newsletter2go.com\\/jcnmuslf\\/s_3kf9rpeb\\/newsletter\\/bjh6gb8j\\/j3r3d74y\\/thumbnail_big.png\",\n            \"header_reply_email\": \"reply@example.org\",\n            \"header_reply_name\": \"Reply Name\",\n            \"header_to_email\": null,\n            \"header_to_name\": null,\n            \"has_open_tracking\": true,\n            \"has_click_tracking\": true,\n            \"has_conversion_tracking\": true,\n            \"has_google_analytics_tracking\": false,\n            \"has_econda_tracking\": false,\n            \"has_custom_tracking\": false,\n            \"tracking_parameter\": null,\n            \"tracking_url\": null,\n            \"tags\": []\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "a71a25e0-8122-4f3d-a300-dbf66b2bc3e8",
+          "name": "Get specific Mailing Reports by Day",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": "https://api.newsletter2go.com/lists/{{list_id}}/newsletters/{{newsletter_id}}/aggregations",
+            "description": "useful for automated mailings that run every day"
+          },
+          "response": [
             {
-              "id": "b932fcae-9012-4e1c-ae6b-630bb504c89a",
-              "name": "Get mailing statistics with filter",
+              "id": "0b524d48-8a69-48c1-adb5-0a3142f1566b",
+              "name": "Get specific Mailing Reports by Day",
               "originalRequest": {
                 "method": "GET",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}",
+                    "disabled": false
+                  }
+                ],
                 "body": {},
-                "url": {
-                  "raw": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports?_filter=gender%3DLIKE%3D%22%25m%25%22",
-                  "protocol": "https",
-                  "host": [
-                    "api",
-                    "newsletter2go",
-                    "com"
-                  ],
-                  "path": [
-                    "newsletters",
-                    "{{newsletter_id}}",
-                    "reports"
-                  ],
-                  "query": [
-                    {
-                      "key": "_filter",
-                      "value": "gender%3DLIKE%3D%22%25m%25%22",
-                      "equals": true
-                    }
-                  ]
-                }
+                "url": "https://api.newsletter2go.com/lists/{{list_id}}/newsletters/{{newsletter_id}}/aggregations"
               },
               "status": "OK",
               "code": 200,
@@ -8241,7 +8246,7 @@
                 },
                 {
                   "key": "Date",
-                  "value": "Wed, 08 Aug 2018 11:39:58 GMT",
+                  "value": "Wed, 15 Aug 2018 14:16:20 GMT",
                   "name": "Date",
                   "description": "The date and time that the message was sent"
                 },
@@ -8320,28 +8325,24 @@
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"count\": 1\n    },\n    \"value\": [\n        {\n            \"unsubscribes\": [\n                {\n                    \"count\": 0\n                }\n            ],\n            \"complaints\": [\n                {\n                    \"count\": 0\n                }\n            ],\n            \"bounces\": [\n                {\n                    \"count\": 0\n                }\n            ],\n            \"open\": {\n                \"unique_open_rate\": 0,\n                \"open_rate\": 0,\n                \"unique_opens\": 0,\n                \"opens\": 0,\n                \"opens_per_opener\": 0,\n                \"devices\": [],\n                \"families\": [],\n                \"useragents\": []\n            },\n            \"click\": {\n                \"unique_click_rate\": 0,\n                \"click_rate\": 0,\n                \"ctr\": 0,\n                \"unique_clicks\": 0,\n                \"clicks\": 0,\n                \"clicks_per_clicker\": 0,\n                \"links\": []\n            },\n            \"conversion\": {\n                \"unique_conversion_rate\": 0,\n                \"conversion_rate\": 0,\n                \"ctr\": 0,\n                \"unique_ctr\": 0,\n                \"unique_conversions\": 0,\n                \"conversions\": 0,\n                \"conversions_per_recipient\": 0,\n                \"products\": [],\n                \"links\": [],\n                \"amount\": 0,\n                \"amount_per_conversion\": 0\n            },\n            \"receivers\": 0,\n            \"name\": \"Newsletter 2018-07-18T13:39:28+02:00\",\n            \"subject\": \"TEst \\ud83e\\udd13\\ud83e\\udd13\\ud83e\\udd13\\ud83e\\udd13\\ud83e\\udd13\",\n            \"header_from_email\": \"support@newsletter2go.com\",\n            \"header_from_name\": \"support@newsletter2go.com\",\n            \"thumbnail_big_url\": \"\\/\\/files.newsletter2go.com\\/jcnmuslf\\/s_3kf9rpeb\\/newsletter\\/jlrcg7mf\\/au37rqoz\\/thumbnail_big.png\",\n            \"header_reply_email\": \"support@newsletter2go.com\",\n            \"header_reply_name\": \"support@newsletter2go.com\",\n            \"header_to_email\": null,\n            \"header_to_name\": null,\n            \"has_open_tracking\": true,\n            \"has_click_tracking\": true,\n            \"has_conversion_tracking\": true,\n            \"has_google_analytics_tracking\": false,\n            \"has_econda_tracking\": false,\n            \"has_custom_tracking\": false,\n            \"tracking_parameter\": null,\n            \"tracking_url\": null,\n            \"tags\": [],\n            \"first_dispatch_time\": \"2018-07-27T08:47:03+0000\",\n            \"last_dispatch_time\": \"2018-07-27T08:47:03+0000\",\n            \"attachments\": []\n        }\n    ]\n}"
+              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"links\": {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/lists\\/om355owj\\/newsletters\\/bjh6gb8j\\/aggregations?_limit=50&_offset=0\"\n        },\n        \"count\": 0,\n        \"additional\": {\n            \"overall\": {\n                \"mail_count\": 1591,\n                \"ave_mail_count\": 10.6779,\n                \"hard_bounces\": 962,\n                \"soft_bounces\": 14,\n                \"spam_bounces\": 0,\n                \"opens\": 263,\n                \"unique_opens\": 183,\n                \"clicks\": 35,\n                \"unique_clicks\": 28,\n                \"conversions\": 0,\n                \"sum_conversions\": 0,\n                \"unsubscribes\": 13,\n                \"complaints\": 0\n            },\n            \"filtered\": {\n                \"mail_count\": 1591,\n                \"ave_mail_count\": 10.6779,\n                \"hard_bounces\": 962,\n                \"soft_bounces\": 14,\n                \"spam_bounces\": 0,\n                \"opens\": 263,\n                \"unique_opens\": 183,\n                \"clicks\": 35,\n                \"unique_clicks\": 28,\n                \"conversions\": 0,\n                \"sum_conversions\": 0,\n                \"unsubscribes\": 13,\n                \"complaints\": 0\n            }\n        }\n    },\n    \"value\": []\n}"
             }
           ]
-        },
-        {
-          "_postman_id": "a71a25e0-8122-4f3d-a300-dbf66b2bc3e8",
-          "name": "Get specific Mailing Reports by Day",
-          "request": {
-            "method": "GET",
-            "header": [],
-            "body": {},
-            "url": "https://api.newsletter2go.com/lists/{{list_id}}/newsletters/{{newsletter_id}}/aggregations",
-            "description": "useful for automated mailings that run every day"
-          },
-          "response": []
         },
         {
           "_postman_id": "c9ff642d-1a33-4cb8-a9d9-f3c5896e53ed",
           "name": "Get multiple Mailing Reports by Day",
           "request": {
+            "auth": {
+              "type": "noauth"
+            },
             "method": "GET",
-            "header": [],
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}} "
+              }
+            ],
             "body": {},
             "url": "https://api.newsletter2go.com/lists/{{list_id}}/newsletters/aggregations",
             "description": "useful for automated mailings that run every day"
