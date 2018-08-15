@@ -403,11 +403,7 @@
         }
       ],
       "auth": {
-        "type": "basic",
-        "basic": {
-          "password": "{{auth_key_part_password}}",
-          "username": "{{auth_key_part_username}}"
-        }
+        "type": "noauth"
       },
       "event": [
         {
