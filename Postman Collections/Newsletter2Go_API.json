@@ -1292,6 +1292,9 @@
           "response": []
         }
       ],
+      "auth": {
+        "type": "noauth"
+      },
       "event": [
         {
           "listen": "prerequest",
