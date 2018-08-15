@@ -6978,11 +6978,18 @@
           "_postman_id": "b6908876-23a9-4edc-a15f-edf5d9337085",
           "name": "Create Mailing",
           "request": {
+            "auth": {
+              "type": "noauth"
+            },
             "method": "POST",
             "header": [
               {
                 "key": "Content-Type",
                 "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}} "
               }
             ],
             "body": {
