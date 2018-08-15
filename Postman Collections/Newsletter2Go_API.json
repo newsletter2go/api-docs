@@ -4009,11 +4009,18 @@
           "_postman_id": "bef8c5b0-c961-41d8-9a77-2d6eb0ea526e",
           "name": "Get Segments in List",
           "request": {
+            "auth": {
+              "type": "noauth"
+            },
             "method": "GET",
             "header": [
               {
                 "key": "Content-Type",
                 "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}} "
               }
             ],
             "body": {
