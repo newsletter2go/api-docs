@@ -3420,14 +3420,19 @@
           },
           "response": [
             {
-              "id": "3f3c737e-99b5-4d37-8292-f75f48afec34",
-              "name": "Import Recipients by File Upload",
+              "id": "e5bc773f-1c72-4d0f-93b4-7c80d9cf13ac",
+              "name": "Import Recipients - Upload File",
               "originalRequest": {
                 "method": "POST",
                 "header": [
                   {
                     "key": "Content-Type",
                     "value": "application/json",
+                    "disabled": false
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}",
                     "disabled": false
                   }
                 ],
@@ -3451,7 +3456,7 @@
               },
               "status": "OK",
               "code": 200,
-              "_postman_previewlanguage": "json",
+              "_postman_previewlanguage": "html",
               "header": [
                 {
                   "key": "Access-Control-Allow-Headers",
@@ -3497,7 +3502,7 @@
                 },
                 {
                   "key": "Date",
-                  "value": "Wed, 08 Aug 2018 10:14:54 GMT",
+                  "value": "Wed, 15 Aug 2018 11:56:29 GMT",
                   "name": "Date",
                   "description": "The date and time that the message was sent"
                 },
@@ -3551,7 +3556,7 @@
                 },
                 {
                   "key": "X-Upstream",
-                  "value": "88.99.99.90:8200",
+                  "value": "138.201.29.81:8200",
                   "name": "X-Upstream",
                   "description": "Custom header"
                 },
@@ -3576,7 +3581,7 @@
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\"success\":true,\"file\":\"ntfl401z\"}"
+              "body": "{\"success\":true,\"file\":\"pklmo3pz\"}"
             }
           ]
         },
@@ -3604,6 +3609,10 @@
               {
                 "key": "Content-Type",
                 "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
               }
             ],
             "body": {
