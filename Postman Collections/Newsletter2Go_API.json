@@ -5662,11 +5662,17 @@
           },
           "response": [
             {
-              "id": "e205cc7e-f488-4c56-9166-c2ce79241278",
+              "id": "42b860fa-a313-4529-bff2-b95c261a010f",
               "name": "Get Attributes from List",
               "originalRequest": {
                 "method": "GET",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}} ",
+                    "disabled": false
+                  }
+                ],
                 "body": {},
                 "url": "https://api.newsletter2go.com/lists/{{list_id}}/attributes"
               },
@@ -5718,7 +5724,7 @@
                 },
                 {
                   "key": "Date",
-                  "value": "Mon, 06 Aug 2018 14:23:09 GMT",
+                  "value": "Wed, 15 Aug 2018 13:51:00 GMT",
                   "name": "Date",
                   "description": "The date and time that the message was sent"
                 },
@@ -5772,7 +5778,7 @@
                 },
                 {
                   "key": "X-Upstream",
-                  "value": "138.201.29.81:8200",
+                  "value": "88.99.5.6:8200",
                   "name": "X-Upstream",
                   "description": "Custom header"
                 },
@@ -5797,7 +5803,7 @@
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"links\": {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/lists\\/om355owj\\/attributes?_limit=50&_offset=0\"\n        },\n        \"count\": 18\n    },\n    \"value\": [\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/cnxun8wj\",\n            \"id\": \"cnxun8wj\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/91pt19av\",\n            \"id\": \"91pt19av\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/jcnm7ks3\",\n            \"id\": \"jcnm7ks3\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/tzf44guv\",\n            \"id\": \"tzf44guv\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/jkjs21xz\",\n            \"id\": \"jkjs21xz\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/cg1968o3\",\n            \"id\": \"cg1968o3\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/axse6xrn\",\n            \"id\": \"axse6xrn\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/yac6xvbr\",\n            \"id\": \"yac6xvbr\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/e85q32t3\",\n            \"id\": \"e85q32t3\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/f8nsxi6b\",\n            \"id\": \"f8nsxi6b\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/e779lnbn\",\n            \"id\": \"e779lnbn\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/cg1qmsb7\",\n            \"id\": \"cg1qmsb7\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/grwmd8lv\",\n            \"id\": \"grwmd8lv\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/wl5o0irb\",\n            \"id\": \"wl5o0irb\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/3pc9xfmv\",\n            \"id\": \"3pc9xfmv\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/d6p7g28n\",\n            \"id\": \"d6p7g28n\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/if43pq03\",\n            \"id\": \"if43pq03\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/7bkvcy1z\",\n            \"id\": \"7bkvcy1z\"\n        }\n    ]\n}"
+              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"links\": {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/lists\\/om355owj\\/attributes?_limit=50&_offset=0\"\n        },\n        \"count\": 20\n    },\n    \"value\": [\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/cnxun8wj\",\n            \"id\": \"cnxun8wj\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/91pt19av\",\n            \"id\": \"91pt19av\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/jcnm7ks3\",\n            \"id\": \"jcnm7ks3\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/tzf44guv\",\n            \"id\": \"tzf44guv\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/jkjs21xz\",\n            \"id\": \"jkjs21xz\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/cg1968o3\",\n            \"id\": \"cg1968o3\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/axse6xrn\",\n            \"id\": \"axse6xrn\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/yac6xvbr\",\n            \"id\": \"yac6xvbr\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/e85q32t3\",\n            \"id\": \"e85q32t3\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/f8nsxi6b\",\n            \"id\": \"f8nsxi6b\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/e779lnbn\",\n            \"id\": \"e779lnbn\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/cg1qmsb7\",\n            \"id\": \"cg1qmsb7\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/grwmd8lv\",\n            \"id\": \"grwmd8lv\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/wl5o0irb\",\n            \"id\": \"wl5o0irb\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/3pc9xfmv\",\n            \"id\": \"3pc9xfmv\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/d6p7g28n\",\n            \"id\": \"d6p7g28n\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/if43pq03\",\n            \"id\": \"if43pq03\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/7bkvcy1z\",\n            \"id\": \"7bkvcy1z\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/76lmsk4z\",\n            \"id\": \"76lmsk4z\"\n        },\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/attribute\\/ewuoch8j\",\n            \"id\": \"ewuoch8j\"\n        }\n    ]\n}"
             }
           ]
         },
@@ -5805,11 +5811,14 @@
           "_postman_id": "b8a4f83b-1e17-4f6c-922e-afcdadc3dd2d",
           "name": "Get Attribute Details",
           "request": {
+            "auth": {
+              "type": "noauth"
+            },
             "method": "GET",
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{access_token}}"
+                "value": "Bearer {{access_token}} "
               }
             ],
             "body": {},
