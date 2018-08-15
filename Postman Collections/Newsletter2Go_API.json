@@ -6137,11 +6137,18 @@
           "_postman_id": "23e37d1d-f8aa-48a1-9093-b9f29195085d",
           "name": "Update Attribute",
           "request": {
+            "auth": {
+              "type": "noauth"
+            },
             "method": "PATCH",
             "header": [
               {
                 "key": "Content-Type",
                 "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}} "
               }
             ],
             "body": {
