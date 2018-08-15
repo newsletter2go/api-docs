@@ -5457,7 +5457,7 @@
                 }
               ]
             },
-            "description": "remove all Recipients from given group. Pay attention to the filter, if you forget to submit it, all recipients are getting removed from the group!\nwill only work for regular group"
+            "description": "Delete multiple / all recipients from a regular (not auto-update) group. \n\n<div class=\"alert alert-info\">Be careful. If you don't pass a <code>_filter</code>, all your recipients will be deleted from the group irrevocably.</div>"
           },
           "response": []
         }
