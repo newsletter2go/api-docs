@@ -2997,11 +2997,18 @@
           "_postman_id": "6f4acfc5-649a-4345-9456-6cad24fa9fee",
           "name": "Update one Recipient",
           "request": {
+            "auth": {
+              "type": "noauth"
+            },
             "method": "PATCH",
             "header": [
               {
                 "key": "Content-Type",
                 "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
               }
             ],
             "body": {
