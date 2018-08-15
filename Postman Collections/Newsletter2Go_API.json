@@ -4527,55 +4527,6 @@
           "response": []
         },
         {
-          "_postman_id": "d9e629cc-aa41-45b3-83a9-f99756f606a3",
-          "name": "Delete Recipient from Segment",
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "DELETE",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Authorization",
-                "value": "Bearer {{access_token}} "
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": {
-              "raw": "https://api.newsletter2go.com/lists/{{list_id}}/groups/{{group_id}}/recipients?_filter=email%3DLIKE%3D%22%example%25%22",
-              "protocol": "https",
-              "host": [
-                "api",
-                "newsletter2go",
-                "com"
-              ],
-              "path": [
-                "lists",
-                "{{list_id}}",
-                "groups",
-                "{{group_id}}",
-                "recipients"
-              ],
-              "query": [
-                {
-                  "key": "_filter",
-                  "value": "email%3DLIKE%3D%22%example%25%22",
-                  "equals": true
-                }
-              ]
-            },
-            "description": "remove all Recipients from given group. Pay attention to the filter, if you forget to submit it, all recipients are getting removed from the group!\nwill only work for regular group"
-          },
-          "response": []
-        },
-        {
           "_postman_id": "e2b73d08-b635-4028-8397-9687f32e2be2",
           "name": "Add one Recipient to Segment",
           "request": {
@@ -4634,6 +4585,55 @@
               ]
             },
             "description": "add all Recipients to the given group. Pay attention to the filter, if you forget to submit it, all recipients of the current list are getting added to the group!\nonly works with regular groups"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "d9e629cc-aa41-45b3-83a9-f99756f606a3",
+          "name": "Delete Recipient from Segment",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}} "
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://api.newsletter2go.com/lists/{{list_id}}/groups/{{group_id}}/recipients?_filter=email%3DLIKE%3D%22%example%25%22",
+              "protocol": "https",
+              "host": [
+                "api",
+                "newsletter2go",
+                "com"
+              ],
+              "path": [
+                "lists",
+                "{{list_id}}",
+                "groups",
+                "{{group_id}}",
+                "recipients"
+              ],
+              "query": [
+                {
+                  "key": "_filter",
+                  "value": "email%3DLIKE%3D%22%example%25%22",
+                  "equals": true
+                }
+              ]
+            },
+            "description": "remove all Recipients from given group. Pay attention to the filter, if you forget to submit it, all recipients are getting removed from the group!\nwill only work for regular group"
           },
           "response": []
         },
