@@ -7001,21 +7001,25 @@
           },
           "response": [
             {
-              "id": "975baa9d-6bda-4425-b0e9-63460178c195",
-              "name": "Create Mailing with HTML",
+              "id": "11ba0364-9dda-46a9-a58b-b319dc77f27c",
+              "name": "Create Mailing",
               "originalRequest": {
                 "method": "POST",
                 "header": [
                   {
                     "key": "Content-Type",
-                    "name": "Content-Type",
                     "value": "application/json",
+                    "disabled": false
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}} ",
                     "disabled": false
                   }
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\r\n  \"type\": \"default\",\r\n  \"name\": \"New Mailing Name\",\r\n  \"has_open_tracking\": true,\r\n  \"has_click_tracking\": true,\r\n  \"has_conversion_tracking\": true,\r\n  \"html\": \"<html><body>html content</body></html>\",\r\n  \"text\": \"Text Version\",\r\n  \"subject\": \"Subject\",\r\n  \"preheader\": \"Pre header\",\r\n  \"header_from_email\": \"from@example.org\",\r\n  \"header_from_name\": \"From Name\",\r\n  \"header_reply_email\": \"reply@example.org\",\r\n  \"header_reply_name\": \"Reply Name\"\r\n}"
+                  "raw": "{\r\n  \"type\": \"default\",\r\n  \"name\": \"New Mailing Name\",\r\n  \"has_open_tracking\": true,\r\n  \"has_click_tracking\": true,\r\n  \"has_conversion_tracking\": true,\r\n  \"subject\": \"Subject\",\r\n  \"preheader\": \"Pre header\",\r\n  \"header_from_email\": \"from@example.org\",\r\n  \"header_from_name\": \"From Name\",\r\n  \"header_reply_email\": \"reply@example.org\",\r\n  \"header_reply_name\": \"Reply Name\"\r\n}"
                 },
                 "url": "https://api.newsletter2go.com/lists/{{list_id}}/newsletters"
               },
@@ -7061,7 +7065,7 @@
                 },
                 {
                   "key": "Date",
-                  "value": "Wed, 08 Aug 2018 12:25:59 GMT",
+                  "value": "Wed, 15 Aug 2018 14:07:46 GMT",
                   "name": "Date",
                   "description": "The date and time that the message was sent"
                 },
@@ -7103,7 +7107,7 @@
                 },
                 {
                   "key": "X-Upstream",
-                  "value": "94.130.53.59:8200",
+                  "value": "195.201.175.60:8200",
                   "name": "X-Upstream",
                   "description": "Custom header"
                 },
@@ -7128,7 +7132,7 @@
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"status\": 201,\n    \"info\": {\n        \"count\": 1,\n        \"additional\": {}\n    },\n    \"value\": [\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/newsletters\\/v35xmjrn\",\n            \"id\": \"v35xmjrn\"\n        }\n    ]\n}"
+              "body": "{\n    \"status\": 201,\n    \"info\": {\n        \"count\": 1,\n        \"additional\": {}\n    },\n    \"value\": [\n        {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/newsletters\\/9qe97zyr\",\n            \"id\": \"9qe97zyr\"\n        }\n    ]\n}"
             }
           ]
         },
@@ -7136,11 +7140,18 @@
           "_postman_id": "a8f42b89-ab89-4ebe-8e5c-8dfe2307341a",
           "name": "Create transactional Mailing",
           "request": {
+            "auth": {
+              "type": "noauth"
+            },
             "method": "POST",
             "header": [
               {
                 "key": "Content-Type",
                 "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}} "
               }
             ],
             "body": {
