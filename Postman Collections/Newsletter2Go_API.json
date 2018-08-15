@@ -8532,7 +8532,146 @@
             "body": {},
             "url": "https://api.newsletter2go.com/forms/generate/{{form_id}}"
           },
-          "response": []
+          "response": [
+            {
+              "id": "243bf0c1-659e-4bdc-b808-cb094e06f0f0",
+              "name": "Get Form",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {},
+                "url": "https://api.newsletter2go.com/forms/generate/{{form_id}}"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Access-Control-Allow-Headers",
+                  "value": "authorization, Content-Type, x-from",
+                  "name": "Access-Control-Allow-Headers",
+                  "description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+                },
+                {
+                  "key": "Access-Control-Allow-Methods",
+                  "value": "GET,HEAD,POST,PUT,PATCH,DELETE,OPTIONS,TRACE",
+                  "name": "Access-Control-Allow-Methods",
+                  "description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*",
+                  "name": "Access-Control-Allow-Origin",
+                  "description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache",
+                  "name": "Cache-Control",
+                  "description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive",
+                  "name": "Connection",
+                  "description": "Options that are desired for the connection"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip",
+                  "name": "Content-Encoding",
+                  "description": "The type of encoding used on the data."
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 15 Aug 2018 14:21:17 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "nginx",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000",
+                  "name": "Strict-Transport-Security",
+                  "description": "A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains."
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked",
+                  "name": "Transfer-Encoding",
+                  "description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept-Encoding",
+                  "name": "Vary",
+                  "description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept-Encoding",
+                  "name": "Vary",
+                  "description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+                },
+                {
+                  "key": "X-Cache-Status",
+                  "value": "HIT",
+                  "name": "X-Cache-Status",
+                  "description": "Custom header"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff",
+                  "name": "X-Content-Type-Options",
+                  "description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+                },
+                {
+                  "key": "X-Fpm",
+                  "value": "default",
+                  "name": "X-Fpm",
+                  "description": "Custom header"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN",
+                  "name": "X-Frame-Options",
+                  "description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1",
+                  "name": "X-XSS-Protection",
+                  "description": "Cross-site scripting (XSS) filter"
+                },
+                {
+                  "key": "expires",
+                  "value": "-1",
+                  "name": "expires",
+                  "description": "Gives the date/time after which the response is considered stale"
+                },
+                {
+                  "key": "pragma",
+                  "value": "no-cache",
+                  "name": "pragma",
+                  "description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"count\": 1\n    },\n    \"value\": [\n        {\n            \"items\": [\n                {\n                    \"name\": \"email\",\n                    \"description\": null,\n                    \"is_multiselect\": false,\n                    \"default_value\": null,\n                    \"attribute_type\": \"text\",\n                    \"attribute_sub_type\": \"email\",\n                    \"label\": \"Email\",\n                    \"placeholder\": \"Email\",\n                    \"is_required\": false,\n                    \"is_multiline\": false,\n                    \"type\": \"attribute\",\n                    \"id\": \"email\"\n                },\n                {\n                    \"is_required\": true,\n                    \"type\": \"gdpr_customer\",\n                    \"content\": \"Ich best&#228;tige die <a href=\\\"https:\\/\\/www.newsletter2go.de\\/datenschutz\\/\\\" target=\\\"_blank\\\">Datenschutzbestimmung<\\/a>\",\n                    \"link\": \"https:\\/\\/www.newsletter2go.de\\/datenschutz\\/\"\n                },\n                {\n                    \"type\": \"gdpr_n2go\",\n                    \"content\": \"<div style=\\\"display: block; position: relative; padding: 10px 10px 10px 80px;\\\"><img style=\\\"width: 60px; position: absolute; left: 0px; top: 20px;\\\" src=\\\"https:\\/\\/files.newsletter2go.com\\/forms\\/gdpr\\/gdpr_lock.png\\\">Wir nutzen Newsletter2Go als Dienstleister f\\u00fcr die Versendung unserer Newsletter. Im Rahmen dieser Anmeldung erkl\\u00e4ren Sie sich einverstanden, dass Ihre eingegebenen Daten an Newsletter2Go \\u00fcbermittelt werden. Bitte beachten Sie die <a href=\\\"https:\\/\\/www.newsletter2go.de\\/datenschutz\\/\\\" target=\\\"_blank\\\">Datenschutzbestimmungen<\\/a> und <a href=\\\"https:\\/\\/www.newsletter2go.de\\/agb\\/\\\" target=\\\"_blank\\\">Allgemeinen Gesch\\u00e4ftsbedingungen<\\/a> von Newsletter2Go.<\\/div>\"\n                },\n                {\n                    \"label\": \"Adressbuchauswahl\",\n                    \"is_required\": false,\n                    \"type\": \"list\",\n                    \"values\": [\n                        {\n                            \"id\": \"om355owj\",\n                            \"label\": \"Default\",\n                            \"is_hidden\": false,\n                            \"is_preselected\": false,\n                            \"value\": \"om355owj\"\n                        },\n                        {\n                            \"id\": \"5oca6p1j\",\n                            \"label\": \"W\\u00f6chentliches Update\",\n                            \"is_hidden\": false,\n                            \"is_preselected\": false,\n                            \"value\": \"5oca6p1j\"\n                        },\n                        {\n                            \"id\": \"7bjaj1wj\",\n                            \"label\": \"Produktneuheiten\",\n                            \"is_hidden\": false,\n                            \"is_preselected\": false,\n                            \"value\": \"7bjaj1wj\"\n                        }\n                    ]\n                },\n                {\n                    \"name\": \"1_bool\",\n                    \"description\": \"\",\n                    \"is_multiselect\": false,\n                    \"default_value\": \"0\",\n                    \"attribute_type\": \"boolean\",\n                    \"attribute_sub_type\": \"integer\",\n                    \"label\": \"1_bool\",\n                    \"placeholder\": \"\",\n                    \"is_required\": false,\n                    \"is_multiline\": false,\n                    \"type\": \"attribute\",\n                    \"id\": \"1_bool\"\n                },\n                {\n                    \"label\": \"Send\",\n                    \"type\": \"submit\"\n                }\n            ],\n            \"attributes\": {\n                \"1_bool\": {\n                    \"name\": \"1_bool\",\n                    \"description\": \"\",\n                    \"type\": \"boolean\",\n                    \"sub_type\": \"integer\",\n                    \"is_multiselect\": false,\n                    \"default_value\": \"0\"\n                },\n                \"email\": {\n                    \"name\": \"email\",\n                    \"description\": null,\n                    \"type\": \"text\",\n                    \"sub_type\": \"email\",\n                    \"is_multiselect\": false,\n                    \"default_value\": null\n                },\n                \"phone\": {\n                    \"name\": \"phone\",\n                    \"description\": null,\n                    \"type\": \"text\",\n                    \"sub_type\": \"text\",\n                    \"is_multiselect\": false,\n                    \"default_value\": null\n                },\n                \"birthday\": {\n                    \"name\": \"birthday\",\n                    \"description\": null,\n                    \"type\": \"date\",\n                    \"sub_type\": \"date\",\n                    \"is_multiselect\": false,\n                    \"default_value\": null\n                },\n                \"first_name\": {\n                    \"name\": \"first_name\",\n                    \"description\": null,\n                    \"type\": \"text\",\n                    \"sub_type\": \"text\",\n                    \"is_multiselect\": false,\n                    \"default_value\": null\n                },\n                \"last_name\": {\n                    \"name\": \"last_name\",\n                    \"description\": null,\n                    \"type\": \"text\",\n                    \"sub_type\": \"text\",\n                    \"is_multiselect\": false,\n                    \"default_value\": null\n                },\n                \"gender\": {\n                    \"name\": \"gender\",\n                    \"description\": null,\n                    \"type\": \"text\",\n                    \"sub_type\": \"text\",\n                    \"is_multiselect\": false,\n                    \"default_value\": null,\n                    \"values\": [\n                        {\n                            \"is_preselected\": false,\n                            \"value\": \"m\"\n                        },\n                        {\n                            \"is_preselected\": false,\n                            \"value\": \"f\"\n                        }\n                    ]\n                }\n            },\n            \"messages\": {\n                \"message_subscribe_error\": \"Unfortunately, an error has occurred. Please check your profile.\",\n                \"message_subscribe_duplicate\": \"You have already subscribed to the newsletter.\",\n                \"message_subscribe_success\": \"You have successfully subscribed to the newsletter.\",\n                \"message_subscribe_doi\": \"Thank you for subscribing. We've sent you an email with a confirmation link.\",\n                \"message_subscribe_email\": \"\",\n                \"message_expired_error\": \"Your subscription invitation has expired. Please try again.\"\n            },\n            \"url\": \"https:\\/\\/subscribe.newsletter2go.com?n2g=3kf9rpeb-g38pecar-ijw\"\n        }\n    ]\n}"
+            }
+          ]
         },
         {
           "_postman_id": "46cc4c57-dc6e-440c-83ec-f214f9d24a1a",
@@ -8551,7 +8690,155 @@
             },
             "url": "https://api.newsletter2go.com/forms/submit/{{form_id}}"
           },
-          "response": []
+          "response": [
+            {
+              "id": "46eee8c5-b460-4e37-b3cd-9ebe149f20bf",
+              "name": "Submit Form / Subscribe Contact",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "disabled": false
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\t\"recipient\": {\r            \"email\": \"email@example.org\",\r            \"first_name\": \"John\",\r            \"last_name\": \"Doe\",\r            \"{{attribute_name}}\": \"attribute value\"\r        }\r}"
+                },
+                "url": "https://api.newsletter2go.com/forms/submit/{{form_id}}"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Access-Control-Allow-Headers",
+                  "value": "authorization, Content-Type, x-from",
+                  "name": "Access-Control-Allow-Headers",
+                  "description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+                },
+                {
+                  "key": "Access-Control-Allow-Methods",
+                  "value": "GET,HEAD,POST,PUT,PATCH,DELETE,OPTIONS,TRACE",
+                  "name": "Access-Control-Allow-Methods",
+                  "description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*",
+                  "name": "Access-Control-Allow-Origin",
+                  "description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache",
+                  "name": "Cache-Control",
+                  "description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive",
+                  "name": "Connection",
+                  "description": "Options that are desired for the connection"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip",
+                  "name": "Content-Encoding",
+                  "description": "The type of encoding used on the data."
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 15 Aug 2018 14:21:32 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "nginx",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000",
+                  "name": "Strict-Transport-Security",
+                  "description": "A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains."
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked",
+                  "name": "Transfer-Encoding",
+                  "description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept-Encoding",
+                  "name": "Vary",
+                  "description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept-Encoding",
+                  "name": "Vary",
+                  "description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff",
+                  "name": "X-Content-Type-Options",
+                  "description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+                },
+                {
+                  "key": "X-Fpm",
+                  "value": "default",
+                  "name": "X-Fpm",
+                  "description": "Custom header"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN",
+                  "name": "X-Frame-Options",
+                  "description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+                },
+                {
+                  "key": "X-Upstream",
+                  "value": "195.201.175.58:8200",
+                  "name": "X-Upstream",
+                  "description": "Custom header"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1",
+                  "name": "X-XSS-Protection",
+                  "description": "Cross-site scripting (XSS) filter"
+                },
+                {
+                  "key": "expires",
+                  "value": "-1",
+                  "name": "expires",
+                  "description": "Gives the date/time after which the response is considered stale"
+                },
+                {
+                  "key": "pragma",
+                  "value": "no-cache",
+                  "name": "pragma",
+                  "description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"count\": 0\n    },\n    \"value\": [\n        {\n            \"result\": {\n                \"success\": {\n                    \"inserted\": 0,\n                    \"updated\": 0\n                },\n                \"error\": {\n                    \"failed\": 1,\n                    \"recipients\": {\n                        \"duplicate\": [],\n                        \"invalid\": [\n                            {\n                                \"email\": \"email@example.org\"\n                            }\n                        ]\n                    }\n                }\n            }\n        }\n    ]\n}"
+            }
+          ]
         }
       ],
       "auth": {
@@ -8589,8 +8876,16 @@
           "_postman_id": "d9b2e7cc-1145-4b04-be6f-ee1e88000646",
           "name": "Get Company Information",
           "request": {
+            "auth": {
+              "type": "noauth"
+            },
             "method": "GET",
-            "header": [],
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}} "
+              }
+            ],
             "body": {},
             "url": "https://api.newsletter2go.com/companies"
           },
