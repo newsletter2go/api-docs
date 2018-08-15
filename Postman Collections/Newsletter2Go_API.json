@@ -5975,11 +5975,18 @@
           "_postman_id": "19dfd182-e8b2-4561-91fe-a4d1a31b11dc",
           "name": "Create Attribute",
           "request": {
+            "auth": {
+              "type": "noauth"
+            },
             "method": "POST",
             "header": [
               {
                 "key": "Content-Type",
                 "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}} "
               }
             ],
             "body": {
