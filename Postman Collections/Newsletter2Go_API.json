@@ -4006,6 +4006,25 @@
       "description": "",
       "item": [
         {
+          "_postman_id": "bef8c5b0-c961-41d8-9a77-2d6eb0ea526e",
+          "name": "Get Segments in List",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://api.newsletter2go.com/lists/{{list_id}}/groups"
+          },
+          "response": []
+        },
+        {
           "_postman_id": "170ef0ae-10c5-4bc1-a658-750dad70c452",
           "name": "Create Segment",
           "request": {
@@ -4653,25 +4672,6 @@
               "raw": ""
             },
             "url": "https://api.newsletter2go.com/lists/{{list_id}}/groups/{{group_id}}/recipients"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "bef8c5b0-c961-41d8-9a77-2d6eb0ea526e",
-          "name": "Get Segments in List",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": "https://api.newsletter2go.com/lists/{{list_id}}/groups"
           },
           "response": []
         }
