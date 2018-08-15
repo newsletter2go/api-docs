@@ -9755,8 +9755,16 @@
           "_postman_id": "289f5a54-e3be-46b7-80c0-24402f8fa2a3",
           "name": "Delete User",
           "request": {
+            "auth": {
+              "type": "noauth"
+            },
             "method": "DELETE",
-            "header": [],
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}} "
+              }
+            ],
             "body": {
               "mode": "raw",
               "raw": ""
