@@ -8891,11 +8891,17 @@
           },
           "response": [
             {
-              "id": "e6240cc7-46a5-4923-8534-5ed65380fa0d",
+              "id": "34c723d3-8e6b-4bb2-957a-e5470e071e6d",
               "name": "Get Company Information",
               "originalRequest": {
                 "method": "GET",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}} ",
+                    "disabled": false
+                  }
+                ],
                 "body": {},
                 "url": "https://api.newsletter2go.com/companies"
               },
@@ -8947,7 +8953,7 @@
                 },
                 {
                   "key": "Date",
-                  "value": "Fri, 03 Aug 2018 15:11:49 GMT",
+                  "value": "Wed, 15 Aug 2018 14:21:57 GMT",
                   "name": "Date",
                   "description": "The date and time that the message was sent"
                 },
@@ -9001,7 +9007,7 @@
                 },
                 {
                   "key": "X-Upstream",
-                  "value": "94.130.53.59:8200",
+                  "value": "195.201.175.60:8200",
                   "name": "X-Upstream",
                   "description": "Custom header"
                 },
@@ -9026,7 +9032,7 @@
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"links\": {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/companies?_limit=50&_offset=0\"\n        },\n        \"count\": 1\n    },\n    \"value\": [\n        {\n            \"id\": \"3kf9rpeb\",\n            \"modified_at\": \"2018-08-01T01:15:10+0000\",\n            \"created_at\": \"2016-04-06T11:27:31+0000\",\n            \"phone\": \"+491781843201\",\n            \"is_migrated\": false,\n            \"is_migrated_plan\": true,\n            \"priority_sending\": 0.66,\n            \"agb_accepted_at\": \"2016-10-16T12:33:13+0000\",\n            \"is_gdpr_compliant\": true,\n            \"name\": \"API test\",\n            \"address\": \"asddfasdf 1\",\n            \"city\": \"Berlin\",\n            \"postcode\": \"10787\",\n            \"country\": \"DE\",\n            \"bill_name\": \"API test\",\n            \"bill_first_name\": \"as\",\n            \"bill_last_name\": \"asf\",\n            \"bill_gender\": \"m\",\n            \"bill_address\": \"asddfasdf 1\",\n            \"bill_city\": \"Berlin\",\n            \"bill_postcode\": \"10787\",\n            \"bill_country\": \"DE\",\n            \"bill_email\": \"s@newsletter2go.com\",\n            \"default_list_id\": \"om355owj\",\n            \"register_tld\": \"de\",\n            \"language\": \"de\",\n            \"credits_email\": 0,\n            \"credits_freemail\": 0,\n            \"credits_abo\": 1000,\n            \"uses_postpaid\": false,\n            \"state\": \"verified\",\n            \"mfa_status\": \"INACTIVE\",\n            \"mfa_method\": \"SMS\",\n            \"ekomi_done\": 0,\n            \"uses_client_testing\": true,\n            \"uses_payback\": true,\n            \"industry_id\": \"fyc983tf\",\n            \"frequency\": \"daily\",\n            \"num_recipients\": \"<1000\",\n            \"ip_class\": 0,\n            \"doubleoptout\": false,\n            \"database\": 103,\n            \"editor_version\": \"2.0\",\n            \"is_archive_active\": false,\n            \"is_archive_autoupdate\": false,\n            \"is_opentracking_allowed\": false,\n            \"is_clicktracking_allowed\": false,\n            \"is_recipienttracking_allowed\": false,\n            \"is_whitelisted\": false,\n            \"timezone\": \"Europe\\/Berlin\",\n            \"dateformat\": \"d.m.Y\",\n            \"timeformat\": \"H:i:s\",\n            \"datetimeformat\": \"d.m.Y H:i:s\",\n            \"number_format\": \".,2\",\n            \"version\": 143,\n            \"allow_support_access\": true,\n            \"lead_rating\": \"average\",\n            \"is_deleted\": false\n        }\n    ]\n}"
+              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"links\": {\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/companies?_limit=50&_offset=0\"\n        },\n        \"count\": 1\n    },\n    \"value\": [\n        {\n            \"id\": \"3kf9rpeb\",\n            \"modified_at\": \"2018-08-15T14:13:03+0000\",\n            \"created_at\": \"2016-04-06T11:27:31+0000\",\n            \"phone\": \"+491781843201\",\n            \"is_migrated\": false,\n            \"is_migrated_plan\": true,\n            \"priority_sending\": 0.66,\n            \"agb_accepted_at\": \"2016-10-16T12:33:13+0000\",\n            \"is_gdpr_compliant\": true,\n            \"name\": \"My Company Name\",\n            \"address\": \"asddfasdf 1\",\n            \"city\": \"Berlin\",\n            \"postcode\": \"10787\",\n            \"country\": \"DE\",\n            \"bill_name\": \"My Company Name\",\n            \"bill_first_name\": \"as\",\n            \"bill_last_name\": \"asf\",\n            \"bill_gender\": \"m\",\n            \"bill_address\": \"asddfasdf 1\",\n            \"bill_city\": \"Berlin\",\n            \"bill_postcode\": \"10787\",\n            \"bill_country\": \"DE\",\n            \"bill_email\": \"s@newsletter2go.com\",\n            \"default_list_id\": \"om355owj\",\n            \"register_tld\": \"de\",\n            \"language\": \"de\",\n            \"credits_email\": 0,\n            \"credits_freemail\": 0,\n            \"credits_abo\": 989,\n            \"uses_postpaid\": false,\n            \"state\": \"verified\",\n            \"mfa_status\": \"INACTIVE\",\n            \"mfa_method\": \"SMS\",\n            \"ekomi_done\": 0,\n            \"uses_client_testing\": true,\n            \"uses_payback\": true,\n            \"industry_id\": \"fyc983tf\",\n            \"frequency\": \"daily\",\n            \"num_recipients\": \"<1000\",\n            \"ip_class\": 0,\n            \"doubleoptout\": false,\n            \"database\": 103,\n            \"editor_version\": \"2.0\",\n            \"is_archive_active\": false,\n            \"is_archive_autoupdate\": false,\n            \"is_opentracking_allowed\": false,\n            \"is_clicktracking_allowed\": false,\n            \"is_recipienttracking_allowed\": false,\n            \"is_whitelisted\": false,\n            \"timezone\": \"Europe\\/Berlin\",\n            \"dateformat\": \"d.m.Y\",\n            \"timeformat\": \"H:i:s\",\n            \"datetimeformat\": \"d.m.Y H:i:s\",\n            \"number_format\": \".,2\",\n            \"version\": 151,\n            \"allow_support_access\": true,\n            \"lead_rating\": \"average\",\n            \"is_deleted\": false\n        }\n    ]\n}"
             }
           ]
         },
@@ -9034,11 +9040,18 @@
           "_postman_id": "f3a08c89-5f52-4b24-864f-dd86dc6e71aa",
           "name": "Update Company Information",
           "request": {
+            "auth": {
+              "type": "noauth"
+            },
             "method": "PATCH",
             "header": [
               {
                 "key": "Content-Type",
                 "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
               }
             ],
             "body": {
