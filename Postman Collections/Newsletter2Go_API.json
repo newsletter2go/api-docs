@@ -9263,31 +9263,19 @@
           },
           "response": [
             {
-              "id": "f0eb8503-77c1-40c3-af3b-82fd6af38625",
-              "name": "Get all Users with Details",
+              "id": "0e6222b5-a2bd-478b-b9ab-7ee34da412a4",
+              "name": "Get all Users",
               "originalRequest": {
                 "method": "GET",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}} ",
+                    "disabled": false
+                  }
+                ],
                 "body": {},
-                "url": {
-                  "raw": "https://api.newsletter2go.com/users?_expand=true",
-                  "protocol": "https",
-                  "host": [
-                    "api",
-                    "newsletter2go",
-                    "com"
-                  ],
-                  "path": [
-                    "users"
-                  ],
-                  "query": [
-                    {
-                      "key": "_expand",
-                      "value": "true",
-                      "equals": true
-                    }
-                  ]
-                }
+                "url": "https://api.newsletter2go.com/users"
               },
               "status": "OK",
               "code": 200,
@@ -9337,7 +9325,7 @@
                 },
                 {
                   "key": "Date",
-                  "value": "Mon, 06 Aug 2018 12:29:16 GMT",
+                  "value": "Wed, 15 Aug 2018 14:22:55 GMT",
                   "name": "Date",
                   "description": "The date and time that the message was sent"
                 },
@@ -9391,7 +9379,7 @@
                 },
                 {
                   "key": "X-Upstream",
-                  "value": "195.201.171.185:8200",
+                  "value": "94.130.134.120:8200",
                   "name": "X-Upstream",
                   "description": "Custom header"
                 },
@@ -9427,20 +9415,6 @@
             "method": "GET",
             "header": [],
             "body": {},
-            "url": "https://api.newsletter2go.com/users/{{user_id}}"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "289f5a54-e3be-46b7-80c0-24402f8fa2a3",
-          "name": "Delete User",
-          "request": {
-            "method": "DELETE",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": "https://api.newsletter2go.com/users/{{user_id}}"
           },
           "response": []
@@ -9612,6 +9586,20 @@
               "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"count\": 0\n    },\n    \"value\": []\n}"
             }
           ]
+        },
+        {
+          "_postman_id": "289f5a54-e3be-46b7-80c0-24402f8fa2a3",
+          "name": "Delete User",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://api.newsletter2go.com/users/{{user_id}}"
+          },
+          "response": []
         }
       ]
     }
