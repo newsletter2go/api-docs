@@ -6159,7 +6159,7 @@
           },
           "response": [
             {
-              "id": "220616d5-c137-476d-8817-dc7c5c414a55",
+              "id": "d977b8d1-f17c-48d6-84c3-8a9fd9b0637a",
               "name": "Update Attribute",
               "originalRequest": {
                 "method": "PATCH",
@@ -6168,11 +6168,16 @@
                     "key": "Content-Type",
                     "value": "application/json",
                     "disabled": false
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}} ",
+                    "disabled": false
                   }
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\r\n  \"list_ids\": [\r\n    \"{{list_id}}\"\r\n  ],\r\n  \"name\": \"New_name\"\r\n}"
+                  "raw": "{\r\n  \"list_ids\": [\r\n    \"{{list_id}}\"\r\n  ],\r\n  \"name\": \"New_Name\"\r\n}"
                 },
                 "url": "https://api.newsletter2go.com/attributes/{{attribute_id}}"
               },
@@ -6224,7 +6229,7 @@
                 },
                 {
                   "key": "Date",
-                  "value": "Tue, 07 Aug 2018 06:59:04 GMT",
+                  "value": "Wed, 15 Aug 2018 13:53:09 GMT",
                   "name": "Date",
                   "description": "The date and time that the message was sent"
                 },
@@ -6278,7 +6283,7 @@
                 },
                 {
                   "key": "X-Upstream",
-                  "value": "195.201.175.58:8200",
+                  "value": "195.201.171.185:8200",
                   "name": "X-Upstream",
                   "description": "Custom header"
                 },
@@ -6311,11 +6316,14 @@
           "_postman_id": "ccc3735c-106a-4c47-9725-2ed6302ac10a",
           "name": "Delete Attribute",
           "request": {
+            "auth": {
+              "type": "noauth"
+            },
             "method": "DELETE",
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{access_token}}"
+                "value": "Bearer {{access_token}} "
               }
             ],
             "body": {},
