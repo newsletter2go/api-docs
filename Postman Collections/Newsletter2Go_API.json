@@ -9956,7 +9956,7 @@
         "id": "a0942a54-9006-4777-8628-fc2ebc058511",
         "type": "text/javascript",
         "exec": [
-          ""
+          "alert(\"hey\")"
         ]
       }
     },
