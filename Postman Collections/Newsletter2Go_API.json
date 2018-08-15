@@ -2805,7 +2805,7 @@
                 }
               ]
             },
-            "description": "remove all recipients from all lists. Pay attention to the filter, if you forget to submit it, all recipients are getting removed from the group!\nwill only work for regular group"
+            "description": "Delete multiple / all recipients from _all_ lists. \n\n<div class=\"alert alert-info\">Be careful. If you don't pass a <code>_filter</code>, all your recipients will be deleted irrevocably.</div>"
           },
           "response": [
             {
