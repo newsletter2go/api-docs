@@ -4009,11 +4009,18 @@
           "_postman_id": "170ef0ae-10c5-4bc1-a658-750dad70c452",
           "name": "Create Segment",
           "request": {
+            "auth": {
+              "type": "noauth"
+            },
             "method": "POST",
             "header": [
               {
                 "key": "Content-Type",
                 "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}} "
               }
             ],
             "body": {
