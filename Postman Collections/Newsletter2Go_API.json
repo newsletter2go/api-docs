@@ -6153,7 +6153,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"list_ids\": [\r\n    \"{{list_id}}\"\r\n  ],\r\n  \"name\": \"New_name\"\r\n}"
+              "raw": "{\r\n  \"list_ids\": [\r\n    \"{{list_id}}\"\r\n  ],\r\n  \"name\": \"New_Name\"\r\n}"
             },
             "url": "https://api.newsletter2go.com/attributes/{{attribute_id}}"
           },
