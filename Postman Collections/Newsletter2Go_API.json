@@ -9598,15 +9598,19 @@
           },
           "response": [
             {
-              "id": "bbf14928-11e9-4c28-a675-bcb9b2011c7f",
-              "name": "Update User Details - set Language to en_EN",
+              "id": "afdf256a-ebb0-4f23-92ef-2a9988cbf29c",
+              "name": "Update User Details",
               "originalRequest": {
                 "method": "PATCH",
                 "header": [
                   {
                     "key": "Content-Type",
-                    "name": "Content-Type",
                     "value": "application/json",
+                    "disabled": false
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}} ",
                     "disabled": false
                   }
                 ],
@@ -9614,7 +9618,7 @@
                   "mode": "raw",
                   "raw": "{\n\t\"language\": \"en_US\"\n}"
                 },
-                "url": "https://api.newsletter2go.com/users/{{users_id}}"
+                "url": "https://api.newsletter2go.com/users/{{user_id}}"
               },
               "status": "OK",
               "code": 200,
@@ -9664,7 +9668,7 @@
                 },
                 {
                   "key": "Date",
-                  "value": "Mon, 06 Aug 2018 12:19:21 GMT",
+                  "value": "Wed, 15 Aug 2018 14:23:45 GMT",
                   "name": "Date",
                   "description": "The date and time that the message was sent"
                 },
@@ -9718,7 +9722,7 @@
                 },
                 {
                   "key": "X-Upstream",
-                  "value": "138.201.29.81:8200",
+                  "value": "94.130.53.59:8200",
                   "name": "X-Upstream",
                   "description": "Custom header"
                 },
@@ -9743,7 +9747,7 @@
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"count\": 0\n    },\n    \"value\": []\n}"
+              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"count\": 1\n    },\n    \"value\": []\n}"
             }
           ]
         },
