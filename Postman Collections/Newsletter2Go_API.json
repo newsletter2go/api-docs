@@ -3790,11 +3790,12 @@
               "mode": "raw",
               "raw": "{\n\t\"file\": \"{{file_id}}\",\n\t\"associations\": {\n\t\t\"0\": \"email\",\n\t\t\"1\": \"first_name\",\n\t\t\"2\": \"last_name\", \n\t\t\"3\": \"{{attribute_name}}\"\n\t}\n}"
             },
-            "url": "https://api.newsletter2go.com/import/{{import_id}}/info"
+            "url": "https://api.newsletter2go.com/import/{{import_id}}/info",
+            "description": "Returns the status of the import with additional information such as the amount of newly created recipients `count_inserted`, the amount of updated recipients `count_updated`, the amount of illegal recipients `count_failed` and arrays recipients that could not be imported `duplicate_recipients` and `invalid_recipients`."
           },
           "response": [
             {
-              "id": "003c4319-051c-45c8-a9ce-0025f872e2e2",
+              "id": "1ae5d6c2-7c4e-4bc4-8470-486a109714cb",
               "name": "Import Recipients - Get Infos on import status",
               "originalRequest": {
                 "method": "GET",
@@ -3802,6 +3803,11 @@
                   {
                     "key": "Content-Type",
                     "value": "application/json",
+                    "disabled": false
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}",
                     "disabled": false
                   }
                 ],
@@ -3859,7 +3865,7 @@
                 },
                 {
                   "key": "Date",
-                  "value": "Wed, 08 Aug 2018 11:09:25 GMT",
+                  "value": "Wed, 15 Aug 2018 12:08:30 GMT",
                   "name": "Date",
                   "description": "The date and time that the message was sent"
                 },
@@ -3913,7 +3919,7 @@
                 },
                 {
                   "key": "X-Upstream",
-                  "value": "88.99.99.90:8200",
+                  "value": "195.201.171.185:8200",
                   "name": "X-Upstream",
                   "description": "Custom header"
                 },
@@ -3938,7 +3944,7 @@
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"count\": 1\n    },\n    \"value\": [\n        {\n            \"count_inserted\": 105,\n            \"count_updated\": 4,\n            \"count_failed\": 6,\n            \"duplicate_recipients\": [\n                {\n                    \"email\": \"email@example.org\"\n                },\n                {\n                    \"email\": \"other@example.org\"\n                }\n            ],\n            \"invalid_recipients\": [],\n            \"file\": \"myfilename.xlsx\"\n        }\n    ]\n}"
+              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"count\": 1\n    },\n    \"value\": [\n        {\n            \"count_inserted\": 0,\n            \"count_updated\": 2,\n            \"count_failed\": 0,\n            \"duplicate_recipients\": [],\n            \"invalid_recipients\": [],\n            \"file\": \"import.csv\"\n        }\n    ]\n}"
             }
           ]
         }
