@@ -8497,7 +8497,7 @@
             ],
             "body": {},
             "url": "https://api.newsletter2go.com/lists/{{list_id}}/newsletters/aggregations",
-            "description": "useful for automated mailings that run every day"
+            "description": "This call is useful for automated mailings that run every day since it returns the reports by day."
           },
           "response": [
             {
