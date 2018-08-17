@@ -6823,7 +6823,7 @@
             ],
             "body": {},
             "url": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/versions",
-            "description": "_filter"
+            "description": "Use the `_filter` to get a specific version."
           },
           "response": [
             {
