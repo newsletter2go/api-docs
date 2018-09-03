@@ -10099,6 +10099,112 @@
           }
         }
       ]
+    },
+    {
+      "_postman_id": "9a2453f5-5e60-4106-8624-f75154c7ee85",
+      "name": "Files",
+      "description": null,
+      "item": [
+        {
+          "_postman_id": "f5bb7b57-6dd2-4e5d-aafa-7c16dafa9c09",
+          "name": "Create File",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "e0220539-ed0e-400c-a145-c69009b7ea29",
+                "type": "text/javascript",
+                "exec": [
+                  "var data = JSON.parse(responseBody);",
+                  "pm.environment.set(\"file_id\", data.value[0].id);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"fileBase64\":\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAV4AAACWBAMAAABkyf1EAAAAG1BMVEXMzMyWlpbFxcWqqqqcnJyxsbG3t7e+vr6jo6OVuynYAAAACXBIWXMAAA7EAAAOxAGVKw4bAAADG0lEQVR4nO2YzW/aQBDFF2PjHBkwCUfTSOEKUaRecRpFPeKqX0eo1KZHnFx6xFWV/tud2V3DsiJEPdi+vN/BC/aL9mV2PDuLUgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgP/jMkuueYhIWPCn4CZ5+4I2Jj3kIk1OS+tC+1wq1d35LXhcvSTWw7zye0JaF2uZe6TUWeU3lvH8uDg0fkvr95S0LrLk8SqjVIXjH8xGPP2dlkl6VJwbv9kzSx9OS2uiR1uZd6k6VZzWiQR7eUQb/CLjt8qBl6W10aWNrOtWTS7snZI/BDqRfTIyfgP5m9PS2tAZKXMWA3uH+uJkcERL1m/M6fOKtDY6uixxfNd9cyOmGV9zkx0TWflIUkb4c5dpvz06Im2I3oOdOF+YG5FOzmJovyzE9KZSm/oQJUekTXLGE8+3X5NnZRNaTcb6QZBxpZvvDRm/3XFUvl950gaZljxlecfZeSvexUTHhnBNaUD7BDV+zxJ+87iMHUobg3er3+blNyZSx0RIM7dgGb+h3lpuPWmTfq/l5f8wnXMeGxPh7pUaFI4fc7tDozdPNPSkTfrluMqq9/hShdA+LIel8/5XflOdKZ60MTiuC/VJcrEc+UGbkLsf2PrwRel9raX4yqrbGBZjPym5bdvshY433hNbyl8mtyWL5/Ze+oDccuXGkhYt1Qel41r58Ypqj9z+y/Wb9duovx/v5bovX/6mFZLbfx36bWN/W4/kOhn3Pusx0b2a0xTkibNdWL/fV0r3SJ60EUx0iqF5d+TbQdMV0EXpxM/41Q+l52ijP9M+y3OztlJrD5raLs2cdsf61RGVnqOF/rcr6RnRIJZlj+RycGiYUNqt2smd30L+x5wvLZwvYho+XpU8Z5Z8i+cytz6UVR05J0PgnCirHe0+fZIz6oG0IfTZfGyO5rrWuodeHfV8X2BDe74Qtu2cj/U5fiaF1ozmhL+q/M0kJ3YrbuuZKIaetDF+ZuY3mks7uj/arGWxo31Fs36DG3q38aQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4FX+AcL6c1W3I+QxAAAAAElFTkSuQmCC\",\n\t\"display_name\":\"image_name.png\",\n\t\"folder_id\":null\n}"
+            },
+            "url": "https://api.newsletter2go.com/files",
+            "description": "Upload a file which is [base64 encoded](https://www.base64encode.net/). \nIt is possible to pass a `folder_id` to put the file into a specific folder during upload."
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "d543b532-8425-48cc-a101-e8475e249699",
+          "name": "Get File",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "da776b83-5889-4686-bde9-a495da30d9cd",
+                "type": "text/javascript",
+                "exec": [
+                  "var data = JSON.parse(responseBody);",
+                  "pm.environment.set(\"file_name\", data.value[0].filename);",
+                  "pm.environment.set(\"file_url\", data.value[0].path + data.value[0].filename);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://api.newsletter2go.com/files/{{file_id}}",
+            "description": "Gets a file. Make clear to provide a `file_id`."
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "e79ebdd9-c2f2-43c2-820d-4239c5657910",
+          "name": "Get All Files Of A Folder",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://api.newsletter2go.com/files",
+            "description": "Get a list of all files."
+          },
+          "response": []
+        }
+      ]
     }
   ],
   "event": [
