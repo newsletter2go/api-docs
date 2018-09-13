@@ -2086,7 +2086,7 @@
               "raw": "{\r\n  \"list_id\": \"{{list_id}}\",\r\n  \"email\": \"email@example.tld\",\r\n  \"phone\": \"+49123456789\",\r\n  \"gender\": \"m\",\r\n  \"first_name\": \"John\",\r\n  \"last_name\": \"Doe\",\r\n  \"is_unsubscribed\": false,\r\n  \"is_blacklisted\": false,\r\n  \"{{attribute_name}}\": \"attribute value\"\r\n}"
             },
             "url": "https://api.newsletter2go.com/recipients",
-            "description": "Create one or more recipient.  \nIf you want to create multiple recipients at the same time, submit multiple recipient objects as a json array. In this case all objects must share the same attributes.  \nIf the e-mail-address exists already the existing recipient gets updated."
+            "description": "Create one or more recipients.  \nIf you want to create multiple recipients at the same time, submit multiple recipient objects as a json array. In this case all objects must share the same attributes.  \nIf the email address already exists, the existing recipient will get updated."
           },
           "response": [
             {
