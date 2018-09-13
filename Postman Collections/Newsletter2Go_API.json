@@ -1693,7 +1693,7 @@
         },
         {
           "_postman_id": "e5050ccd-0f51-4ac6-8c92-e9b88e2ecbd0",
-          "name": "Get Recipients from List",
+          "name": "Get Recipient's From List",
           "request": {
             "auth": {
               "type": "noauth"
