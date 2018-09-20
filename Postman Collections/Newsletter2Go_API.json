@@ -8161,7 +8161,7 @@
         },
         {
           "_postman_id": "53c1e0e6-4714-47b3-9b1a-e2236dabd2b5",
-          "name": "Update one Mailing with Attachments",
+          "name": "Add Attachments to a Mailing",
           "request": {
             "method": "PATCH",
             "header": [
@@ -8179,7 +8179,7 @@
               "raw": "{\"attachments\":[{\"id\":\"{{file_id}}\",\"filename\":\"{{file_name}}\",\"type\":\"url\",\"url\":\"{{file_url}}\"}]}"
             },
             "url": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/variants",
-            "description": "Updates a mailing with a list of attachments. \nTo attach a file to a newsletter, you first must upload the file. See section `Files->Create Files` about this.\nSet `file_id`, `file_name` (containing a file prefix) and `file_url`, which contains of the file path and the file name. See also `Files->Get File` for further information on this."
+            "description": "To attach a file to a mailing, you [must first upload the file](https://docs.newsletter2go.com/#9a2453f5-5e60-4106-8624-f75154c7ee85).\nSet `file_id`, `file_name` (containing a file prefix) and `file_url`, which contains the file path and the file name."
           },
           "response": []
         },
