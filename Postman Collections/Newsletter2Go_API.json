@@ -7667,7 +7667,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"scheduled\": \"2018-07-27T16:58:12+0200\",\r\n  \"contexts\": [\r\n  \t\t{\r\n  \t\t\"recipient\": {\r\n  \t\t\t\"email\": \"email@example.org\" }\r\n  \t\t}\r\n  \t]\r\n}"
+              "raw": "{\r\n  \"scheduled\": \"2018-07-27T16:58:12+0200\",\r\n  \"contexts\": [\r\n  \t\t{\r\n  \t\t\"recipient\": {\r\n  \t\t\t\"email\": \"email@example.org\" }\r\n  \t\t},\r\n  \t\t{\r\n  \t\t\"recipient\": {\r\n  \t\t\t\"email\": \"otheremail@example.org\" }\r\n  \t\t}\r\n  \t]\r\n}"
             },
             "url": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/send",
             "description": "Make sure to understand [how transactional mailings work](#transactional-mailings) first."
