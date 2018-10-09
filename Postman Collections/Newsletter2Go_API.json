@@ -7670,7 +7670,7 @@
               "raw": "{\r\n  \"scheduled\": \"2018-07-27T16:58:12+0200\",\r\n  \"contexts\": [\r\n  \t\t{\r\n  \t\t\"recipient\": {\r\n  \t\t\t\"email\": \"email@example.org\" }\r\n  \t\t},\r\n  \t\t{\r\n  \t\t\"recipient\": {\r\n  \t\t\t\"email\": \"otheremail@example.org\" }\r\n  \t\t}\r\n  \t]\r\n}"
             },
             "url": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/send",
-            "description": "Make sure to understand [how transactional mailings work](#transactional-mailings) first."
+            "description": "Make sure to understand [how transactional mailings work](#transactional-mailings) first.  \nYou can pass other data fields (such as `first_name` or custom attributes) in the recipient object as well and reference them in the body of the email.  \nIf you want to send a transactional mailing to multiple contacts at the same time, just add another `recipient` object to the `contexts` array."
           },
           "response": [
             {
@@ -7971,6 +7971,116 @@
                   "value": "no-cache",
                   "name": "pragma",
                   "description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"count\": 1\n    },\n    \"value\": [\n        {\n            \"success\": true\n        }\n    ]\n}"
+            },
+            {
+              "id": "377f6d64-42dc-4541-8c92-532ff4f298df",
+              "name": "Send transactional Mailing to multiple Contacts",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}} "
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"scheduled\": \"2018-07-27T16:58:12+0200\",\r\n  \"contexts\": [\r\n  \t\t{\r\n  \t\t\"recipient\": {\r\n  \t\t\t\"email\": \"email@example.org\" }\r\n  \t\t},\r\n  \t\t{\r\n  \t\t\"recipient\": {\r\n  \t\t\t\"email\": \"otheremail@example.org\" }\r\n  \t\t}\r\n  \t]\r\n}"
+                },
+                "url": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/send"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Server",
+                  "value": "nginx"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 09 Oct 2018 11:41:04 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "expires",
+                  "value": "-1"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Access-Control-Allow-Headers",
+                  "value": "authorization, Content-Type, x-from"
+                },
+                {
+                  "key": "Access-Control-Allow-Methods",
+                  "value": "GET,HEAD,POST,PUT,PATCH,DELETE,OPTIONS,TRACE"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1"
+                },
+                {
+                  "key": "X-Fpm",
+                  "value": "default"
+                },
+                {
+                  "key": "X-Upstream",
+                  "value": "88.99.90.166:8200"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
                 }
               ],
               "cookie": [],
