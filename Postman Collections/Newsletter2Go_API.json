@@ -8475,155 +8475,59 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports"
+            "url": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients"
           },
           "response": [
             {
-              "id": "a5aeb110-35b7-4384-ab7e-5cc76d79a1e9",
-              "name": "Get specific Mailing Reports",
+              "id": "c3117904-2f17-4948-a5b3-14381dd4ef66",
+              "name": "Get specific Mailing Reports Recipient Information Clickers",
               "originalRequest": {
                 "method": "GET",
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "Bearer {{access_token}} ",
-                    "disabled": false
+                    "value": "Bearer {{access_token}} "
                   }
                 ],
                 "body": {
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Access-Control-Allow-Headers",
-                  "value": "authorization, Content-Type, x-from",
-                  "name": "Access-Control-Allow-Headers",
-                  "description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
-                },
-                {
-                  "key": "Access-Control-Allow-Methods",
-                  "value": "GET,HEAD,POST,PUT,PATCH,DELETE,OPTIONS,TRACE",
-                  "name": "Access-Control-Allow-Methods",
-                  "description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
-                },
-                {
-                  "key": "Access-Control-Allow-Origin",
-                  "value": "*",
-                  "name": "Access-Control-Allow-Origin",
-                  "description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
-                },
-                {
-                  "key": "Cache-Control",
-                  "value": "no-cache",
-                  "name": "Cache-Control",
-                  "description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
-                },
-                {
-                  "key": "Connection",
-                  "value": "keep-alive",
-                  "name": "Connection",
-                  "description": "Options that are desired for the connection"
-                },
-                {
-                  "key": "Content-Encoding",
-                  "value": "gzip",
-                  "name": "Content-Encoding",
-                  "description": "The type of encoding used on the data."
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json",
-                  "name": "Content-Type",
-                  "description": "The mime type of this content"
-                },
-                {
-                  "key": "Date",
-                  "value": "Wed, 15 Aug 2018 14:16:03 GMT",
-                  "name": "Date",
-                  "description": "The date and time that the message was sent"
-                },
-                {
-                  "key": "Server",
-                  "value": "nginx",
-                  "name": "Server",
-                  "description": "A name for the server"
-                },
-                {
-                  "key": "Strict-Transport-Security",
-                  "value": "max-age=31536000",
-                  "name": "Strict-Transport-Security",
-                  "description": "A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains."
-                },
-                {
-                  "key": "Transfer-Encoding",
-                  "value": "chunked",
-                  "name": "Transfer-Encoding",
-                  "description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
-                },
-                {
-                  "key": "Vary",
-                  "value": "Accept-Encoding",
-                  "name": "Vary",
-                  "description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
-                },
-                {
-                  "key": "Vary",
-                  "value": "Accept-Encoding",
-                  "name": "Vary",
-                  "description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
-                },
-                {
-                  "key": "X-Content-Type-Options",
-                  "value": "nosniff",
-                  "name": "X-Content-Type-Options",
-                  "description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
-                },
-                {
-                  "key": "X-Fpm",
-                  "value": "default",
-                  "name": "X-Fpm",
-                  "description": "Custom header"
-                },
-                {
-                  "key": "X-Frame-Options",
-                  "value": "SAMEORIGIN",
-                  "name": "X-Frame-Options",
-                  "description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
-                },
-                {
-                  "key": "X-Upstream",
-                  "value": "88.99.5.6:8200",
-                  "name": "X-Upstream",
-                  "description": "Custom header"
-                },
-                {
-                  "key": "X-XSS-Protection",
-                  "value": "1",
-                  "name": "X-XSS-Protection",
-                  "description": "Cross-site scripting (XSS) filter"
-                },
-                {
-                  "key": "expires",
-                  "value": "-1",
-                  "name": "expires",
-                  "description": "Gives the date/time after which the response is considered stale"
-                },
-                {
-                  "key": "pragma",
-                  "value": "no-cache",
-                  "name": "pragma",
-                  "description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+                "url": {
+                  "raw": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients?_fields=urls,email&_filter=_filter=clicked_newsletter=CONTAINS=\"<newsletter_id>\"",
+                  "protocol": "https",
+                  "host": [
+                    "api",
+                    "newsletter2go",
+                    "com"
+                  ],
+                  "path": [
+                    "newsletters",
+                    "{{newsletter_id}}",
+                    "reports",
+                    "recipients"
+                  ],
+                  "query": [
+                    {
+                      "key": "_fields",
+                      "value": "urls,email",
+                      "equals": true,
+                      "description": "Define the fields you want to retrieve here"
+                    },
+                    {
+                      "key": "_filter",
+                      "value": "_filter=clicked_newsletter=CONTAINS=\"<newsletter_id>\"",
+                      "equals": true,
+                      "description": "Defines the filter for this endpoint. In this case searches for recipient that clicked a link in a specifc newsletter"
+                    }
+                  ]
                 }
-              ],
+              },
+              "_postman_previewlanguage": null,
+              "header": null,
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"count\": 1\n    },\n    \"value\": [\n        {\n            \"unsubscribes\": [\n                {\n                    \"count\": 0\n                }\n            ],\n            \"complaints\": [\n                {\n                    \"count\": 0\n                }\n            ],\n            \"bounces\": [\n                {\n                    \"count\": 0\n                }\n            ],\n            \"open\": {\n                \"unique_open_rate\": 0,\n                \"open_rate\": 0,\n                \"unique_opens\": 0,\n                \"opens\": 0,\n                \"opens_per_opener\": 0,\n                \"devices\": [],\n                \"families\": [],\n                \"useragents\": []\n            },\n            \"click\": {\n                \"unique_click_rate\": 0,\n                \"click_rate\": 0,\n                \"ctr\": 0,\n                \"unique_clicks\": 0,\n                \"clicks\": 0,\n                \"clicks_per_clicker\": 0,\n                \"links\": []\n            },\n            \"conversion\": {\n                \"unique_conversion_rate\": 0,\n                \"conversion_rate\": 0,\n                \"ctr\": 0,\n                \"unique_ctr\": 0,\n                \"unique_conversions\": 0,\n                \"conversions\": 0,\n                \"conversions_per_recipient\": 0,\n                \"products\": [],\n                \"links\": [],\n                \"amount\": 0,\n                \"amount_per_conversion\": 0\n            },\n            \"receivers\": 0,\n            \"name\": \"Other Name\",\n            \"subject\": \"Subject\",\n            \"header_from_email\": \"from@example.org\",\n            \"header_from_name\": \"From Name\",\n            \"thumbnail_big_url\": \"\\/\\/files.newsletter2go.com\\/jcnmuslf\\/s_3kf9rpeb\\/newsletter\\/bjh6gb8j\\/j3r3d74y\\/thumbnail_big.png\",\n            \"header_reply_email\": \"reply@example.org\",\n            \"header_reply_name\": \"Reply Name\",\n            \"header_to_email\": null,\n            \"header_to_name\": null,\n            \"has_open_tracking\": true,\n            \"has_click_tracking\": true,\n            \"has_conversion_tracking\": true,\n            \"has_google_analytics_tracking\": false,\n            \"has_econda_tracking\": false,\n            \"has_custom_tracking\": false,\n            \"tracking_parameter\": null,\n            \"tracking_url\": null,\n            \"tags\": []\n        }\n    ]\n}"
+              "body": "{\r\n    \"status\": 200,\r\n    \"info\": {\r\n        \"links\": {\r\n            \"_href\": \"https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients?_fields=urls,email&_filter=_filter=clicked_newsletter=CONTAINS=%22%3Cnewsletter_id%3E%22\"\r\n        },\r\n        \"count\": 1,\r\n        \"additional\": {\r\n            \"invalid_recipients\": []\r\n        }\r\n    },\r\n    \"value\": [\r\n        {\r\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/recipients\\/navngid\",\r\n            \"id\": \"navngid\",\r\n            \"email\": \"example@newsletter2go.com\",\r\n            \"rating\": 3,\r\n            \"created_at\": \"2018-11-23T09:31:24+0000\",\r\n            \"urls\": [\r\n                \"http:\\/\\/www.newsletter2go.com\",\r\n                \"http:\\/\\/www.newsletter2go.com\"\r\n            ]\r\n        }\r\n    ]\r\n}"
             }
           ]
         },
