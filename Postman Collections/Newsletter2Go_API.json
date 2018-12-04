@@ -8462,7 +8462,8 @@
           "name": "Get specific Mailing Reports Recipient Information",
           "request": {
             "auth": {
-              "type": "noauth"
+              "type": "bearer",
+              "bearer": {}
             },
             "method": "GET",
             "header": [
@@ -8475,13 +8476,54 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients",
+            "url": {
+              "raw": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients?_limit=10&_offset=0&_fields&_filter&_expand=false",
+              "protocol": "https",
+              "host": [
+                "api",
+                "newsletter2go",
+                "com"
+              ],
+              "path": [
+                "newsletters",
+                "{{newsletter_id}}",
+                "reports",
+                "recipients"
+              ],
+              "query": [
+                {
+                  "key": "_limit",
+                  "value": "10",
+                  "equals": true
+                },
+                {
+                  "key": "_offset",
+                  "value": "0",
+                  "equals": true
+                },
+                {
+                  "key": "_fields",
+                  "value": "",
+                  "equals": false
+                },
+                {
+                  "key": "_filter",
+                  "value": "",
+                  "equals": false
+                },
+                {
+                  "key": "_expand",
+                  "value": "false",
+                  "equals": true
+                }
+              ]
+            },
             "description": "This endpoint provides report information about the recipients in a newsletter. Use the `_fields` and `_filter` query option to retrieve different sets of recipients and values. For more information see [Common GET Parameters](https://docs.newsletter2go.com/#common-get-parameters).\n\nLook at the examples for some possible ways to query this endpoint."
           },
           "response": [
             {
               "id": "c3117904-2f17-4948-a5b3-14381dd4ef66",
-              "name": "Get specific Mailing Reports Recipient Information Clickers",
+              "name": "Clickers",
               "originalRequest": {
                 "method": "GET",
                 "header": [
@@ -8495,7 +8537,7 @@
                   "raw": ""
                 },
                 "url": {
-                  "raw": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients?_fields=urls,email&_filter=clicked_newsletter%3DCONTAINS%3D\"{{newsletter_id}}\"",
+                  "raw": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients?_fields=email,first_name,last_name,urls,products,unsubscription,bounce,complaints,gender,rating,created_at&_filter=clicked_newsletter%3DCONTAINS%3D\"{{newsletter_id}}\"&_limit=10&_offset=0&_expand=false",
                   "protocol": "https",
                   "host": [
                     "api",
@@ -8511,7 +8553,7 @@
                   "query": [
                     {
                       "key": "_fields",
-                      "value": "urls,email",
+                      "value": "email,first_name,last_name,urls,products,unsubscription,bounce,complaints,gender,rating,created_at",
                       "equals": true,
                       "description": "Define the fields you want to retrieve here"
                     },
@@ -8520,6 +8562,21 @@
                       "value": "clicked_newsletter%3DCONTAINS%3D\"{{newsletter_id}}\"",
                       "equals": true,
                       "description": "Defines the filter for this endpoint. In this case searches for recipients that clicked a link in a specifc newsletter"
+                    },
+                    {
+                      "key": "_limit",
+                      "value": "10",
+                      "equals": true
+                    },
+                    {
+                      "key": "_offset",
+                      "value": "0",
+                      "equals": true
+                    },
+                    {
+                      "key": "_expand",
+                      "value": "false",
+                      "type": "text"
                     }
                   ]
                 }
@@ -8530,11 +8587,11 @@
               "header": null,
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"links\": {\n            \"_href\": \"https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients?_fields=urls%2Cemail&_filter=clicked_newsletter%3DCONTAINS%3D{{newsletter_id}}\"\n        },\n        \"count\": 2,\n        \"additional\": {\n            \"invalid_recipients\": []\n        }\n    },\n    \"value\": [\n        {\n            \"_href\": \"https://api.newsletter2go.com/recipients/{{recipient_id}}\",\n            \"email\": \"example@newsletter2go.com\",\n            \"urls\": [\n                \"http://www.newsletter2go.com\",\n                \"http://www.newsletter2go.com\"\n            ]\n        }\n    ]\n}"
+              "body": "{\r\n    \"status\": 200,\r\n    \"info\": {\r\n        \"links\": {\r\n            \"_href\": \"https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients?_limit=10&_offset=0&_filter=clicked_newsletter%3DCONTAINS%3D%22{{newsletter_id}}%22&_expand=false&_fields=email%2Cfirst_name%2Clast_name%2Curls%2Cproducts%2Cunsubscription%2Cbounce%2Ccomplaints%2Cgender%2Crating%2Ccreated_at\"\r\n        },\r\n        \"count\": 1,\r\n        \"additional\": {\r\n            \"invalid_recipients\": []\r\n        }\r\n    },\r\n    \"value\": [\r\n        {\r\n            \"_href\": \"https://api.newsletter2go.com/recipients/{{recipient_id}}\",\r\n            \"id\": \"{{recipient_id}}\",\r\n            \"email\": \"example@newsletter2go.com\",\r\n            \"rating\": 3,\r\n            \"created_at\": \"2018-11-23T09:31:24+0000\",\r\n            \"urls\": [\r\n                \"http://www.google.com\",\r\n                \"http://www.google.com\"\r\n            ]\r\n        }\r\n    ]\r\n}"
             },
             {
               "id": "ffa5dad9-5bf6-4c55-bc05-2d93db84bcf4",
-              "name": "Get specific Mailing Reports Recipient Information Openers",
+              "name": "Openers",
               "originalRequest": {
                 "method": "GET",
                 "header": [
@@ -8548,7 +8605,7 @@
                   "raw": ""
                 },
                 "url": {
-                  "raw": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients?_fields=urls,email&_filter=opened_newsletter%3DCONTAINS%3D\"{{newsletter_id}}\"",
+                  "raw": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients?_fields=email,first_name,last_name,urls,products,unsubscription,bounce,complaints,gender,rating,created_at&_filter=opened_newsletter%3DCONTAINS%3D\"{{newsletter_id}}\"&_limit=10&_offset=0&_expand=false",
                   "protocol": "https",
                   "host": [
                     "api",
@@ -8564,7 +8621,7 @@
                   "query": [
                     {
                       "key": "_fields",
-                      "value": "urls,email",
+                      "value": "email,first_name,last_name,urls,products,unsubscription,bounce,complaints,gender,rating,created_at",
                       "equals": true,
                       "description": "Define the fields you want to retrieve here"
                     },
@@ -8573,6 +8630,21 @@
                       "value": "opened_newsletter%3DCONTAINS%3D\"{{newsletter_id}}\"",
                       "equals": true,
                       "description": "Defines the filter for this endpoint. In this case searches for recipients that opened a specifc newsletter"
+                    },
+                    {
+                      "key": "_limit",
+                      "value": "10",
+                      "equals": true
+                    },
+                    {
+                      "key": "_offset",
+                      "value": "0",
+                      "equals": true
+                    },
+                    {
+                      "key": "_expand",
+                      "value": "false",
+                      "type": "text"
                     }
                   ]
                 }
@@ -8583,7 +8655,207 @@
               "header": null,
               "cookie": [],
               "responseTime": null,
-              "body": "{\r\n    \"status\": 200,\r\n    \"info\": {\r\n        \"links\": {\r\n            \"_href\": \"https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients?_fields=urls%2Cemail&_filter=opened_newsletter%3DCONTAINS%3D{{newsletter_id}}\"\r\n        },\r\n        \"count\": 1,\r\n        \"additional\": {\r\n            \"invalid_recipients\": []\r\n        }\r\n    },\r\n    \"value\": [\r\n        {\r\n            \"_href\": \"https://api.newsletter2go.com/recipients/{{recipient_id}}\",\r\n            \"email\": \"example2@newsletter2go.com\"\r\n        },\r\n        {\r\n            \"_href\": \"https://api.newsletter2go.com/recipients/{{recipient_id}}\",\r\n            \"email\": \"example@newsletter2go.com\",\r\n            \"urls\": [\r\n                \"http://www.google.com\",\r\n                \"http://www.google.com\"\r\n            ]\r\n        }\r\n    ]\r\n}"
+              "body": "{\r\n    \"status\": 200,\r\n    \"info\": {\r\n        \"links\": {\r\n            \"_href\": \"https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients?_limit=10&_offset=0&_filter=opened_newsletter%3DCONTAINS%3D%22{{newsletter_id}}%22&_expand=false&_fields=email%2Cfirst_name%2Clast_name%2Curls%2Cproducts%2Cunsubscription%2Cbounce%2Ccomplaints%2Cgender%2Crating%2Ccreated_at\"\r\n        },\r\n        \"count\": 2,\r\n        \"additional\": {\r\n            \"invalid_recipients\": []\r\n        }\r\n    },\r\n    \"value\": [\r\n        {\r\n            \"_href\": \"https://api.newsletter2go.com/recipients/{{recipient_id}}\",\r\n            \"id\": \"{{recipient_id}}\",\r\n            \"email\": \"example@newsletter2go.com\",\r\n            \"first_name\": \"Max\",\r\n            \"last_name\": \"Mustermann\",\r\n            \"gender\": \"\",\r\n            \"rating\": 4,\r\n            \"created_at\": \"2018-11-23T09:32:32+0000\"\r\n        },\r\n        {\r\n            \"_href\": \"https://api.newsletter2go.com/recipients/{{recipient_id}}\",\r\n            \"id\": \"{{recipient_id}}\",\r\n            \"email\": \"example+1@newsletter2go.com\",\r\n            \"rating\": 3,\r\n            \"created_at\": \"2018-11-23T09:31:14+0000\",\r\n            \"urls\": [\r\n                \"http://www.google.com\",\r\n                \"http://www.google.com\"\r\n            ]\r\n        }\r\n    ]\r\n}"
+            },
+            {
+              "id": "dab7c9c1-f8e8-46dd-8a3b-f2cb2aec4915",
+              "name": "Non-openers",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}} "
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients?_fields=email,first_name,last_name,urls,products,unsubscription,bounce,complaints,gender,rating,created_at&_filter=opened_newsletter%3DNCONTAINS%3D\"{{newsletter_id}}\";received_newsletter%3DCONTAINS%3D\"{{newsletter_id}}\"&_limit=10&_offset=0&_expand=false",
+                  "protocol": "https",
+                  "host": [
+                    "api",
+                    "newsletter2go",
+                    "com"
+                  ],
+                  "path": [
+                    "newsletters",
+                    "{{newsletter_id}}",
+                    "reports",
+                    "recipients"
+                  ],
+                  "query": [
+                    {
+                      "key": "_fields",
+                      "value": "email,first_name,last_name,urls,products,unsubscription,bounce,complaints,gender,rating,created_at",
+                      "equals": true,
+                      "description": "Define the fields you want to retrieve here"
+                    },
+                    {
+                      "key": "_filter",
+                      "value": "opened_newsletter%3DNCONTAINS%3D\"{{newsletter_id}}\";received_newsletter%3DCONTAINS%3D\"{{newsletter_id}}\"",
+                      "equals": true,
+                      "description": "Defines the filter for this endpoint. In this case searches for recipients that did not open, but received a specifc newsletter"
+                    },
+                    {
+                      "key": "_limit",
+                      "value": "10",
+                      "equals": true
+                    },
+                    {
+                      "key": "_offset",
+                      "value": "0",
+                      "equals": true
+                    },
+                    {
+                      "key": "_expand",
+                      "value": "false",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": null,
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\r\n    \"status\": 200,\r\n    \"info\": {\r\n        \"links\": {\r\n\t\t\t\"_href\": \"https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients?_limit=10&_offset=0&_filter=converted_newsletter%3DCONTAINS%3D%22{{newsletter_id}}%22&_expand=false&_fields=email%2Cfirst_name%2Clast_name%2Curls%2Cproducts%2Cunsubscription%2Cbounce%2Ccomplaints%2Cgender%2Crating%2Ccreated_at\"\r\n\r\n        },\r\n        \"count\": 1,\r\n        \"additional\": {\r\n            \"invalid_recipients\": []\r\n        }\r\n    },\r\n    \"value\": [\r\n        {\r\n            \"_href\": \"https://api.newsletter2go.com/recipients/{{recipient_id}}\",\r\n            \"id\": \"{{recipient_id}}\",\r\n            \"email\": \"example@newsletter2go.com\",\r\n            \"rating\": 3,\r\n            \"created_at\": \"2018-11-23T09:31:24+0000\",\r\n            \"urls\": [\r\n                \"http://www.google.com\",\r\n                \"http://www.google.com\"\r\n            ]\r\n        }\r\n    ]\r\n}"
+            },
+            {
+              "id": "cd4789dd-019d-4ba0-9e56-510b6dfac18d",
+              "name": "Buyers",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}} "
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients?_fields=email,first_name,last_name,urls,products,unsubscription,bounce,complaints,gender,rating,created_at&_filter=converted_newsletter%3DCONTAINS%3D\"{{newsletter_id}}\"&_limit=10&_offset=0&_expand=false",
+                  "protocol": "https",
+                  "host": [
+                    "api",
+                    "newsletter2go",
+                    "com"
+                  ],
+                  "path": [
+                    "newsletters",
+                    "{{newsletter_id}}",
+                    "reports",
+                    "recipients"
+                  ],
+                  "query": [
+                    {
+                      "key": "_fields",
+                      "value": "email,first_name,last_name,urls,products,unsubscription,bounce,complaints,gender,rating,created_at",
+                      "equals": true,
+                      "description": "Define the fields you want to retrieve here"
+                    },
+                    {
+                      "key": "_filter",
+                      "value": "converted_newsletter%3DCONTAINS%3D\"{{newsletter_id}}\"",
+                      "equals": true,
+                      "description": "Defines the filter for this endpoint. In this case searches for recipients that did buy something after clicking a link in the newsletter"
+                    },
+                    {
+                      "key": "_limit",
+                      "value": "10",
+                      "equals": true
+                    },
+                    {
+                      "key": "_offset",
+                      "value": "0",
+                      "equals": true
+                    },
+                    {
+                      "key": "_expand",
+                      "value": "false",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": null,
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"links\": {\n\t\t\"_href\": \"https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients?_limit=10&_offset=0&_filter=converted_newsletter%3DCONTAINS%3D%22{{newsletter_id}}%22&_expand=false&_fields=email%2Cfirst_name%2Clast_name%2Curls%2Cproducts%2Cunsubscription%2Cbounce%2Ccomplaints%2Cgender%2Crating%2Ccreated_at\"\n        },\n        \"count\": 1,\n        \"additional\": {\n            \"invalid_recipients\": []\n        }\n    },\n    \"value\": [\n        {\n            \"_href\": \"https://api.newsletter2go.com/recipients/{{recipient_id}}\",\n            \"id\": \"{{recipient_id}}\",\n            \"email\": \"bernhardt+1@newsletter2go.com\",\n            \"rating\": 3,\n            \"created_at\": \"2018-11-23T09:31:24+0000\"\n        }\n    ]\n}"
+            },
+            {
+              "id": "e40f3cbc-db49-410b-8bfe-087e07814454",
+              "name": "Unsubscribers",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}} "
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients?_fields=email,first_name,last_name,urls,products,unsubscription,bounce,complaints,gender,rating,created_at&_filter=unsubscribed_newsletter%3DCONTAINS%3D\"{{newsletter_id}}\"&_limit=10&_offset=0&_expand=false",
+                  "protocol": "https",
+                  "host": [
+                    "api",
+                    "newsletter2go",
+                    "com"
+                  ],
+                  "path": [
+                    "newsletters",
+                    "{{newsletter_id}}",
+                    "reports",
+                    "recipients"
+                  ],
+                  "query": [
+                    {
+                      "key": "_fields",
+                      "value": "email,first_name,last_name,urls,products,unsubscription,bounce,complaints,gender,rating,created_at",
+                      "type": "text"
+                    },
+                    {
+                      "key": "_filter",
+                      "value": "unsubscribed_newsletter%3DCONTAINS%3D\"{{newsletter_id}}\"",
+                      "type": "text"
+                    },
+                    {
+                      "key": "_limit",
+                      "value": "10",
+                      "type": "text"
+                    },
+                    {
+                      "key": "_offset",
+                      "value": "0",
+                      "type": "text"
+                    },
+                    {
+                      "key": "_expand",
+                      "value": "false",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": null,
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"links\": {\n            \"_href\": \"https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients?_limit=10&_offset=0&_filter=unsubscribed_newsletter%3DCONTAINS%3D%22{{newsletter_id}}%22&_expand=false&_fields=email%2Cfirst_name%2Clast_name%2Curls%2Cproducts%2Cunsubscription%2Cbounce%2Ccomplaints%2Cgender%2Crating%2Ccreated_at\"\n        },\n        \"count\": 1,\n        \"additional\": {\n            \"invalid_recipients\": []\n        }\n    },\n    \"value\": [\n        {\n            \"_href\": \"https://api.newsletter2go.com/recipients/{{recipient_id}}\",\n            \"id\": \"{{recipient_id}}\",\n            \"email\": \"example@newsletter2go.com\",\n            \"rating\": 3,\n            \"created_at\": \"2018-11-23T09:31:24+0000\",\n            \"urls\": [\n                \"http://www.google.com\",\n                \"http://www.google.com\"\n            ]\n        }\n    ]\n}"
             }
           ]
         },
