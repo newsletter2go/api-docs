@@ -3644,7 +3644,7 @@
               "raw": "{\n    \"file\": \"{{file_id}}\",\n    \"associations\": {\n        \"0\": \"email\",\n        \"1\": \"first_name\",\n        \"2\": \"last_name\",\n        \"3\": \"{{attribute_name}}\"\n    },\n    \"groupId\": \"{{group_id}}\",\n    \"emptyBeforeImport\": false,\n    \"doi_form_id\": \"{{doi_form_id}}\",\n    \"insertIntoFormLists\": false\n}"
             },
             "url": "https://api.newsletter2go.com/lists/{{list_id}}/recipients/import/save",
-            "description": "In this call, you match the columns of the uploaded file to the attributes in your account.  \nMake sure to pass the right amount of `associations`.  \nDepending on the size of your file, the import might take some time. Make sure to store the import `id` that is returned in order to check the import status with the `import/{{import_id}}/info` call.\n\n`groupId` is an optional param. Set this parameter to an existing `group_id` to import all recipients into a specifc group.\n`emptyBeforeImport` is an optional param. Set this parameter to `true` to remove all recipients from the group or list before the import starts\n`doi_form_id` is an optional param. Set this parameter to an existing `doi_form_id` to import recipients with a Double Opt In mailing configure in the form\n`insertIntoFormLists` is an optional param. Set this parameter to `true` to import all DOI recipients into the list linked to the form instead of the current list"
+            "description": "In this call, you match the columns of the uploaded file to the attributes in your account.  \nMake sure to pass the right amount of `associations`.  \nDepending on the size of your file, the import might take some time. Make sure to store the import `id` that is returned in order to check the import status with the `import/{{import_id}}/info` call.\n\n`groupId` is an optional param. Set this parameter to an existing `group_id` to import all recipients into a specifc group.\n\n`emptyBeforeImport` is an optional param. Set this parameter to `true` to remove all recipients from the group or list before the import starts.\n\n`doi_form_id` is an optional param. Set this parameter to an existing `doi_form_id` to import recipients with a Double Opt In mailing configured in the form. Ensure that the Double Opt In Mailing is active.\n\n`insertIntoFormLists` is an optional param. Set this parameter to `true` to import all DOI recipients into the list linked to the form instead of the current list."
           },
           "response": [
             {
@@ -8477,48 +8477,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": {
-              "raw": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients?_limit=10&_offset=0&_fields&_filter&_expand=false",
-              "protocol": "https",
-              "host": [
-                "api",
-                "newsletter2go",
-                "com"
-              ],
-              "path": [
-                "newsletters",
-                "{{newsletter_id}}",
-                "reports",
-                "recipients"
-              ],
-              "query": [
-                {
-                  "key": "_limit",
-                  "value": "10",
-                  "equals": true
-                },
-                {
-                  "key": "_offset",
-                  "value": "0",
-                  "equals": true
-                },
-                {
-                  "key": "_fields",
-                  "value": "",
-                  "equals": false
-                },
-                {
-                  "key": "_filter",
-                  "value": "",
-                  "equals": false
-                },
-                {
-                  "key": "_expand",
-                  "value": "false",
-                  "equals": true
-                }
-              ]
-            },
+            "url": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients",
             "description": "This endpoint provides report information about the recipients in a newsletter. Use the `_fields` and `_filter` query option to retrieve different sets of recipients and values. For more information see [Common GET Parameters](https://docs.newsletter2go.com/#common-get-parameters).\n\nLook at the examples for some possible ways to query this endpoint."
           },
           "response": [
