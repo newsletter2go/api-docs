@@ -8466,7 +8466,13 @@
               "bearer": {}
             },
             "method": "GET",
-            "header": [],
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}} ",
+                "type": "text"
+              }
+            ],
             "body": {
               "mode": "raw",
               "raw": ""
