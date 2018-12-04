@@ -8475,7 +8475,8 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients"
+            "url": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients",
+            "description": "This endpoint provides report information about the recipients in a newsletter. Use the `_fields` and `_filter` query option to retrieve different set of recipients and values. For more information see [Common GET Parameters](https://docs.newsletter2go.com/#common-get-parameters).\n\nLook at the examples for some possible ways to query this endpoint."
           },
           "response": [
             {
@@ -8494,7 +8495,7 @@
                   "raw": ""
                 },
                 "url": {
-                  "raw": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients?_fields=urls,email&_filter=_filter=clicked_newsletter=CONTAINS=\"<newsletter_id>\"",
+                  "raw": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients?_fields=urls,email&_filter=_filter=clicked_newsletter=CONTAINS=\"{{newsletter_id}}\"",
                   "protocol": "https",
                   "host": [
                     "api",
@@ -8516,7 +8517,7 @@
                     },
                     {
                       "key": "_filter",
-                      "value": "_filter=clicked_newsletter=CONTAINS=\"<newsletter_id>\"",
+                      "value": "_filter=clicked_newsletter=CONTAINS=\"{{newsletter_id}}\"",
                       "equals": true,
                       "description": "Defines the filter for this endpoint. In this case searches for recipient that clicked a link in a specifc newsletter"
                     }
@@ -8527,7 +8528,7 @@
               "header": null,
               "cookie": [],
               "responseTime": null,
-              "body": "{\r\n    \"status\": 200,\r\n    \"info\": {\r\n        \"links\": {\r\n            \"_href\": \"https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients?_fields=urls,email&_filter=_filter=clicked_newsletter=CONTAINS=%22%3Cnewsletter_id%3E%22\"\r\n        },\r\n        \"count\": 1,\r\n        \"additional\": {\r\n            \"invalid_recipients\": []\r\n        }\r\n    },\r\n    \"value\": [\r\n        {\r\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/recipients\\/navngid\",\r\n            \"id\": \"navngid\",\r\n            \"email\": \"example@newsletter2go.com\",\r\n            \"rating\": 3,\r\n            \"created_at\": \"2018-11-23T09:31:24+0000\",\r\n            \"urls\": [\r\n                \"http:\\/\\/www.newsletter2go.com\",\r\n                \"http:\\/\\/www.newsletter2go.com\"\r\n            ]\r\n        }\r\n    ]\r\n}"
+              "body": "{\r\n    \"status\": 200,\r\n    \"info\": {\r\n        \"links\": {\r\n            \"_href\": \"https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients?_fields=urls,email&_filter=_filter=clicked_newsletter=CONTAINS={{newsletter_id}}\"\r\n        },\r\n        \"count\": 1,\r\n        \"additional\": {\r\n            \"invalid_recipients\": []\r\n        }\r\n    },\r\n    \"value\": [\r\n        {\r\n            \"_href\": \"https:\\/\\/api.newsletter2go.com\\/recipients\\/navngid\",\r\n            \"id\": \"navngid\",\r\n            \"email\": \"example@newsletter2go.com\",\r\n            \"rating\": 3,\r\n            \"created_at\": \"2018-11-23T09:31:24+0000\",\r\n            \"urls\": [\r\n                \"http:\\/\\/www.newsletter2go.com\",\r\n                \"http:\\/\\/www.newsletter2go.com\"\r\n            ]\r\n        }\r\n    ]\r\n}"
             }
           ]
         },
