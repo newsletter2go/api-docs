@@ -3641,7 +3641,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n\t\"file\": \"{{file_id}}\",\n\t\"associations\": {\n\t\t\"0\": \"email\",\n\t\t\"1\": \"first_name\",\n\t\t\"2\": \"last_name\", \n\t\t\"3\": \"{{attribute_name}}\"\n\t},\n\t\"groupId\": \"Optional Param: {{group_id}}\",\n\t\"emptyBeforeImport\": \"Optional Param (Empty group or list before import): true\",\n\t\"insertIntoFormLists\": false\n}"
+              "raw": "{\n    \"file\": \"{{file_id}}\",\n    \"associations\": {\n        \"0\": \"email\",\n        \"1\": \"first_name\",\n        \"2\": \"last_name\",\n        \"3\": \"{{attribute_name}}\"\n    },\n    \"groupId\": \"{{group_id}}\",\n    \"emptyBeforeImport\": false,\n    \"insertIntoFormLists\": false\n}"
             },
             "url": "https://api.newsletter2go.com/lists/{{list_id}}/recipients/import/save",
             "description": "In this call, you match the columns of the uploaded file to the attributes in your account.  \nMake sure to pass the right amount of `associations`.  \nDepending on the size of your file, the import might take some time. Make sure to store the import `id` that is returned in order to check the import status with the `import/{{import_id}}/info` call."
