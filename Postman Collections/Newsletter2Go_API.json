@@ -8738,7 +8738,7 @@
                     {
                       "key": "_expand",
                       "value": "false",
-                      "type": "text"
+                      "equals": true
                     }
                   ]
                 }
@@ -8749,7 +8749,7 @@
               "header": null,
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"links\": {\n\t\t\"_href\": \"https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients?_limit=10&_offset=0&_filter=converted_newsletter%3DCONTAINS%3D%22{{newsletter_id}}%22&_expand=false&_fields=email%2Cfirst_name%2Clast_name%2Curls%2Cproducts%2Cunsubscription%2Cbounce%2Ccomplaints%2Cgender%2Crating%2Ccreated_at\"\n        },\n        \"count\": 1,\n        \"additional\": {\n            \"invalid_recipients\": []\n        }\n    },\n    \"value\": [\n        {\n            \"_href\": \"https://api.newsletter2go.com/recipients/{{recipient_id}}\",\n            \"id\": \"{{recipient_id}}\",\n            \"email\": \"bernhardt+1@newsletter2go.com\",\n            \"rating\": 3,\n            \"created_at\": \"2018-11-23T09:31:24+0000\"\n        }\n    ]\n}"
+              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"links\": {\n\t\t\"_href\": \"https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients?_limit=10&_offset=0&_filter=converted_newsletter%3DCONTAINS%3D%22{{newsletter_id}}%22&_expand=false&_fields=email%2Cfirst_name%2Clast_name%2Curls%2Cproducts%2Cunsubscription%2Cbounce%2Ccomplaints%2Cgender%2Crating%2Ccreated_at\"\n        },\n        \"count\": 1,\n        \"additional\": {\n            \"invalid_recipients\": []\n        }\n    },\n    \"value\": [\n        {\n            \"_href\": \"https://api.newsletter2go.com/recipients/{{recipient_id}}\",\n            \"id\": \"{{recipient_id}}\",\n            \"email\": \"example@newsletter2go.com\",\n            \"rating\": 3,\n            \"created_at\": \"2018-11-23T09:31:24+0000\"\n        }\n    ]\n}"
             },
             {
               "id": "e40f3cbc-db49-410b-8bfe-087e07814454",
@@ -8784,27 +8784,27 @@
                     {
                       "key": "_fields",
                       "value": "email,first_name,last_name,urls,products,unsubscription,bounce,complaints,gender,rating,created_at",
-                      "type": "text"
+                      "equals": true
                     },
                     {
                       "key": "_filter",
                       "value": "unsubscribed_newsletter%3DCONTAINS%3D\"{{newsletter_id}}\"",
-                      "type": "text"
+                      "equals": true
                     },
                     {
                       "key": "_limit",
                       "value": "10",
-                      "type": "text"
+                      "equals": true
                     },
                     {
                       "key": "_offset",
                       "value": "0",
-                      "type": "text"
+                      "equals": true
                     },
                     {
                       "key": "_expand",
                       "value": "false",
-                      "type": "text"
+                      "equals": true
                     }
                   ]
                 }
@@ -8815,7 +8815,7 @@
               "header": null,
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"links\": {\n            \"_href\": \"https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients?_limit=10&_offset=0&_filter=unsubscribed_newsletter%3DCONTAINS%3D%22{{newsletter_id}}%22&_expand=false&_fields=email%2Cfirst_name%2Clast_name%2Curls%2Cproducts%2Cunsubscription%2Cbounce%2Ccomplaints%2Cgender%2Crating%2Ccreated_at\"\n        },\n        \"count\": 1,\n        \"additional\": {\n            \"invalid_recipients\": []\n        }\n    },\n    \"value\": [\n        {\n            \"_href\": \"https://api.newsletter2go.com/recipients/{{recipient_id}}\",\n            \"id\": \"{{recipient_id}}\",\n            \"email\": \"example@newsletter2go.com\",\n            \"rating\": 3,\n            \"created_at\": \"2018-11-23T09:31:24+0000\",\n            \"urls\": [\n                \"http://www.google.com\",\n                \"http://www.google.com\"\n            ]\n        }\n    ]\n}"
+              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"links\": {\n            \"_href\": \"https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients?_limit=10&_offset=0&_filter=unsubscribed_newsletter%3DCONTAINS%3D%22{{newsletter_id}}%22&_expand=false&_fields=email%2Cfirst_name%2Clast_name%2Curls%2Cproducts%2Cunsubscription%2Cbounce%2Ccomplaints%2Cgender%2Crating%2Ccreated_at\"\n        },\n        \"count\": 1,\n        \"additional\": {\n            \"invalid_recipients\": []\n        }\n    },\n    \"value\": [\n        {\n            \"_href\": \"https://api.newsletter2go.com/recipients/{{recipient_id}}\",\n            \"id\": \"{{recipient_id}}\",\n            \"email\": \"example@newsletter2go.com\",\n            \"rating\": 3,\n            \"created_at\": \"2018-11-23T09:31:24+0000\"\n        }\n    ]\n}"
             },
             {
               "id": "4845442c-a786-4bc0-806b-a88cd876409a",
@@ -9469,7 +9469,8 @@
               "mode": "raw",
               "raw": "{\r\t\"recipient\": {\r            \"email\": \"email@example.org\",\r            \"first_name\": \"John\",\r            \"last_name\": \"Doe\",\r            \"{{attribute_name}}\": \"Attribute Value\"\r        }\r}"
             },
-            "url": "https://api.newsletter2go.com/forms/submit/{{form_id}}"
+            "url": "https://api.newsletter2go.com/forms/submit/{{form_id}}",
+            "description": "This call can be used to trigger a double opt in process through the API.  \nThe contact will only be added to your list once he / she has clicked the confirmation link in the email."
           },
           "response": [
             {
