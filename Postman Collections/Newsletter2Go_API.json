@@ -453,7 +453,7 @@
             ],
             "body": {},
             "url": "https://api.newsletter2go.com/lists",
-            "description": "Get all lists in your account"
+            "description": "Get all lists in your account."
           },
           "response": [
             {
