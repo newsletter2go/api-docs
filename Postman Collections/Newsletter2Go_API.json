@@ -8478,7 +8478,7 @@
               "raw": ""
             },
             "url": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients",
-            "description": "This endpoint provides report information about the recipients in a newsletter. Use the `_fields` and `_filter` query option to retrieve different sets of recipients and values. For more information see [Common GET Parameters](https://docs.newsletter2go.com/#common-get-parameters).\n\nLook at the examples for some possible ways to query this endpoint."
+            "description": "Add a `_filter` to the endpoint in order to query for specific actions:\n`received_newsletter` for contacts that received the mailing\n`opened_newsletter` for contacts that opened the mailing\n`clicked_newsletter` for contacts that clicked the mailing\n`unsubscribed_newsletter` for contacts that unsubscribed from the mailing\n`bounced_newsletter` for contacts that clicked the mailing\n\ne.g.\nhttps://api.newsletter2go.com/newsletters/{{mailing_id}}/reports/recipients?_expand=false&_fields=email,first_name,last_name,urls,products,unsubscription,bounce,complaints,gender,rating,created_at&_filter=received_newsletter%3DCONTAINS%3D%22{{mailing_id}}%22&_limit=10&_offset=0"
           },
           "response": [
             {
