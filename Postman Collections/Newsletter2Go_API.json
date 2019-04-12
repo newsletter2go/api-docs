@@ -7,12 +7,9 @@
   },
   "item": [
     {
-      "_postman_id": "b136221c-ab6b-011a-6644-d14ccaa2c5c5",
       "name": "Authentication",
-      "description": "#### Step 1  \r\nAuthenticate and acquire an access token by [calling our OAuth endpoint](#fcc16cf4-7bb7-3d4b-f37b-78e00171f6c3)\r\n\r\n#### Step 2  \r\nStore the `access_token` from the response (in our Postman collection we save it automatically in an environment variable)\r\n\r\n#### Step 3  \r\nPass the `access_token` in the `Authorization` header in each request as a `Bearer`\r\n\r\n\r\nYou will need your `user name`, your `password` and your `auth key`, which you can find in [your account](https://ui.newsletter2go.com/api-client).\r\n\r\n<div class=\"alert alert-info\">We recommend creating a dedicated API user before you get started. This way, you can better manage permissions and do not have to worry about password changes.</div>\r\n\r\nThe Newsletter2Go API uses [OAuth 2.0 bearer tokens](https://tools.ietf.org/html/rfc6750) to authenticate your requests.\r\n\r\nThat means, that you will have to acquire a valid access token first by making a `POST` call to our `/oauth/v2/token` endpoint. [More information on the authentication endpoint.](#fcc16cf4-7bb7-3d4b-f37b-78e00171f6c3)\r\n \r\nIf the authentication was successful, you will receive an `access_token` in the `JSON` response. It expires automatically after 2 hours ([you can use the `refresh_token` to renew your session](#db2b80e2-f37f-4d4d-80ee-a072aae691a9)).\r\n\r\nStore the `access_token` in a safe place and add it in each consecutive request in the `Authorization` header.  ",
       "item": [
         {
-          "_postman_id": "fcc16cf4-7bb7-3d4b-f37b-78e00171f6c3",
           "name": "OAuth Login / Retrieve Access Token",
           "event": [
             {
@@ -36,6 +33,7 @@
               }
             }
           ],
+          "_postman_id": "fcc16cf4-7bb7-3d4b-f37b-78e00171f6c3",
           "request": {
             "auth": {
               "type": "noauth"
@@ -206,7 +204,6 @@
           ]
         },
         {
-          "_postman_id": "db2b80e2-f37f-4d4d-80ee-a072aae691a9",
           "name": "OAuth Refresh Access Token",
           "event": [
             {
@@ -230,6 +227,7 @@
               }
             }
           ],
+          "_postman_id": "db2b80e2-f37f-4d4d-80ee-a072aae691a9",
           "request": {
             "auth": {
               "type": "noauth"
@@ -402,6 +400,8 @@
           ]
         }
       ],
+      "_postman_id": "b136221c-ab6b-011a-6644-d14ccaa2c5c5",
+      "description": "#### Step 1  \r\nAuthenticate and acquire an access token by [calling our OAuth endpoint](#fcc16cf4-7bb7-3d4b-f37b-78e00171f6c3)\r\n\r\n#### Step 2  \r\nStore the `access_token` from the response (in our Postman collection we save it automatically in an environment variable)\r\n\r\n#### Step 3  \r\nPass the `access_token` in the `Authorization` header in each request as a `Bearer`\r\n\r\n\r\nYou will need your `user name`, your `password` and your `auth key`, which you can find in [your account](https://ui.newsletter2go.com/api-client).\r\n\r\n<div class=\"alert alert-info\">We recommend creating a dedicated API user before you get started. This way, you can better manage permissions and do not have to worry about password changes.</div>\r\n\r\nThe Newsletter2Go API uses [OAuth 2.0 bearer tokens](https://tools.ietf.org/html/rfc6750) to authenticate your requests.\r\n\r\nThat means, that you will have to acquire a valid access token first by making a `POST` call to our `/oauth/v2/token` endpoint. [More information on the authentication endpoint.](#fcc16cf4-7bb7-3d4b-f37b-78e00171f6c3)\r\n \r\nIf the authentication was successful, you will receive an `access_token` in the `JSON` response. It expires automatically after 2 hours ([you can use the `refresh_token` to renew your session](#db2b80e2-f37f-4d4d-80ee-a072aae691a9)).\r\n\r\nStore the `access_token` in a safe place and add it in each consecutive request in the `Authorization` header.  ",
       "auth": {
         "type": "noauth"
       },
@@ -433,13 +433,11 @@
       ]
     },
     {
-      "_postman_id": "06014fbe-a579-47e3-81c9-74a25b700cf7",
       "name": "Lists",
-      "description": "With Newsletter2Go you can manage multiple contact lists. Each list can contains campaigns, contacts, segments and attributes.  \n\n<div class=\"alert alert-info\">Contacts can subscribe and unsubscribe from lists independently. If you don't know if you should use another list, ask yourself the question if the recipients should be able to unsubscribe from each list individually</div>\n\nThe purpose of lists is to separate concerns. You can manage different contacts in different states (active, unsubscribed) with different attributes in different lists. A typical application is to use lists for separate mailing types; e.g. one contact list to send out product news to prospects and one list to send regular information to existing customers.  \n\n## `List` Parameters\n\n| Parameter | Type      | Description |\n|-----------|-----------|-----------|\n| `id` | `string` | The id of the list |\n| `name` | `string` | The name of the list |\n| `uses_econda` | `boolean` defaults to `0` | Automatically rewrite links to use Econda tracking parameters |\n| `uses_googleanalytics` | `boolean` defaults to `0` | Automatically rewrite links to use Google Analytics tracking parameters |\n| `has_opentracking` | `boolean` defaults to `1` | Whether mailings in this list will use open tracking by default |\n| `has_clicktracking` | `boolean` defaults to `1` | Whether mailings in this list will use link tracking by default |\n| `has_conversiontracking` | `boolean` defaults to `0` | Whether mailings in this list will use conversion tracking by default |\n| `imprint` | `url` | The link to your legal notice |\n| `header_from_email` | `email` | The default from email address (e.g., info@mybusiness.tld) for your mailings |\n| `header_from_name` | `string` | The default from sender name (e.g., \"My Business\") for your mailings |\n| `header_reply_email` | `email` | The default reply-to email address (e.g., info@mybusiness.tld) for your mailings |\n| `header_reply_name` | `string` | The default reply-to sender name (e.g., \"My Business\") for your mailings |\n| `landingpage` | `url` | The default landing page after the recipient unsubscribes |\n| `tracking_url` | `url` | A custom tracking url to use with link tracking. Make sure to set it up before |\n| `use_ecg_list` | `boolean` defaults to `0` | Whether the list should sync daily with the Austrian ECG blacklist |",
       "item": [
         {
-          "_postman_id": "5552d812-59b0-4831-9771-a4ea91a8e552",
           "name": "Get All Lists",
+          "_postman_id": "5552d812-59b0-4831-9771-a4ea91a8e552",
           "request": {
             "auth": {
               "type": "noauth"
@@ -451,7 +449,10 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://api.newsletter2go.com/lists",
             "description": "Get all lists in your account."
           },
@@ -468,7 +469,10 @@
                     "disabled": false
                   }
                 ],
-                "body": {},
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": "https://api.newsletter2go.com/lists"
               },
               "status": "OK",
@@ -612,7 +616,10 @@
                     "disabled": false
                   }
                 ],
-                "body": {},
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": {
                   "raw": "https://api.newsletter2go.com/lists?_expand=true",
                   "protocol": "https",
@@ -627,8 +634,7 @@
                   "query": [
                     {
                       "key": "_expand",
-                      "value": "true",
-                      "equals": true
+                      "value": "true"
                     }
                   ]
                 }
@@ -765,8 +771,8 @@
           ]
         },
         {
-          "_postman_id": "2b0496e8-e75a-48d5-a8e4-2baff95af7bf",
           "name": "Get List Details",
+          "_postman_id": "2b0496e8-e75a-48d5-a8e4-2baff95af7bf",
           "request": {
             "auth": {
               "type": "noauth"
@@ -778,7 +784,10 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://api.newsletter2go.com/lists/{{list_id}}",
             "description": "Get all information for one specific list."
           },
@@ -795,7 +804,10 @@
                     "disabled": false
                   }
                 ],
-                "body": {},
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": "https://api.newsletter2go.com/lists/{{list_id}}"
               },
               "status": "OK",
@@ -930,8 +942,8 @@
           ]
         },
         {
-          "_postman_id": "364131ba-fd20-444a-b029-e53a5a89546d",
           "name": "Create List",
+          "_postman_id": "364131ba-fd20-444a-b029-e53a5a89546d",
           "request": {
             "auth": {
               "type": "noauth"
@@ -1092,8 +1104,8 @@
           ]
         },
         {
-          "_postman_id": "80247ee2-dda3-4793-b15a-905af57af154",
           "name": "Update List",
+          "_postman_id": "80247ee2-dda3-4793-b15a-905af57af154",
           "request": {
             "auth": {
               "type": "noauth"
@@ -1272,8 +1284,8 @@
           ]
         },
         {
-          "_postman_id": "ef5f6c3e-4a7a-4b31-8b29-57775feff3fa",
           "name": "Delete List",
+          "_postman_id": "ef5f6c3e-4a7a-4b31-8b29-57775feff3fa",
           "request": {
             "auth": {
               "type": "noauth"
@@ -1285,13 +1297,18 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://api.newsletter2go.com/lists/{{list_id}}",
             "description": "Delete a specific list.  \n<div class=\"alert alert-info\">Be careful! You're irrevocably deleting the entire list with all campaigns and contacts.</div>"
           },
           "response": []
         }
       ],
+      "_postman_id": "06014fbe-a579-47e3-81c9-74a25b700cf7",
+      "description": "With Newsletter2Go you can manage multiple contact lists. Each list can contains campaigns, contacts, segments and attributes.  \n\n<div class=\"alert alert-info\">Contacts can subscribe and unsubscribe from lists independently. If you don't know if you should use another list, ask yourself the question if the recipients should be able to unsubscribe from each list individually</div>\n\nThe purpose of lists is to separate concerns. You can manage different contacts in different states (active, unsubscribed) with different attributes in different lists. A typical application is to use lists for separate mailing types; e.g. one contact list to send out product news to prospects and one list to send regular information to existing customers.  \n\n## `List` Parameters\n\n| Parameter | Type      | Description |\n|-----------|-----------|-----------|\n| `id` | `string` | The id of the list |\n| `name` | `string` | The name of the list |\n| `uses_econda` | `boolean` defaults to `0` | Automatically rewrite links to use Econda tracking parameters |\n| `uses_googleanalytics` | `boolean` defaults to `0` | Automatically rewrite links to use Google Analytics tracking parameters |\n| `has_opentracking` | `boolean` defaults to `1` | Whether mailings in this list will use open tracking by default |\n| `has_clicktracking` | `boolean` defaults to `1` | Whether mailings in this list will use link tracking by default |\n| `has_conversiontracking` | `boolean` defaults to `0` | Whether mailings in this list will use conversion tracking by default |\n| `imprint` | `url` | The link to your legal notice |\n| `header_from_email` | `email` | The default from email address (e.g., info@mybusiness.tld) for your mailings |\n| `header_from_name` | `string` | The default from sender name (e.g., \"My Business\") for your mailings |\n| `header_reply_email` | `email` | The default reply-to email address (e.g., info@mybusiness.tld) for your mailings |\n| `header_reply_name` | `string` | The default reply-to sender name (e.g., \"My Business\") for your mailings |\n| `landingpage` | `url` | The default landing page after the recipient unsubscribes |\n| `tracking_url` | `url` | A custom tracking url to use with link tracking. Make sure to set it up before |\n| `use_ecg_list` | `boolean` defaults to `0` | Whether the list should sync daily with the Austrian ECG blacklist |",
       "auth": {
         "type": "noauth"
       },
@@ -1319,13 +1336,11 @@
       ]
     },
     {
-      "_postman_id": "0559b63a-004d-4db8-908c-ce3266547fd0",
       "name": "Contacts",
-      "description": "# Contacts parameters\n\n| Parameter | Type      | Description |\n|-----------|-----------|-----------|\n| `email` | `email` | The email address of the contact |\n| `first_name` | `string` | The first name of the contact |\n| `last_name` | `string` | The last name of the contact |\n| `gender` | `enum` `f` or `m` | The gender of the contact |\n| `phone` | `string` | The phone number of the contact |\n| `created_at` | `date` ISO-8601 format | The date the contact was created |\n| `rating` | `enum` 0 to 5 | The contact's activity rating calculated by N2G |\n| `is_unsubscribed` | `boolean` | Whether the contact has unsubscribed from the current list |\n| `is_bounced` | `boolean` | Whether the contact has bounced from the current list |\n| `is_blacklisted` | `boolean` | Whether the contact is blacklisted in the current list |\n| `statistic_mails_received` | `integer` | The amount of emails the contact received |\n| `statistic_mails_opened` | `integer` | The amount of emails opened by this contact  |\n| `statistic_mails_unique_opened` | `integer` | The amount of emails uniquely opened by this contact |\n| `statistic_mails_clicked` | `integer` | The amount of emails clicked by this contact |\n| `statistic_mails_unique_clicked` | `integer` | The amount of emails uniquely clicked by this contact |\n| `statistic_conversions` | `integer` | The amount of conversions triggered by this contact |\n| `statistic_last_mail_action` | `date` ISO-8601 format | The date of the last action (open, click, conversion) the contact performed |\n| `statistic_last_country_code` | `string` ISO ALPHA-2 Code | The country code of the last location the contact was tracked in |\n| `statistic_last_city` | `string` | The last city that contact was tracked in |\n| `group_ids` | `array` of `string` | An array of `group_ids` that the contact is part of |\n| `list_ids` | `array` of `string` | An array of `list_ids` that the contact is part of |\n| `{{attribute_name}}` | `any` | Custom attributes and its value for the current contact |",
       "item": [
         {
-          "_postman_id": "c97c941a-267c-4afb-80e9-d45b0572b19d",
           "name": "Get Recipients",
+          "_postman_id": "c97c941a-267c-4afb-80e9-d45b0572b19d",
           "request": {
             "auth": {
               "type": "noauth"
@@ -1337,7 +1352,10 @@
                 "value": "Bearer {{access_token}} "
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://api.newsletter2go.com/recipients",
             "description": "Get recipients from any list.\n\n_Remember: You can use the [common GET parameters](#common-get-parameters) to control the result sets from the API._"
           },
@@ -1354,7 +1372,10 @@
                     "disabled": false
                   }
                 ],
-                "body": {},
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": "https://api.newsletter2go.com/recipients"
               },
               "status": "OK",
@@ -1489,8 +1510,8 @@
           ]
         },
         {
-          "_postman_id": "6c7853a8-978c-4d48-8d97-b5a921d6e287",
           "name": "Get One Recipient's Details",
+          "_postman_id": "6c7853a8-978c-4d48-8d97-b5a921d6e287",
           "request": {
             "auth": {
               "type": "noauth"
@@ -1502,7 +1523,10 @@
                 "value": "Bearer {{access_token}} "
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
               "raw": "https://api.newsletter2go.com/recipients/{{recipient_id}}?_fields=email,first_name,{{attribute_name}}",
               "protocol": "https",
@@ -1518,8 +1542,7 @@
               "query": [
                 {
                   "key": "_fields",
-                  "value": "email,first_name,{{attribute_name}}",
-                  "equals": true
+                  "value": "email,first_name,{{attribute_name}}"
                 }
               ]
             },
@@ -1538,7 +1561,10 @@
                     "disabled": false
                   }
                 ],
-                "body": {},
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": {
                   "raw": "https://api.newsletter2go.com/recipients/{{recipient_id}}?_fields=email,first_name,{{attribute_name}}",
                   "protocol": "https",
@@ -1554,8 +1580,7 @@
                   "query": [
                     {
                       "key": "_fields",
-                      "value": "email,first_name,{{attribute_name}}",
-                      "equals": true
+                      "value": "email,first_name,{{attribute_name}}"
                     }
                   ]
                 }
@@ -1692,8 +1717,8 @@
           ]
         },
         {
-          "_postman_id": "e5050ccd-0f51-4ac6-8c92-e9b88e2ecbd0",
           "name": "Get Recipients From List",
+          "_postman_id": "e5050ccd-0f51-4ac6-8c92-e9b88e2ecbd0",
           "request": {
             "auth": {
               "type": "noauth"
@@ -1705,7 +1730,10 @@
                 "value": "Bearer {{access_token}} "
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://api.newsletter2go.com/lists/{{list_id}}/recipients",
             "description": "Get recipients from a specific list.\n\n_Remember: You can use the [common GET parameters](#common-get-parameters) to control the result sets from the API._"
           },
@@ -1722,7 +1750,10 @@
                     "disabled": false
                   }
                 ],
-                "body": {},
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": "https://api.newsletter2go.com/lists/{{list_id}}/recipients"
               },
               "status": "OK",
@@ -1857,8 +1888,8 @@
           ]
         },
         {
-          "_postman_id": "da371f3a-692c-4840-815b-f92bbb2e80a2",
           "name": "Get Recipients Details from List",
+          "_postman_id": "da371f3a-692c-4840-815b-f92bbb2e80a2",
           "request": {
             "auth": {
               "type": "noauth"
@@ -1870,7 +1901,10 @@
                 "value": "Bearer {{access_token}} "
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
               "raw": "https://api.newsletter2go.com/lists/{{list_id}}/recipients/{{recipient_id}}?_fields=email,first_name,{{attribute_name}}",
               "protocol": "https",
@@ -1888,8 +1922,7 @@
               "query": [
                 {
                   "key": "_fields",
-                  "value": "email,first_name,{{attribute_name}}",
-                  "equals": true
+                  "value": "email,first_name,{{attribute_name}}"
                 }
               ]
             },
@@ -1908,7 +1941,10 @@
                     "disabled": false
                   }
                 ],
-                "body": {},
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": {
                   "raw": "https://api.newsletter2go.com/lists/{{list_id}}/recipients/{{recipient_id}}?_fields=email,first_name,{{attribute_name}}",
                   "protocol": "https",
@@ -1926,8 +1962,7 @@
                   "query": [
                     {
                       "key": "_fields",
-                      "value": "email,first_name,{{attribute_name}}",
-                      "equals": true
+                      "value": "email,first_name,{{attribute_name}}"
                     }
                   ]
                 }
@@ -2064,8 +2099,8 @@
           ]
         },
         {
-          "_postman_id": "9eb0eccc-8c3c-4a59-90e5-547031fe55a2",
           "name": "Create or Update Recipient(s)",
+          "_postman_id": "9eb0eccc-8c3c-4a59-90e5-547031fe55a2",
           "request": {
             "auth": {
               "type": "noauth"
@@ -2378,8 +2413,8 @@
           ]
         },
         {
-          "_postman_id": "b84956c5-93ef-48a4-9e1d-7f13306dbffd",
           "name": "Delete One Recipient From List",
+          "_postman_id": "b84956c5-93ef-48a4-9e1d-7f13306dbffd",
           "request": {
             "auth": {
               "type": "noauth"
@@ -2557,8 +2592,8 @@
           ]
         },
         {
-          "_postman_id": "08f94f86-eab1-4b57-aca4-5f4c8d9e8317",
           "name": "Delete multiple Recipients from List",
+          "_postman_id": "08f94f86-eab1-4b57-aca4-5f4c8d9e8317",
           "request": {
             "auth": {
               "type": "noauth"
@@ -2594,8 +2629,7 @@
               "query": [
                 {
                   "key": "_filter",
-                  "value": "email%3DLIKE%3D%22%example%25%22",
-                  "equals": true
+                  "value": "email%3DLIKE%3D%22%example%25%22"
                 }
               ]
             },
@@ -2639,8 +2673,7 @@
                   "query": [
                     {
                       "key": "_filter",
-                      "value": "email%3DLIKE%3D%22%example%25%22",
-                      "equals": true
+                      "value": "email%3DLIKE%3D%22%example%25%22"
                     }
                   ]
                 }
@@ -2777,8 +2810,8 @@
           ]
         },
         {
-          "_postman_id": "1fba6376-c242-43ad-bbd4-c5f4cefbc136",
           "name": "Delete Recipients",
+          "_postman_id": "1fba6376-c242-43ad-bbd4-c5f4cefbc136",
           "request": {
             "auth": {
               "type": "noauth"
@@ -2812,8 +2845,7 @@
               "query": [
                 {
                   "key": "_filter",
-                  "value": "email%3DLIKE%3D%22%example%25%22",
-                  "equals": true
+                  "value": "email%3DLIKE%3D%22%example%25%22"
                 }
               ]
             },
@@ -2855,8 +2887,7 @@
                   "query": [
                     {
                       "key": "_filter",
-                      "value": "email%3DLIKE%3D%22%example%25%22",
-                      "equals": true
+                      "value": "email%3DLIKE%3D%22%example%25%22"
                     }
                   ]
                 }
@@ -2993,8 +3024,8 @@
           ]
         },
         {
-          "_postman_id": "6f4acfc5-649a-4345-9456-6cad24fa9fee",
           "name": "Update one Recipient",
+          "_postman_id": "6f4acfc5-649a-4345-9456-6cad24fa9fee",
           "request": {
             "auth": {
               "type": "noauth"
@@ -3172,8 +3203,8 @@
           ]
         },
         {
-          "_postman_id": "b16f71d0-0d63-4df0-a750-7dc4e8515bcc",
           "name": "Update multiple Recipients",
+          "_postman_id": "b16f71d0-0d63-4df0-a750-7dc4e8515bcc",
           "request": {
             "auth": {
               "type": "noauth"
@@ -3209,8 +3240,7 @@
               "query": [
                 {
                   "key": "_filter",
-                  "value": "email%3DLIKE%3D%22%example%25%22",
-                  "equals": true
+                  "value": "email%3DLIKE%3D%22%example%25%22"
                 }
               ]
             },
@@ -3254,8 +3284,7 @@
                   "query": [
                     {
                       "key": "_filter",
-                      "value": "email%3DLIKE%3D%22%example%25%22",
-                      "equals": true
+                      "value": "email%3DLIKE%3D%22%example%25%22"
                     }
                   ]
                 }
@@ -3392,7 +3421,6 @@
           ]
         },
         {
-          "_postman_id": "126f937f-ae5e-402f-ac30-ab2a7f0cc327",
           "name": "Import Recipients - Upload File",
           "event": [
             {
@@ -3407,6 +3435,7 @@
               }
             }
           ],
+          "_postman_id": "126f937f-ae5e-402f-ac30-ab2a7f0cc327",
           "request": {
             "auth": {
               "type": "noauth"
@@ -3431,7 +3460,6 @@
                   "sessionValue": {
                     "0": {}
                   },
-                  "description": "",
                   "type": "file"
                 }
               ]
@@ -3465,11 +3493,8 @@
                       "sessionValue": {
                         "0": {}
                       },
-                      "description": "",
                       "type": "file",
-                      "src": {
-                        "0": {}
-                      }
+                      "src": null
                     }
                   ]
                 },
@@ -3607,7 +3632,6 @@
           ]
         },
         {
-          "_postman_id": "21c9e82c-66ec-4773-aba9-243b0ef45010",
           "name": "Import Recipients - Match columns and start Import",
           "event": [
             {
@@ -3624,6 +3648,7 @@
               }
             }
           ],
+          "_postman_id": "21c9e82c-66ec-4773-aba9-243b0ef45010",
           "request": {
             "auth": {
               "type": "noauth"
@@ -3784,7 +3809,6 @@
           ]
         },
         {
-          "_postman_id": "d7aba723-6eb5-441a-b898-1f9624896f87",
           "name": "Import Recipients - Get Infos on import status",
           "event": [
             {
@@ -3798,6 +3822,7 @@
               }
             }
           ],
+          "_postman_id": "d7aba723-6eb5-441a-b898-1f9624896f87",
           "request": {
             "auth": {
               "type": "noauth"
@@ -3976,6 +4001,8 @@
           ]
         }
       ],
+      "_postman_id": "0559b63a-004d-4db8-908c-ce3266547fd0",
+      "description": "# Contacts parameters\n\n| Parameter | Type      | Description |\n|-----------|-----------|-----------|\n| `email` | `email` | The email address of the contact |\n| `first_name` | `string` | The first name of the contact |\n| `last_name` | `string` | The last name of the contact |\n| `gender` | `enum` `f` or `m` | The gender of the contact |\n| `phone` | `string` | The phone number of the contact |\n| `created_at` | `date` ISO-8601 format | The date the contact was created |\n| `rating` | `enum` 0 to 5 | The contact's activity rating calculated by N2G |\n| `is_unsubscribed` | `boolean` | Whether the contact has unsubscribed from the current list |\n| `is_bounced` | `boolean` | Whether the contact has bounced from the current list |\n| `is_blacklisted` | `boolean` | Whether the contact is blacklisted in the current list |\n| `statistic_mails_received` | `integer` | The amount of emails the contact received |\n| `statistic_mails_opened` | `integer` | The amount of emails opened by this contact  |\n| `statistic_mails_unique_opened` | `integer` | The amount of emails uniquely opened by this contact |\n| `statistic_mails_clicked` | `integer` | The amount of emails clicked by this contact |\n| `statistic_mails_unique_clicked` | `integer` | The amount of emails uniquely clicked by this contact |\n| `statistic_conversions` | `integer` | The amount of conversions triggered by this contact |\n| `statistic_last_mail_action` | `date` ISO-8601 format | The date of the last action (open, click, conversion) the contact performed |\n| `statistic_last_country_code` | `string` ISO ALPHA-2 Code | The country code of the last location the contact was tracked in |\n| `statistic_last_city` | `string` | The last city that contact was tracked in |\n| `group_ids` | `array` of `string` | An array of `group_ids` that the contact is part of |\n| `list_ids` | `array` of `string` | An array of `list_ids` that the contact is part of |\n| `{{attribute_name}}` | `any` | Custom attributes and its value for the current contact |",
       "event": [
         {
           "listen": "prerequest",
@@ -4000,13 +4027,11 @@
       ]
     },
     {
-      "_postman_id": "21056689-a283-4b42-be23-7e23b4b9026e",
       "name": "Segments",
-      "description": "",
       "item": [
         {
-          "_postman_id": "bef8c5b0-c961-41d8-9a77-2d6eb0ea526e",
           "name": "Get Segments in List",
+          "_postman_id": "bef8c5b0-c961-41d8-9a77-2d6eb0ea526e",
           "request": {
             "auth": {
               "type": "noauth"
@@ -4184,8 +4209,8 @@
           ]
         },
         {
-          "_postman_id": "170ef0ae-10c5-4bc1-a658-750dad70c452",
           "name": "Create Segment",
+          "_postman_id": "170ef0ae-10c5-4bc1-a658-750dad70c452",
           "request": {
             "auth": {
               "type": "noauth"
@@ -4345,8 +4370,8 @@
           ]
         },
         {
-          "_postman_id": "9e4c105f-23de-4fc0-8ebd-da2a4e8c1998",
           "name": "Create Auto-Update Segment",
+          "_postman_id": "9e4c105f-23de-4fc0-8ebd-da2a4e8c1998",
           "request": {
             "auth": {
               "type": "noauth"
@@ -4507,8 +4532,8 @@
           ]
         },
         {
-          "_postman_id": "dc96fd1b-9664-4bf9-8f03-891216999de1",
           "name": "Update Segment",
+          "_postman_id": "dc96fd1b-9664-4bf9-8f03-891216999de1",
           "request": {
             "auth": {
               "type": "noauth"
@@ -4686,8 +4711,8 @@
           ]
         },
         {
-          "_postman_id": "c28c7c5b-f3d0-4d35-be6e-eacd6b83495c",
           "name": "Delete Segment",
+          "_postman_id": "c28c7c5b-f3d0-4d35-be6e-eacd6b83495c",
           "request": {
             "auth": {
               "type": "noauth"
@@ -4865,8 +4890,8 @@
           ]
         },
         {
-          "_postman_id": "0f795e20-e225-4633-81cb-8c0165dea3e3",
           "name": "Get Recipient from Segment",
+          "_postman_id": "0f795e20-e225-4633-81cb-8c0165dea3e3",
           "request": {
             "auth": {
               "type": "noauth"
@@ -5044,8 +5069,8 @@
           ]
         },
         {
-          "_postman_id": "e2b73d08-b635-4028-8397-9687f32e2be2",
           "name": "Add one Recipient to Segment",
+          "_postman_id": "e2b73d08-b635-4028-8397-9687f32e2be2",
           "request": {
             "auth": {
               "type": "noauth"
@@ -5206,8 +5231,8 @@
           ]
         },
         {
-          "_postman_id": "35077232-fdc7-4a30-8ef2-a45f5341fb07",
           "name": "Add multiple Recipients to Segment",
+          "_postman_id": "35077232-fdc7-4a30-8ef2-a45f5341fb07",
           "request": {
             "auth": {
               "type": "noauth"
@@ -5245,8 +5270,7 @@
               "query": [
                 {
                   "key": "_filter",
-                  "value": "email%3DLIKE%3D%22%example%25%22",
-                  "equals": true
+                  "value": "email%3DLIKE%3D%22%example%25%22"
                 }
               ]
             },
@@ -5292,8 +5316,7 @@
                   "query": [
                     {
                       "key": "_filter",
-                      "value": "email%3DLIKE%3D%22%example%25%22",
-                      "equals": true
+                      "value": "email%3DLIKE%3D%22%example%25%22"
                     }
                   ]
                 }
@@ -5412,8 +5435,8 @@
           ]
         },
         {
-          "_postman_id": "d9e629cc-aa41-45b3-83a9-f99756f606a3",
           "name": "Delete Recipients from Segment",
+          "_postman_id": "d9e629cc-aa41-45b3-83a9-f99756f606a3",
           "request": {
             "auth": {
               "type": "noauth"
@@ -5451,8 +5474,7 @@
               "query": [
                 {
                   "key": "_filter",
-                  "value": "email%3DLIKE%3D%22%example%25%22",
-                  "equals": true
+                  "value": "email%3DLIKE%3D%22%example%25%22"
                 }
               ]
             },
@@ -5498,8 +5520,7 @@
                   "query": [
                     {
                       "key": "_filter",
-                      "value": "email%3DLIKE%3D%22%example%25%22",
-                      "equals": true
+                      "value": "email%3DLIKE%3D%22%example%25%22"
                     }
                   ]
                 }
@@ -5635,16 +5656,15 @@
             }
           ]
         }
-      ]
+      ],
+      "_postman_id": "21056689-a283-4b42-be23-7e23b4b9026e"
     },
     {
-      "_postman_id": "9fa4c904-5bc0-41f5-8c70-11ec428d8c75",
       "name": "Attributes",
-      "description": "",
       "item": [
         {
-          "_postman_id": "186844bb-9313-4935-96f8-9336f654aaf7",
           "name": "Get Attributes from List",
+          "_postman_id": "186844bb-9313-4935-96f8-9336f654aaf7",
           "request": {
             "auth": {
               "type": "noauth"
@@ -5656,7 +5676,10 @@
                 "value": "Bearer {{access_token}} "
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://api.newsletter2go.com/lists/{{list_id}}/attributes"
           },
           "response": [
@@ -5672,7 +5695,10 @@
                     "disabled": false
                   }
                 ],
-                "body": {},
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": "https://api.newsletter2go.com/lists/{{list_id}}/attributes"
               },
               "status": "OK",
@@ -5807,8 +5833,8 @@
           ]
         },
         {
-          "_postman_id": "b8a4f83b-1e17-4f6c-922e-afcdadc3dd2d",
           "name": "Get Attribute Details",
+          "_postman_id": "b8a4f83b-1e17-4f6c-922e-afcdadc3dd2d",
           "request": {
             "auth": {
               "type": "noauth"
@@ -5820,7 +5846,10 @@
                 "value": "Bearer {{access_token}} "
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://api.newsletter2go.com/attributes/{{attribute_id}}"
           },
           "response": [
@@ -5836,7 +5865,10 @@
                     "disabled": false
                   }
                 ],
-                "body": {},
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": "https://api.newsletter2go.com/attributes/{{attribute_id}}"
               },
               "status": "OK",
@@ -5971,8 +6003,8 @@
           ]
         },
         {
-          "_postman_id": "19dfd182-e8b2-4561-91fe-a4d1a31b11dc",
           "name": "Create Attribute",
+          "_postman_id": "19dfd182-e8b2-4561-91fe-a4d1a31b11dc",
           "request": {
             "auth": {
               "type": "noauth"
@@ -6133,8 +6165,8 @@
           ]
         },
         {
-          "_postman_id": "23e37d1d-f8aa-48a1-9093-b9f29195085d",
           "name": "Update Attribute",
+          "_postman_id": "23e37d1d-f8aa-48a1-9093-b9f29195085d",
           "request": {
             "auth": {
               "type": "noauth"
@@ -6312,8 +6344,8 @@
           ]
         },
         {
-          "_postman_id": "ccc3735c-106a-4c47-9725-2ed6302ac10a",
           "name": "Delete Attribute",
+          "_postman_id": "ccc3735c-106a-4c47-9725-2ed6302ac10a",
           "request": {
             "auth": {
               "type": "noauth"
@@ -6325,7 +6357,10 @@
                 "value": "Bearer {{access_token}} "
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://api.newsletter2go.com/lists/{{list_id}}/attributes/{{attribute_id}}"
           },
           "response": [
@@ -6341,7 +6376,10 @@
                     "disabled": false
                   }
                 ],
-                "body": {},
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": "https://api.newsletter2go.com/lists/{{list_id}}/attributes/{{attribute_id}}"
               },
               "status": "OK",
@@ -6475,16 +6513,15 @@
             }
           ]
         }
-      ]
+      ],
+      "_postman_id": "9fa4c904-5bc0-41f5-8c70-11ec428d8c75"
     },
     {
-      "_postman_id": "f84f1ba5-15e8-4200-aa37-fac35dec44f9",
       "name": "Campaigns",
-      "description": "",
       "item": [
         {
-          "_postman_id": "d45a8153-1081-4ee6-a779-6a245d484746",
           "name": "Get Mailings from List",
+          "_postman_id": "d45a8153-1081-4ee6-a779-6a245d484746",
           "request": {
             "auth": {
               "type": "noauth"
@@ -6496,7 +6533,10 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://api.newsletter2go.com/lists/{{list_id}}/newsletters"
           },
           "response": [
@@ -6512,7 +6552,10 @@
                     "disabled": false
                   }
                 ],
-                "body": {},
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": "https://api.newsletter2go.com/lists/{{list_id}}/newsletters"
               },
               "status": "OK",
@@ -6647,8 +6690,8 @@
           ]
         },
         {
-          "_postman_id": "75083638-39a1-4cdf-a307-4e7708e8da76",
           "name": "Get one Mailing",
+          "_postman_id": "75083638-39a1-4cdf-a307-4e7708e8da76",
           "request": {
             "method": "GET",
             "header": [
@@ -6657,7 +6700,10 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}"
           },
           "response": [
@@ -6673,7 +6719,10 @@
                     "disabled": false
                   }
                 ],
-                "body": {},
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}"
               },
               "status": "OK",
@@ -6808,8 +6857,8 @@
           ]
         },
         {
-          "_postman_id": "3bfd595a-d46c-4695-9681-aea918f22e9a",
           "name": "Get saved Versions of a Mailing",
+          "_postman_id": "3bfd595a-d46c-4695-9681-aea918f22e9a",
           "request": {
             "auth": {
               "type": "noauth"
@@ -6821,7 +6870,10 @@
                 "value": "Bearer {{access_token}} "
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/versions",
             "description": "Use the `_filter` to get a specific version."
           },
@@ -6838,7 +6890,10 @@
                     "disabled": false
                   }
                 ],
-                "body": {},
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/versions"
               },
               "status": "OK",
@@ -6973,8 +7028,8 @@
           ]
         },
         {
-          "_postman_id": "b6908876-23a9-4edc-a15f-edf5d9337085",
           "name": "Create Mailing",
+          "_postman_id": "b6908876-23a9-4edc-a15f-edf5d9337085",
           "request": {
             "auth": {
               "type": "noauth"
@@ -7135,8 +7190,8 @@
           ]
         },
         {
-          "_postman_id": "a8f42b89-ab89-4ebe-8e5c-8dfe2307341a",
           "name": "Create transactional Mailing",
+          "_postman_id": "a8f42b89-ab89-4ebe-8e5c-8dfe2307341a",
           "request": {
             "auth": {
               "type": "noauth"
@@ -7297,8 +7352,8 @@
           ]
         },
         {
-          "_postman_id": "1df37c76-18ee-434f-bb1c-445a7e2f872f",
           "name": "Send Test",
+          "_postman_id": "1df37c76-18ee-434f-bb1c-445a7e2f872f",
           "request": {
             "auth": {
               "type": "noauth"
@@ -7477,8 +7532,8 @@
           ]
         },
         {
-          "_postman_id": "ba16af5b-06fa-4c10-94cd-8f54cec5a316",
           "name": "Send one-time Mailing",
+          "_postman_id": "ba16af5b-06fa-4c10-94cd-8f54cec5a316",
           "request": {
             "method": "POST",
             "header": [
@@ -7648,8 +7703,8 @@
           ]
         },
         {
-          "_postman_id": "d39fb18d-bf1f-4255-be78-36f327023b0a",
           "name": "Send transactional Mailing",
+          "_postman_id": "d39fb18d-bf1f-4255-be78-36f327023b0a",
           "request": {
             "auth": {
               "type": "noauth"
@@ -8090,8 +8145,8 @@
           ]
         },
         {
-          "_postman_id": "76993cf1-63df-4bb9-89ee-393d2e8593f3",
           "name": "Update one Mailing",
+          "_postman_id": "76993cf1-63df-4bb9-89ee-393d2e8593f3",
           "request": {
             "auth": {
               "type": "noauth"
@@ -8270,8 +8325,8 @@
           ]
         },
         {
-          "_postman_id": "53c1e0e6-4714-47b3-9b1a-e2236dabd2b5",
           "name": "Add Attachments to a Mailing",
+          "_postman_id": "53c1e0e6-4714-47b3-9b1a-e2236dabd2b5",
           "request": {
             "method": "PATCH",
             "header": [
@@ -8294,8 +8349,8 @@
           "response": []
         },
         {
-          "_postman_id": "6d5ffa40-7180-4646-b92b-59baf1c94d1f",
           "name": "Get specific Mailing Reports",
+          "_postman_id": "6d5ffa40-7180-4646-b92b-59baf1c94d1f",
           "request": {
             "auth": {
               "type": "noauth"
@@ -8307,7 +8362,10 @@
                 "value": "Bearer {{access_token}} "
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports"
           },
           "response": [
@@ -8323,7 +8381,10 @@
                     "disabled": false
                   }
                 ],
-                "body": {},
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports"
               },
               "status": "OK",
@@ -8458,8 +8519,11 @@
           ]
         },
         {
-          "_postman_id": "c0af7251-3532-4db0-9e1a-8671ede275de",
           "name": "Get specific Mailing Reports Recipient Information",
+          "_postman_id": "c0af7251-3532-4db0-9e1a-8671ede275de",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "auth": {
               "type": "bearer",
@@ -8473,10 +8537,6 @@
                 "type": "text"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients",
             "description": "Add a `_filter` to the endpoint in order to query for specific actions:  \n`received_newsletter` for contacts that received the mailing  \n`opened_newsletter` for contacts that opened the mailing  \n`clicked_newsletter` for contacts that clicked the mailing  \n`unsubscribed_newsletter` for contacts that unsubscribed from the mailing  \n`bounced_newsletter` for contacts that clicked the mailing  \n\nCheck out the examples requests on the right for more information."
           },
@@ -8492,10 +8552,6 @@
                     "value": "Bearer {{access_token}} "
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": {
                   "raw": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients?_fields=email,first_name,last_name,urls,products,unsubscription,bounce,complaints,gender,rating,created_at&_filter=clicked_newsletter%3DCONTAINS%3D\"{{newsletter_id}}\"&_limit=10&_offset=0&_expand=false",
                   "protocol": "https",
@@ -8514,24 +8570,20 @@
                     {
                       "key": "_fields",
                       "value": "email,first_name,last_name,urls,products,unsubscription,bounce,complaints,gender,rating,created_at",
-                      "equals": true,
                       "description": "Define the fields you want to retrieve here"
                     },
                     {
                       "key": "_filter",
                       "value": "clicked_newsletter%3DCONTAINS%3D\"{{newsletter_id}}\"",
-                      "equals": true,
                       "description": "Defines the filter for this endpoint. In this case searches for recipients that clicked a link in a specifc newsletter"
                     },
                     {
                       "key": "_limit",
-                      "value": "10",
-                      "equals": true
+                      "value": "10"
                     },
                     {
                       "key": "_offset",
-                      "value": "0",
-                      "equals": true
+                      "value": "0"
                     },
                     {
                       "key": "_expand",
@@ -8560,10 +8612,6 @@
                     "value": "Bearer {{access_token}} "
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": {
                   "raw": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients?_fields=email,first_name,last_name,urls,products,unsubscription,bounce,complaints,gender,rating,created_at&_filter=opened_newsletter%3DCONTAINS%3D\"{{newsletter_id}}\"&_limit=10&_offset=0&_expand=false",
                   "protocol": "https",
@@ -8582,24 +8630,20 @@
                     {
                       "key": "_fields",
                       "value": "email,first_name,last_name,urls,products,unsubscription,bounce,complaints,gender,rating,created_at",
-                      "equals": true,
                       "description": "Define the fields you want to retrieve here"
                     },
                     {
                       "key": "_filter",
                       "value": "opened_newsletter%3DCONTAINS%3D\"{{newsletter_id}}\"",
-                      "equals": true,
                       "description": "Defines the filter for this endpoint. In this case searches for recipients that opened a specifc newsletter"
                     },
                     {
                       "key": "_limit",
-                      "value": "10",
-                      "equals": true
+                      "value": "10"
                     },
                     {
                       "key": "_offset",
-                      "value": "0",
-                      "equals": true
+                      "value": "0"
                     },
                     {
                       "key": "_expand",
@@ -8628,10 +8672,6 @@
                     "value": "Bearer {{access_token}} "
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": {
                   "raw": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients?_fields=email,first_name,last_name,urls,products,unsubscription,bounce,complaints,gender,rating,created_at&_filter=opened_newsletter%3DNCONTAINS%3D\"{{newsletter_id}}\";received_newsletter%3DCONTAINS%3D\"{{newsletter_id}}\"&_limit=10&_offset=0&_expand=false",
                   "protocol": "https",
@@ -8650,24 +8690,20 @@
                     {
                       "key": "_fields",
                       "value": "email,first_name,last_name,urls,products,unsubscription,bounce,complaints,gender,rating,created_at",
-                      "equals": true,
                       "description": "Define the fields you want to retrieve here"
                     },
                     {
                       "key": "_filter",
                       "value": "opened_newsletter%3DNCONTAINS%3D\"{{newsletter_id}}\";received_newsletter%3DCONTAINS%3D\"{{newsletter_id}}\"",
-                      "equals": true,
                       "description": "Defines the filter for this endpoint. In this case searches for recipients that did not open, but received a specifc newsletter"
                     },
                     {
                       "key": "_limit",
-                      "value": "10",
-                      "equals": true
+                      "value": "10"
                     },
                     {
                       "key": "_offset",
-                      "value": "0",
-                      "equals": true
+                      "value": "0"
                     },
                     {
                       "key": "_expand",
@@ -8694,10 +8730,6 @@
                     "value": "Bearer {{access_token}} "
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": {
                   "raw": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients?_fields=email,first_name,last_name,urls,products,unsubscription,bounce,complaints,gender,rating,created_at&_filter=converted_newsletter%3DCONTAINS%3D\"{{newsletter_id}}\"&_limit=10&_offset=0&_expand=false",
                   "protocol": "https",
@@ -8716,29 +8748,24 @@
                     {
                       "key": "_fields",
                       "value": "email,first_name,last_name,urls,products,unsubscription,bounce,complaints,gender,rating,created_at",
-                      "equals": true,
                       "description": "Define the fields you want to retrieve here"
                     },
                     {
                       "key": "_filter",
                       "value": "converted_newsletter%3DCONTAINS%3D\"{{newsletter_id}}\"",
-                      "equals": true,
                       "description": "Defines the filter for this endpoint. In this case searches for recipients that did buy something after clicking a link in the newsletter"
                     },
                     {
                       "key": "_limit",
-                      "value": "10",
-                      "equals": true
+                      "value": "10"
                     },
                     {
                       "key": "_offset",
-                      "value": "0",
-                      "equals": true
+                      "value": "0"
                     },
                     {
                       "key": "_expand",
-                      "value": "false",
-                      "equals": true
+                      "value": "false"
                     }
                   ]
                 }
@@ -8762,10 +8789,6 @@
                     "value": "Bearer {{access_token}} "
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": {
                   "raw": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients?_fields=email,first_name,last_name,urls,products,unsubscription,bounce,complaints,gender,rating,created_at&_filter=unsubscribed_newsletter%3DCONTAINS%3D\"{{newsletter_id}}\"&_limit=10&_offset=0&_expand=false",
                   "protocol": "https",
@@ -8783,28 +8806,23 @@
                   "query": [
                     {
                       "key": "_fields",
-                      "value": "email,first_name,last_name,urls,products,unsubscription,bounce,complaints,gender,rating,created_at",
-                      "equals": true
+                      "value": "email,first_name,last_name,urls,products,unsubscription,bounce,complaints,gender,rating,created_at"
                     },
                     {
                       "key": "_filter",
-                      "value": "unsubscribed_newsletter%3DCONTAINS%3D\"{{newsletter_id}}\"",
-                      "equals": true
+                      "value": "unsubscribed_newsletter%3DCONTAINS%3D\"{{newsletter_id}}\""
                     },
                     {
                       "key": "_limit",
-                      "value": "10",
-                      "equals": true
+                      "value": "10"
                     },
                     {
                       "key": "_offset",
-                      "value": "0",
-                      "equals": true
+                      "value": "0"
                     },
                     {
                       "key": "_expand",
-                      "value": "false",
-                      "equals": true
+                      "value": "false"
                     }
                   ]
                 }
@@ -8829,10 +8847,6 @@
                     "type": "text"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": {
                   "raw": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients?_limit=10&_offset=0&_fields=email,first_name,last_name,urls,products,unsubscription,bounce,complaints,gender,rating,created_at&_filter=bounced_newsletter%3DCONTAINS%3D\"{{newsletter_id}}\"&_expand=false",
                   "protocol": "https",
@@ -8850,28 +8864,23 @@
                   "query": [
                     {
                       "key": "_limit",
-                      "value": "10",
-                      "equals": true
+                      "value": "10"
                     },
                     {
                       "key": "_offset",
-                      "value": "0",
-                      "equals": true
+                      "value": "0"
                     },
                     {
                       "key": "_fields",
-                      "value": "email,first_name,last_name,urls,products,unsubscription,bounce,complaints,gender,rating,created_at",
-                      "equals": true
+                      "value": "email,first_name,last_name,urls,products,unsubscription,bounce,complaints,gender,rating,created_at"
                     },
                     {
                       "key": "_filter",
-                      "value": "bounced_newsletter%3DCONTAINS%3D\"{{newsletter_id}}\"",
-                      "equals": true
+                      "value": "bounced_newsletter%3DCONTAINS%3D\"{{newsletter_id}}\""
                     },
                     {
                       "key": "_expand",
-                      "value": "false",
-                      "equals": true
+                      "value": "false"
                     }
                   ]
                 }
@@ -8896,10 +8905,6 @@
                     "type": "text"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": {
                   "raw": "https://api.newsletter2go.com/newsletters/{{newsletter_id}}/reports/recipients?_limit=10&_offset=0&_fields=email,first_name,last_name,urls,products,unsubscription,bounce,complaints,gender,rating,created_at&_filter=complained_newsletter%3DCONTAINS%3D\"{{newsletter_id}}\"&_expand=false",
                   "protocol": "https",
@@ -8917,28 +8922,23 @@
                   "query": [
                     {
                       "key": "_limit",
-                      "value": "10",
-                      "equals": true
+                      "value": "10"
                     },
                     {
                       "key": "_offset",
-                      "value": "0",
-                      "equals": true
+                      "value": "0"
                     },
                     {
                       "key": "_fields",
-                      "value": "email,first_name,last_name,urls,products,unsubscription,bounce,complaints,gender,rating,created_at",
-                      "equals": true
+                      "value": "email,first_name,last_name,urls,products,unsubscription,bounce,complaints,gender,rating,created_at"
                     },
                     {
                       "key": "_filter",
-                      "value": "complained_newsletter%3DCONTAINS%3D\"{{newsletter_id}}\"",
-                      "equals": true
+                      "value": "complained_newsletter%3DCONTAINS%3D\"{{newsletter_id}}\""
                     },
                     {
                       "key": "_expand",
-                      "value": "false",
-                      "equals": true
+                      "value": "false"
                     }
                   ]
                 }
@@ -8954,12 +8954,15 @@
           ]
         },
         {
-          "_postman_id": "a71a25e0-8122-4f3d-a300-dbf66b2bc3e8",
           "name": "Get specific Mailing Reports by Day",
+          "_postman_id": "a71a25e0-8122-4f3d-a300-dbf66b2bc3e8",
           "request": {
             "method": "GET",
             "header": [],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://api.newsletter2go.com/lists/{{list_id}}/newsletters/{{newsletter_id}}/aggregations",
             "description": "This call is useful for automated mailings that run every day since it returns the reports by day."
           },
@@ -8976,7 +8979,10 @@
                     "disabled": false
                   }
                 ],
-                "body": {},
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": "https://api.newsletter2go.com/lists/{{list_id}}/newsletters/{{newsletter_id}}/aggregations"
               },
               "status": "OK",
@@ -9111,8 +9117,8 @@
           ]
         },
         {
-          "_postman_id": "c9ff642d-1a33-4cb8-a9d9-f3c5896e53ed",
           "name": "Get multiple Mailing Reports by Day",
+          "_postman_id": "c9ff642d-1a33-4cb8-a9d9-f3c5896e53ed",
           "request": {
             "auth": {
               "type": "noauth"
@@ -9124,7 +9130,10 @@
                 "value": "Bearer {{access_token}} "
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://api.newsletter2go.com/lists/{{list_id}}/newsletters/aggregations",
             "description": "This call is useful for automated mailings that run every day since it returns the reports by day."
           },
@@ -9141,7 +9150,10 @@
                     "disabled": false
                   }
                 ],
-                "body": {},
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": "https://api.newsletter2go.com/lists/{{list_id}}/newsletters/aggregations"
               },
               "status": "OK",
@@ -9276,6 +9288,7 @@
           ]
         }
       ],
+      "_postman_id": "f84f1ba5-15e8-4200-aa37-fac35dec44f9",
       "event": [
         {
           "listen": "prerequest",
@@ -9300,17 +9313,18 @@
       ]
     },
     {
-      "_postman_id": "22cf6ae6-ae22-4cc6-8160-cded15a94fbb",
       "name": "Forms",
-      "description": "The forms end points offer a convenient way to retrieve subscribe, profile and unsubscribe forms configured in the Newsletter2Go UI and to submit them subscribing and unsubscribing exiting recipients.\n\n<div class=\"alert alert-info\">The forms calls are public and don't need authentication. You only need your `form_id` from the Newsletter2Go UI.</div> ",
       "item": [
         {
-          "_postman_id": "4daba842-cc75-45e1-a822-05334f87ebed",
           "name": "Get Form",
+          "_postman_id": "4daba842-cc75-45e1-a822-05334f87ebed",
           "request": {
             "method": "GET",
             "header": [],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://api.newsletter2go.com/forms/generate/{{form_id}}"
           },
           "response": [
@@ -9320,7 +9334,10 @@
               "originalRequest": {
                 "method": "GET",
                 "header": [],
-                "body": {},
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": "https://api.newsletter2go.com/forms/generate/{{form_id}}"
               },
               "status": "OK",
@@ -9455,8 +9472,8 @@
           ]
         },
         {
-          "_postman_id": "46cc4c57-dc6e-440c-83ec-f214f9d24a1a",
           "name": "Submit Form / Subscribe Contact",
+          "_postman_id": "46cc4c57-dc6e-440c-83ec-f214f9d24a1a",
           "request": {
             "method": "POST",
             "header": [
@@ -9623,6 +9640,8 @@
           ]
         }
       ],
+      "_postman_id": "22cf6ae6-ae22-4cc6-8160-cded15a94fbb",
+      "description": "The forms end points offer a convenient way to retrieve subscribe, profile and unsubscribe forms configured in the Newsletter2Go UI and to submit them subscribing and unsubscribing exiting recipients.\n\n<div class=\"alert alert-info\">The forms calls are public and don't need authentication. You only need your `form_id` from the Newsletter2Go UI.</div> ",
       "auth": {
         "type": "noauth"
       },
@@ -9650,13 +9669,11 @@
       ]
     },
     {
-      "_postman_id": "193e9341-33d4-45aa-9cb3-e933d1a52c4c",
       "name": "Company",
-      "description": "| Parameter | Type      | Description |\r\n|-----------|-----------|-----------|\r\n| `id` | `string`<br>8-digit alphanumeric | The `id` of your company account |\r\n| `modified_at` | `date`<br>ISO-8601 format | Last date the company data was modified |\r\n| `created_at` | `date`<br>ISO-8601 format | The date your company account was created |\r\n| `phone` | `string` | The company phone number |\r\n| `agb_accepted_at` | `date`<br>ISO-8601 format | The date your company accepted the general terms and conditions |\r\n| `name` | `string` | The company name |\r\n| `address` | `string` | The company address |\r\n| `city` | `string` | The company city |\r\n| `postcode` | `string` | The company postcode |\r\n| `country` | `string`<br>ISO 3166-1 alpha-2 format | 2-digit country code of your company |\r\n| `bill_name` | `string` | The company name on your invoices |\r\n| `bill_first_name` | `string` | The first name on your invoices |\r\n| `bill_last_name` | `string` | The last name on your invoices |\r\n| `bill_gender` | `enum`<br>m, f | Gender of the person on your invoice |\r\n| `bill_address` | `string` | The company address on your invoices |\r\n| `bill_city` | `string` | The company city on your invoices |\r\n| `bill_postcode` | `string` | The company postcode on your invoices |\r\n| `bill_country` | `string`<br>ISO 3166-1 alpha-2 format | The company country on your invoices |\r\n| `bill_email` | `string`<br>RFC822 compliant email address | The email address invoices will be sent to |\r\n| `default_list_id` | `string`<br>8-digit alphanumeric | The `id` of your default list |\r\n| `credits_email` | `number`<br>non-negative integer | The amount of prepaid emails in your account |\r\n| `credits_freemail` | `number`<br>non-negative integer | The amount of free emails in your account |\r\n| `credits_abo` | `number`<br>non-negative integer | The amount of subscription emails in your account |\r\n| `state` | `enum`<br>verified, pending, declined | Whether your account has been verified for sending |\r\n| `uses_client_testing` | `boolean` | Whether the client testing is active |\r\n| `uses_payback` | `boolean` | Whether the credit payback feature is active |\r\n| `industry_id` | \"fyc983tf\" | |\r\n| `frequency` | `enum`<br>daily, weekly, monthly, quartely, sporadic | The dispatch frequency of the company |\r\n| `num_recipients` | `enum`<br><1000, 1000_5000, 5000_10000, 10000_25000, 25000_50000, >50000  | The number of recipients of the company |\r\n| `is_opentracking_allowed` | `boolean` | Whether open tracking is allowed |\r\n| `is_clicktracking_allowed` | `boolean` | Whether click / link tracking is allowed |\r\n| `is_recipienttracking_allowed` | `boolean` | Whether recipient based tracking is allowed |\r\n| `allow_support_access` | `boolean` | Whether the customer support may access your account |\r\n",
       "item": [
         {
-          "_postman_id": "d9b2e7cc-1145-4b04-be6f-ee1e88000646",
           "name": "Get Company Information",
+          "_postman_id": "d9b2e7cc-1145-4b04-be6f-ee1e88000646",
           "request": {
             "auth": {
               "type": "noauth"
@@ -9668,7 +9685,10 @@
                 "value": "Bearer {{access_token}} "
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://api.newsletter2go.com/companies"
           },
           "response": [
@@ -9684,7 +9704,10 @@
                     "disabled": false
                   }
                 ],
-                "body": {},
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": "https://api.newsletter2go.com/companies"
               },
               "status": "OK",
@@ -9819,8 +9842,8 @@
           ]
         },
         {
-          "_postman_id": "f3a08c89-5f52-4b24-864f-dd86dc6e71aa",
           "name": "Update Company Information",
+          "_postman_id": "f3a08c89-5f52-4b24-864f-dd86dc6e71aa",
           "request": {
             "auth": {
               "type": "noauth"
@@ -9998,6 +10021,8 @@
           ]
         }
       ],
+      "_postman_id": "193e9341-33d4-45aa-9cb3-e933d1a52c4c",
+      "description": "| Parameter | Type      | Description |\r\n|-----------|-----------|-----------|\r\n| `id` | `string`<br>8-digit alphanumeric | The `id` of your company account |\r\n| `modified_at` | `date`<br>ISO-8601 format | Last date the company data was modified |\r\n| `created_at` | `date`<br>ISO-8601 format | The date your company account was created |\r\n| `phone` | `string` | The company phone number |\r\n| `agb_accepted_at` | `date`<br>ISO-8601 format | The date your company accepted the general terms and conditions |\r\n| `name` | `string` | The company name |\r\n| `address` | `string` | The company address |\r\n| `city` | `string` | The company city |\r\n| `postcode` | `string` | The company postcode |\r\n| `country` | `string`<br>ISO 3166-1 alpha-2 format | 2-digit country code of your company |\r\n| `bill_name` | `string` | The company name on your invoices |\r\n| `bill_first_name` | `string` | The first name on your invoices |\r\n| `bill_last_name` | `string` | The last name on your invoices |\r\n| `bill_gender` | `enum`<br>m, f | Gender of the person on your invoice |\r\n| `bill_address` | `string` | The company address on your invoices |\r\n| `bill_city` | `string` | The company city on your invoices |\r\n| `bill_postcode` | `string` | The company postcode on your invoices |\r\n| `bill_country` | `string`<br>ISO 3166-1 alpha-2 format | The company country on your invoices |\r\n| `bill_email` | `string`<br>RFC822 compliant email address | The email address invoices will be sent to |\r\n| `default_list_id` | `string`<br>8-digit alphanumeric | The `id` of your default list |\r\n| `credits_email` | `number`<br>non-negative integer | The amount of prepaid emails in your account |\r\n| `credits_freemail` | `number`<br>non-negative integer | The amount of free emails in your account |\r\n| `credits_abo` | `number`<br>non-negative integer | The amount of subscription emails in your account |\r\n| `state` | `enum`<br>verified, pending, declined | Whether your account has been verified for sending |\r\n| `uses_client_testing` | `boolean` | Whether the client testing is active |\r\n| `uses_payback` | `boolean` | Whether the credit payback feature is active |\r\n| `industry_id` | \"fyc983tf\" | |\r\n| `frequency` | `enum`<br>daily, weekly, monthly, quartely, sporadic | The dispatch frequency of the company |\r\n| `num_recipients` | `enum`<br><1000, 1000_5000, 5000_10000, 10000_25000, 25000_50000, >50000  | The number of recipients of the company |\r\n| `is_opentracking_allowed` | `boolean` | Whether open tracking is allowed |\r\n| `is_clicktracking_allowed` | `boolean` | Whether click / link tracking is allowed |\r\n| `is_recipienttracking_allowed` | `boolean` | Whether recipient based tracking is allowed |\r\n| `allow_support_access` | `boolean` | Whether the customer support may access your account |\r\n",
       "event": [
         {
           "listen": "prerequest",
@@ -10022,13 +10047,11 @@
       ]
     },
     {
-      "_postman_id": "e04bad9d-f7f1-43ab-8547-81b242686060",
       "name": "Users",
-      "description": "",
       "item": [
         {
-          "_postman_id": "d0c4c31f-eeca-438d-8ba1-b6a652a0fd42",
           "name": "Get all Users",
+          "_postman_id": "d0c4c31f-eeca-438d-8ba1-b6a652a0fd42",
           "request": {
             "auth": {
               "type": "noauth"
@@ -10040,7 +10063,10 @@
                 "value": "Bearer {{access_token}} "
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://api.newsletter2go.com/users"
           },
           "response": [
@@ -10056,7 +10082,10 @@
                     "disabled": false
                   }
                 ],
-                "body": {},
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": "https://api.newsletter2go.com/users"
               },
               "status": "OK",
@@ -10191,8 +10220,8 @@
           ]
         },
         {
-          "_postman_id": "898b1b3e-071c-4391-95ba-fb4c0f5c09b7",
           "name": "Get User Details",
+          "_postman_id": "898b1b3e-071c-4391-95ba-fb4c0f5c09b7",
           "request": {
             "auth": {
               "type": "noauth"
@@ -10204,7 +10233,10 @@
                 "value": "Bearer {{access_token}} "
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://api.newsletter2go.com/users/{{user_id}}"
           },
           "response": [
@@ -10220,7 +10252,10 @@
                     "disabled": false
                   }
                 ],
-                "body": {},
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": "https://api.newsletter2go.com/users/{{user_id}}"
               },
               "status": "OK",
@@ -10355,8 +10390,8 @@
           ]
         },
         {
-          "_postman_id": "34405c3b-57dc-4a28-9f4d-b9aa6f722cfd",
           "name": "Update User Details",
+          "_postman_id": "34405c3b-57dc-4a28-9f4d-b9aa6f722cfd",
           "request": {
             "auth": {
               "type": "noauth"
@@ -10534,8 +10569,8 @@
           ]
         },
         {
-          "_postman_id": "289f5a54-e3be-46b7-80c0-24402f8fa2a3",
           "name": "Delete User",
+          "_postman_id": "289f5a54-e3be-46b7-80c0-24402f8fa2a3",
           "request": {
             "auth": {
               "type": "noauth"
@@ -10704,6 +10739,7 @@
           ]
         }
       ],
+      "_postman_id": "e04bad9d-f7f1-43ab-8547-81b242686060",
       "auth": {
         "type": "noauth"
       },
@@ -10731,12 +10767,9 @@
       ]
     },
     {
-      "_postman_id": "9a2453f5-5e60-4106-8624-f75154c7ee85",
       "name": "Files",
-      "description": null,
       "item": [
         {
-          "_postman_id": "f5bb7b57-6dd2-4e5d-aafa-7c16dafa9c09",
           "name": "Create File",
           "event": [
             {
@@ -10751,6 +10784,7 @@
               }
             }
           ],
+          "_postman_id": "f5bb7b57-6dd2-4e5d-aafa-7c16dafa9c09",
           "request": {
             "method": "POST",
             "header": [
@@ -10773,7 +10807,6 @@
           "response": []
         },
         {
-          "_postman_id": "d543b532-8425-48cc-a101-e8475e249699",
           "name": "Get File",
           "event": [
             {
@@ -10789,6 +10822,7 @@
               }
             }
           ],
+          "_postman_id": "d543b532-8425-48cc-a101-e8475e249699",
           "request": {
             "method": "GET",
             "header": [
@@ -10801,18 +10835,14 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": "https://api.newsletter2go.com/files/{{file_id}}",
             "description": "Gets a file. Make clear to provide a `file_id`."
           },
           "response": []
         },
         {
-          "_postman_id": "e79ebdd9-c2f2-43c2-820d-4239c5657910",
           "name": "Get All Files",
+          "_postman_id": "e79ebdd9-c2f2-43c2-820d-4239c5657910",
           "request": {
             "method": "GET",
             "header": [
@@ -10825,18 +10855,21 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": "https://api.newsletter2go.com/files",
             "description": "Get a list of all files."
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "9a2453f5-5e60-4106-8624-f75154c7ee85"
     }
   ],
+  "auth": {
+    "type": "bearer",
+    "bearer": {
+      "token": "{{access_token}}"
+    }
+  },
   "event": [
     {
       "listen": "prerequest",
