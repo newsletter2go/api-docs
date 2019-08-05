@@ -1349,11 +1349,7 @@
                 "value": "Bearer {{access_token}} "
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
-            "url": "https://api.newsletter2go.com/recipients",
+            "url": "",
             "description": "Get recipients from any list.\n\n_Remember: You can use the [common GET parameters](#common-get-parameters) to control the result sets from the API._"
           },
           "response": [
