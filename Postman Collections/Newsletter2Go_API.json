@@ -4385,7 +4385,7 @@
               "raw": "{\n\t\"list_id\": \"{{list_id}}\",\n\t\"name\": \"New group Segment like example\",\n\t\"filter\": \"email=LIKE=\\\"%example%\\\"\",\n\t\"is_dynamic\": true\n}"
             },
             "url": "https://api.newsletter2go.com/groups",
-            "description": "explain filter, explain is_dynamic"
+            "description": "The attribute `filter` should be the conditions upon which the auto-update action is executed. \n\nThe attribute `is_dynamic` defines wether the segment will auto-update or not. "
           },
           "response": [
             {
@@ -5267,7 +5267,7 @@
                 }
               ]
             },
-            "description": "add all Recipients to the given group. Pay attention to the filter, if you forget to submit it, all recipients of the current list are getting added to the group!\nonly works with regular groups"
+            "description": "Add all Recipients to the given segment. This will \nonly work with regular groups (non auto-update)\n\n<div class=\"alert alert-info\">\nPay attention to the filter, if you forget to submit it, all recipients of the current list will be added to the group. </div>\n"
           },
           "response": [
             {
