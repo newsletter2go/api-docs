@@ -78,8 +78,8 @@ This is the official issue tracking site for the Newsletter2Go API. Nevertheless
 
 
  - **[Stack Overflow]** : You can post your questions making use of the tag `Newsletter2Go`.
- <br/>
-  | [Help Site EN] 🇬🇧 | [Help Site DE] 🇩🇪 | [Help Site FR] 🇫🇷  | [Help Site IT] 🇮🇹 |
+
+  [Help Site EN] 🇬🇧 | [Help Site DE] 🇩🇪 | [Help Site FR] 🇫🇷 | [Help Site IT] 🇮🇹
 
 #
 
