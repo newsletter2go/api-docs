@@ -3836,7 +3836,7 @@
               "raw": "{\n\t\"file\": \"{{file_id}}\",\n\t\"associations\": {\n\t\t\"0\": \"email\",\n\t\t\"1\": \"first_name\",\n\t\t\"2\": \"last_name\", \n\t\t\"3\": \"{{attribute_name}}\"\n\t}\n}"
             },
             "url": "https://api.newsletter2go.com/import/{{import_id}}/info",
-            "description": "Returns the status of the import with additional information such as the amount of newly created recipients `count_inserted`, the amount of updated recipients `count_updated`, the amount of illegal recipients `count_failed` and arrays recipients that could not be imported `duplicate_recipients` and `invalid_recipients`"
+            "description": "Returns the status of the import with additional information such as the amount of newly created recipients `count_inserted`, the amount of updated recipients `count_updated`, the amount of illegal recipients `count_failed` and arrays recipients that could not be imported `duplicate_recipients` and `invalid_recipients`."
           },
           "response": [
             {
@@ -3985,7 +3985,7 @@
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"count\": 1\n    },\n    \"value\": [\n        {\n            \"count_inserted\": 0,\n            \"count_updated\": 2,\n            \"count_failed\": 3,\n            \"duplicate_recipients\": [\n            \t{\n                    \"email\": \"some_duplicate@email.de\",\n                    \"last_name\": \"Duplicate\"\n                },\n                {\n                    \"email\": \"some.duplicate2@email.com\",\n                    \"last_name\": \"Duplicate 2\"\n                }\n            ],\n            \"invalid_recipients\": [\n            \t{\n                    \"email\": \"some.invalid@email\",\n                    \"last_name\": \"Invalid\"\n                }\n            ],\n            \"file\": \"import.csv\"\n        }\n    ]\n}"
+              "body": "{\n    \"status\": 200,\n    \"info\": {\n        \"count\": 1\n    },\n    \"value\": [\n        {\n            \"count_inserted\": 0,\n            \"count_updated\": 2,\n            \"count_failed\": 3,\n            \"duplicate_recipients\": [\n            \t{\n                    \"email\": \"some.duplicate@email.de\",\n                    \"last_name\": \"Duplicate\"\n                },\n                {\n                    \"email\": \"some.duplicate2@email.com\",\n                    \"last_name\": \"Duplicate 2\"\n                }\n            ],\n            \"invalid_recipients\": [\n            \t{\n                    \"email\": \"some.invalid@email\",\n                    \"last_name\": \"Invalid\"\n                }\n            ],\n            \"file\": \"import.csv\"\n        }\n    ]\n}"
             }
           ]
         }
