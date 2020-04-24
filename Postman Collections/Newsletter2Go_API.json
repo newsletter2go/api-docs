@@ -10423,20 +10423,6 @@
             "description": "Get a list of all files."
           },
           "response": []
-        },
-        {
-          "name": "upload File",
-          "_postman_id": "943912d7-9adb-4b20-b939-edac4941d8e7",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [],
-            "url": "",
-            "description": "uploads a file to S3"
-          },
-          "response": []
         }
       ],
       "_postman_id": "9a2453f5-5e60-4106-8624-f75154c7ee85"
