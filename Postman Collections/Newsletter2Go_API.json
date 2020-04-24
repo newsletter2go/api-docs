@@ -10431,7 +10431,7 @@
             "disableBodyPruning": true
           },
           "request": {
-            "method": "GET",
+            "method": "POST",
             "header": [],
             "url": "",
             "description": "uploads a file to S3"
